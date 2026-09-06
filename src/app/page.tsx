@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ProjectGrid } from "@/components/ProjectGrid";
 import { projects } from "@/lib/content";
+import { asset } from "@/lib/asset";
 
 const I_AM = [
   {
@@ -24,7 +25,7 @@ export default function Home() {
     <>
       <section
         className="relative flex min-h-[85vh] items-center justify-center overflow-hidden bg-black bg-cover bg-center px-6 py-24 text-center text-white"
-        style={{ backgroundImage: "url(/images/804a177782632f59.png)" }}
+        style={{ backgroundImage: `url(${asset("/images/804a177782632f59.png")})` }}
       >
         <div className="absolute inset-0 bg-black/40" />
         <div className="relative mx-auto max-w-3xl">

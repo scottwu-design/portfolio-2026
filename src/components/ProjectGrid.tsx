@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { ProjectSummary } from "@/data/types";
+import { asset } from "@/lib/asset";
 
 export function ProjectGrid({ projects }: { projects: ProjectSummary[] }) {
   return (
@@ -13,7 +14,7 @@ export function ProjectGrid({ projects }: { projects: ProjectSummary[] }) {
           <div className="aspect-[4/3] w-full overflow-hidden rounded-xl bg-neutral-100">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={project.thumbnail}
+              src={asset(project.thumbnail)}
               alt={project.title}
               loading="lazy"
               className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"

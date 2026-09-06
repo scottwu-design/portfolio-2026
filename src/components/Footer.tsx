@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { asset } from "@/lib/asset";
 
 const SOCIAL_LINKS = [
   {
@@ -50,8 +50,9 @@ export function Footer() {
               aria-label={s.label}
               className="opacity-80 transition-opacity hover:opacity-100"
             >
-              <Image
-                src={s.icon}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={asset(s.icon)}
                 alt={s.label}
                 width={32}
                 height={32}

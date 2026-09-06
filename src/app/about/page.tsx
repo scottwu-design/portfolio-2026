@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { asset } from "@/lib/asset";
 
 export const metadata: Metadata = {
   title: "About",
@@ -20,7 +21,7 @@ export default function AboutPage() {
 
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/images/c60fa277d215e63f.png"
+            src={asset("/images/c60fa277d215e63f.png")}
             alt="Scott Wu"
             className="mt-6 h-28 w-28 rounded-full object-cover"
           />
@@ -46,7 +47,7 @@ export default function AboutPage() {
         <div className="order-1 md:order-2">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/images/d24a8874968cc013.jpg"
+            src={asset("/images/d24a8874968cc013.jpg")}
             alt="Scott Wu playing tennis"
             className="w-full rounded-xl object-cover"
           />

@@ -6,6 +6,7 @@ import {
   STUDY,
   TOOLS,
 } from "@/data/resume";
+import { asset } from "@/lib/asset";
 
 export const metadata: Metadata = {
   title: "Resume",
@@ -33,7 +34,7 @@ export default function ResumePage() {
     <>
       <section
         className="relative flex min-h-[50vh] items-center bg-black bg-cover bg-center text-white"
-        style={{ backgroundImage: "url(/images/8c9b725b8fb063b4.jpg)" }}
+        style={{ backgroundImage: `url(${asset("/images/8c9b725b8fb063b4.jpg")})` }}
       >
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative mx-auto max-w-3xl px-6 py-20">

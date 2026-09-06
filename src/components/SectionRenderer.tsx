@@ -1,4 +1,5 @@
 import type { ContentNode, Section } from "@/data/types";
+import { asset } from "@/lib/asset";
 
 function ImageGallery({ images }: { images: string[] }) {
   if (images.length === 0) return null;
@@ -7,7 +8,7 @@ function ImageGallery({ images }: { images: string[] }) {
     return (
       // eslint-disable-next-line @next/next/no-img-element
       <img
-        src={images[0]}
+        src={asset(images[0])}
         alt=""
         className="w-full rounded-lg border border-black/5"
         loading="lazy"
@@ -21,7 +22,7 @@ function ImageGallery({ images }: { images: string[] }) {
         // eslint-disable-next-line @next/next/no-img-element
         <img
           key={src}
-          src={src}
+          src={asset(src)}
           alt=""
           className="w-full rounded-lg border border-black/5"
           loading="lazy"
