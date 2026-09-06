@@ -1,0 +1,83 @@
+{
+  "page": "FxOS SmartPhone",
+  "sections": [
+    {
+      "kind": "content",
+      "nodes": [],
+      "images": [
+        "/images/571b4e279eaa573d.jpg"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "FIREFOX OS FOR SMARTPHONE"
+        },
+        {
+          "type": "para",
+          "text": "The followings are some of my motion works designed for Firefox OS Smartphone Project. I was invited to the workshops and collaborated with the design teams from San Francisco and Toronto, and I helped to convey ideas through these motion works."
+        }
+      ],
+      "images": []
+    },
+    {
+      "kind": "roleTeamDuration",
+      "role": [
+        "Motion Designer"
+      ],
+      "team": [
+        "UX Designer",
+        "UI Designer",
+        "Product Manager"
+      ],
+      "duration": [
+        "Apr 2015 to May 2015",
+        "1 mo."
+      ],
+      "images": []
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "Essential Phone Project"
+        },
+        {
+          "type": "para",
+          "text": "This is the concept video showcasing how an app/action was launched and closed."
+        },
+        {
+          "type": "heading",
+          "text": "Essential Phone Project"
+        },
+        {
+          "type": "para",
+          "text": "This is the motion concept of how an app/action was pinned to home and unpinned from home."
+        },
+        {
+          "type": "heading",
+          "text": "Ripple Project"
+        },
+        {
+          "type": "para",
+          "text": "The motion concept demonstrates how users instantly download files from users nearby."
+        },
+        {
+          "type": "heading",
+          "text": "Ripple Project"
+        },
+        {
+          "type": "para",
+          "text": "The motion concept demonstrates how users instantly share files with users nearby."
+        }
+      ],
+      "images": [
+        "/images/25ec829c86ec4ccf.jpg",
+        "/images/859ef545a19837d0.png"
+      ]
+    }
+  ]
+}

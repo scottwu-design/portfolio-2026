@@ -1,0 +1,472 @@
+{
+  "page": "KaiOS Smart Watch",
+  "sections": [
+    {
+      "kind": "content",
+      "nodes": [],
+      "images": [
+        "/images/4716d504dd48b52f.png"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "CONCEPT FOR KAIOS SMART WATCH"
+        },
+        {
+          "type": "para",
+          "text": "This wearable watch project was initiated by KaiOS's U.S. partner, AT&T; the requirement of this product needs to fit a wide range of users, such as kids, sports, and elders. The design also needs to apply to both touch and non-touch display hardware. Our UX team spent two weeks finishing the pitch deck, including the design concept, high-level interaction design, and visual design."
+        },
+        {
+          "type": "para",
+          "text": "My contributions to this project were: concept development, storyboard, launcher design, UI components, and motion design, and led 2 visual designers in Taipei and 1 visual designer in Manaus, Brazil, responsible for the UI design."
+        }
+      ],
+      "images": []
+    },
+    {
+      "kind": "roleTeamDuration",
+      "role": [
+        "Visual Design Lead",
+        "UI Designer",
+        "Motion Designer"
+      ],
+      "team": [
+        "UX Designer",
+        "UI Designer",
+        "Product Manager"
+      ],
+      "duration": [
+        "May 2018 to Jul 2016",
+        "3 mo."
+      ],
+      "images": []
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "DESIGN THINKING"
+        },
+        {
+          "type": "list",
+          "items": [
+            "A Simple, Essential",
+            "Yet Efficient Smart Watch Design"
+          ]
+        }
+      ],
+      "images": []
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "WHO ARE THE USERS?"
+        }
+      ],
+      "images": [
+        "/images/04f770ca55bc6c0b.png"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "DESIGN OBJECTIVE"
+        },
+        {
+          "type": "heading",
+          "text": "Simple Navigation"
+        },
+        {
+          "type": "para",
+          "text": "A design is easy to use and learn so that users can easily operate the device."
+        },
+        {
+          "type": "heading",
+          "text": "Personalize for Users"
+        },
+        {
+          "type": "para",
+          "text": "A design is flexible enough to allow users to customize the launcher to fulfill their needs."
+        },
+        {
+          "type": "heading",
+          "text": "Speedy Action"
+        },
+        {
+          "type": "para",
+          "text": "A design that does not require many steps to get things done."
+        },
+        {
+          "type": "heading",
+          "text": "Clear Visual"
+        },
+        {
+          "type": "para",
+          "text": "A user interface design that users can browse and read clearly on a tiny watch display."
+        }
+      ],
+      "images": [
+        "/images/ca55bdcc53b0e2ee.png",
+        "/images/11fcdcdfa09e1bf1.png",
+        "/images/c5956c9d80715bb7.png",
+        "/images/b2e824fdffc3849c.png"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "FEATURES"
+        },
+        {
+          "type": "heading",
+          "text": "Voice Assistant"
+        },
+        {
+          "type": "heading",
+          "text": "Use voice commands and voice typing"
+        },
+        {
+          "type": "heading",
+          "text": "Communication"
+        },
+        {
+          "type": "heading",
+          "text": "Make and receive phone calls"
+        },
+        {
+          "type": "heading",
+          "text": "Training"
+        },
+        {
+          "type": "heading",
+          "text": "Track workouts and activities"
+        },
+        {
+          "type": "heading",
+          "text": "Health"
+        },
+        {
+          "type": "heading",
+          "text": "Monitor heart rate and gather fitness data"
+        },
+        {
+          "type": "heading",
+          "text": "Location Monitor"
+        },
+        {
+          "type": "heading",
+          "text": "Track child's location for safety"
+        },
+        {
+          "type": "heading",
+          "text": "Reminder"
+        },
+        {
+          "type": "para",
+          "text": "Set a reminder to stay on track with tasks"
+        }
+      ],
+      "images": [
+        "/images/9e817ffb15f2249d.png",
+        "/images/addc15965d39a09b.png",
+        "/images/6211287347c6484e.png",
+        "/images/3a7f3dec5a8d701d.png",
+        "/images/24f9e4432cf8743d.png",
+        "/images/0b03233eea62ecf0.png"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "WEARABLE OS STUDIES"
+        },
+        {
+          "type": "heading",
+          "text": "Wear OS by Google"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Reaching an app/action requires access to more than 2+ layers.",
+            "Complicated operation in Quick Settings and Notifications."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Apple WatchOS"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Reaching an app/action requires access to more than 2+ layers.",
+            "Dock and All Apps List are confusing."
+          ]
+        }
+      ],
+      "images": [
+        "/images/41e16869e95abecf.png",
+        "/images/0665d3aa940b0a66.png"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "KAIOS WEARABLE UX"
+        },
+        {
+          "type": "heading",
+          "text": "NAVIGATION MODEL"
+        },
+        {
+          "type": "list",
+          "items": [
+            "One layer to reach an app/action by swiping up or down on the touch screen or pressing up or down the hardware key.",
+            "Personalization of most used apps and actions on the launcher."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "A SINGLE-LAYER DESIGN"
+        },
+        {
+          "type": "para",
+          "text": "We keep the home(watch face), basic apps, instant actions, and favorite apps on the launcher in a single layer so that users can easily access their most-used apps or actions in a vertical scroll list."
+        },
+        {
+          "type": "heading",
+          "text": "SCREEN SHAPES"
+        },
+        {
+          "type": "para",
+          "text": "The user interface is compatible with different shapes of screens, whether square or circle."
+        },
+        {
+          "type": "heading",
+          "text": "HARDWARE COMPATIBILITY"
+        },
+        {
+          "type": "para",
+          "text": "One design adopts both touch and non-touch displays."
+        },
+        {
+          "type": "heading",
+          "text": "LAUNCHER NAVIGATION IN MOTION"
+        },
+        {
+          "type": "para",
+          "text": "Swiping up or down on the touch screen or pressing up or down the hardware key to switch a card (an app or an action) on the launcher."
+        }
+      ],
+      "images": [
+        "/images/1a53fe68debbb05d.png",
+        "/images/b207cba831b9ebd1.png",
+        "/images/9b5f48c04ca785c1.png",
+        "/images/001819f222b17f98.png",
+        "/images/be910f39788b7b0b.png"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "VISUAL DIRECTION"
+        },
+        {
+          "type": "heading",
+          "text": "Modern"
+        },
+        {
+          "type": "para",
+          "text": "Build a modern UI in mind that is easy to use and engage with for users."
+        },
+        {
+          "type": "heading",
+          "text": "Minimalist"
+        },
+        {
+          "type": "para",
+          "text": "Build a minimalist interface that loads fast and requires fewer resources to carry out in less time."
+        },
+        {
+          "type": "heading",
+          "text": "Depth"
+        },
+        {
+          "type": "para",
+          "text": "Create a sense of depth that overlaps elements and objects to emphasize the visual hierarchy."
+        },
+        {
+          "type": "heading",
+          "text": "Contrast"
+        },
+        {
+          "type": "para",
+          "text": "Using contrast in a balanced way to help organize the design and establish a hierarchy"
+        }
+      ],
+      "images": []
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "UI COMPONENTS"
+        },
+        {
+          "type": "heading",
+          "text": "LIST"
+        },
+        {
+          "type": "para",
+          "text": "For the Non-touch version, the elements (secondary text and on/off switch) will show when it's being selected."
+        },
+        {
+          "type": "heading",
+          "text": "HEADER BUTTON"
+        },
+        {
+          "type": "para",
+          "text": "The header can display the page title and an action button."
+        },
+        {
+          "type": "heading",
+          "text": "BUTTON"
+        },
+        {
+          "type": "heading",
+          "text": "INPUT"
+        },
+        {
+          "type": "heading",
+          "text": "OPTION MENU"
+        },
+        {
+          "type": "heading",
+          "text": "NUMBER KEYPAD"
+        },
+        {
+          "type": "para",
+          "text": "For the Non-touch version, press the up or down hardware key to switch a number or other key among three rows."
+        },
+        {
+          "type": "heading",
+          "text": "MAGNIFYING EFFECT ON NUMBER KEYPAD"
+        },
+        {
+          "type": "para",
+          "text": "Dail numbers on a watch size display isn't easy. For the Touch version, users can use the pinch zoom in/out gesture to change the keypad size and the pan gesture to scroll the view vertically or horizontally."
+        },
+        {
+          "type": "heading",
+          "text": "SLIDER"
+        },
+        {
+          "type": "para",
+          "text": "On the Touch version, users can tap the top and bottom buttons on the screen to adjust the level. And for the Non-touch version, users can press the up and down hardware keys."
+        },
+        {
+          "type": "heading",
+          "text": "DATE PICKER"
+        },
+        {
+          "type": "para",
+          "text": "Use the horizontal swipe gesture to switch among the columns (month, day, and year) and the vertical scroll to adjust the value in each column."
+        },
+        {
+          "type": "heading",
+          "text": "DIALOG"
+        },
+        {
+          "type": "para",
+          "text": "The dialog can appear with action buttons or without buttons. The right and left edge buttons are used for an action that can display the icon, and the list text buttons can display more than two actions."
+        },
+        {
+          "type": "heading",
+          "text": "PROGRESS BAR"
+        },
+        {
+          "type": "para",
+          "text": "There are two types of progress: linear progress and circular progress, and both support determinate and indeterminate states."
+        },
+        {
+          "type": "heading",
+          "text": "NOTIFICATIONS"
+        },
+        {
+          "type": "heading",
+          "text": "VOICE ASSISTANT"
+        },
+        {
+          "type": "heading",
+          "text": "COLOR"
+        },
+        {
+          "type": "para",
+          "text": "The reason why I chose Neon color is because it's widely used in the fashion industry; it has made its way into sporty and formal high-end clothing manufactured by major designers. The neon color gets noticed, eye-popping, and attracts attention immediately. I applied neon as the primary color, which appeared as part of the color element in highlight and press states within the app."
+        }
+      ],
+      "images": [
+        "/images/774eaed10b2b3241.png",
+        "/images/119f5bb3605a2555.png",
+        "/images/1c233b17f948873a.png",
+        "/images/46a1ba46c81541cd.png",
+        "/images/b3a05fab27de82e7.png",
+        "/images/85740b4714d66729.png",
+        "/images/aae2c921917c56eb.png",
+        "/images/a800fafc3df8e055.png",
+        "/images/0b67c600447fb40d.png",
+        "/images/230e425843188685.png",
+        "/images/bc428a6a37b4702a.png",
+        "/images/56fc7900f4303718.png",
+        "/images/89ec143bfe201f31.png",
+        "/images/e04766405eeff218.gif"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "WATCH FACES"
+        },
+        {
+          "type": "para",
+          "text": "The watch face set, with more than 20+ styles, was designed and crafted by the visual designers, Aaron Sung and Leticia Cavalcante."
+        },
+        {
+          "type": "heading",
+          "text": "KIDS"
+        },
+        {
+          "type": "heading",
+          "text": "SPORTS"
+        },
+        {
+          "type": "heading",
+          "text": "UNISEX"
+        }
+      ],
+      "images": [
+        "/images/cbeb4662a37099a1.png",
+        "/images/dc7e6fd4275e9fcd.png",
+        "/images/b646337ce25f6cf2.png"
+      ]
+    }
+  ]
+}

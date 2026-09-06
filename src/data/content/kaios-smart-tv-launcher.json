@@ -1,0 +1,254 @@
+{
+  "page": "KaiOS Smart TV Launcher",
+  "sections": [
+    {
+      "kind": "content",
+      "nodes": [],
+      "images": [
+        "/images/6372d8349d326737.png"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "KAIOS SMART TV LAUNCHER"
+        },
+        {
+          "type": "para",
+          "text": "KaiOS Smart TV launcher was designed to operate and fit all sizes of different devices, including large TVs, classic TV set-top boxes, and compact TV dongles. The requirement of this project came from one of KaiOS's biggest partners, Reliance JiO, in India. The goal of the design is simple; the layouts, visual style, and UI design patterns need to be customizable and allow partners to transform their content into a powerful entertainment center."
+        },
+        {
+          "type": "para",
+          "text": "My contributions to the project included: competitive study, ideation, UX design of the spatial navigation for the launcher, defined visual direction, led 2 visual designers in Taipei and 2 visual designers in Manaus, Brazil, responsible for the entire UI design, and collaborated with developers in Manaus, Brazil for implementation."
+        }
+      ],
+      "images": []
+    },
+    {
+      "kind": "roleTeamDuration",
+      "role": [
+        "UX Designer",
+        "Visual Design Lead",
+        "UI Designer"
+      ],
+      "team": [
+        "UX Designer",
+        "UI Designer",
+        "Product Manager",
+        "Front-end Engineer"
+      ],
+      "duration": [
+        "Aug 2017 to Jan 2018",
+        "6 mo."
+      ],
+      "images": []
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "para",
+          "text": "Animation of the spatial navigation model for Smart TV launcher"
+        }
+      ],
+      "images": [
+        "/images/c3b7c493750fdf31.png"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "CHALLENGES"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Since it's a universal design, we don't actually know who our users are and get to know their interests or pain points.",
+            "The design needs to be adaptable and run smoothly on different low-end hardware devices, such as TV set-top boxes and dongles.",
+            "We are on a tight schedule, three months to design and three months to develop."
+          ]
+        }
+      ],
+      "images": []
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "COMPETITOR STUDY"
+        },
+        {
+          "type": "para",
+          "text": "Since it's a universal design, we began to study the products that already dominate the market worldwide, such as the smart TVs from LG and Samsung, Set-top boxes from Apple, Roku, and TV dongles from Google and Amazon. We analyzed their design to identify their strengths and weaknesses and then determined our product objectives and design strategies."
+        }
+      ],
+      "images": [
+        "/images/15945634a91bc43b.png"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "INSIGHTS"
+        },
+        {
+          "type": "para",
+          "text": "Through our online research in the developed countries, we have discovered a few insights into user usage:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Users find the recently played list of TV shows or movies useful.",
+            "Watching Live TV, movies, or playing games are the primary use for TV users; however, each user's priority in using a TV is different.",
+            "Users want their TV menu launcher to be able to personalize so that they can access the content quickly.",
+            "Users prefer using the voice search instead of typing via a virtual keyboard."
+          ]
+        }
+      ],
+      "images": []
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "LAUNCHER ARCHITECTURE"
+        },
+        {
+          "type": "para",
+          "text": "There are three major components to access features: the action bar on the top for Search, Notifications, Settings, and Account, the promotional banner in the middle for promotional or profitable content, and the main body below for TV content."
+        },
+        {
+          "type": "heading",
+          "text": "VISUAL DESIGN DIRECTION"
+        },
+        {
+          "type": "para",
+          "text": "Above are the visual characteristics that I wanted to bring into our TV user interface and, more importantly, to reflect KaiOS's brand identity."
+        }
+      ],
+      "images": [
+        "/images/cbfd6032a2633305.png",
+        "/images/0c6eff90b5bbde1e.gif"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "KEY SCREENS"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Category Bar",
+            "Action Bar",
+            "Content - Grid View",
+            "Content - Linear View",
+            "Detail View",
+            "Recent",
+            "Notices",
+            "Side Tab",
+            "Keyboard",
+            "Volume Control"
+          ]
+        }
+      ],
+      "images": [
+        "/images/493a9c19cc6695ea.png",
+        "/images/e1446af7f8b3857d.png",
+        "/images/3e86ae2d62f39f8d.png",
+        "/images/47f8222e50ccca7f.png",
+        "/images/f75f5a8a9003d68c.png",
+        "/images/e5c29921d7e97896.png",
+        "/images/015f5fedc92e76e7.png",
+        "/images/e850d69b83f78fce.png",
+        "/images/e399adff0fab7ca3.png",
+        "/images/bd1af104705b09e2.png"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "UI PATTERNS"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Grid View",
+            "Album Grid View",
+            "Grid View with Side Menu",
+            "List View with Side menu",
+            "Dialog",
+            "Option Menu"
+          ]
+        }
+      ],
+      "images": [
+        "/images/18090ace102cb1e1.png",
+        "/images/06ab1047c3f56300.png",
+        "/images/8851993b52bf32ce.png",
+        "/images/b937afde44c9a648.png",
+        "/images/6c1da215b14ddf6a.png",
+        "/images/a6c67bd5347137f1.png"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "DEMO VIDEOS"
+        },
+        {
+          "type": "heading",
+          "text": "SIMULATOR"
+        },
+        {
+          "type": "para",
+          "text": "The screencast of KaiOS simulator shows how to browse the content through the TV launcher app."
+        },
+        {
+          "type": "heading",
+          "text": "BOARD"
+        },
+        {
+          "type": "para",
+          "text": "The demo video shows how the TV launcher app runs on a board, the TV dongle. The board has a processor with four cores, but we only use a single core to demo."
+        }
+      ],
+      "images": [
+        "/images/73fcfea03dec8faf.gif",
+        "/images/0d38cf916fffe6fe.gif"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "TAKEAWAY"
+        },
+        {
+          "type": "para",
+          "text": "The schedule of this project was tight: we need to complete the project within 6 months from research, and UX design to development completion. Although the project was suspended in the end, it was great that my teammates and I could have such a great opportunity to explore a new dimension -- designing and developing a TV project outside our daily mobile-driven scope just then. From a small 2.4\" feature phone display to a large TV display, both form factors are used as hardware keys to operate under low-end devices."
+        },
+        {
+          "type": "para",
+          "text": "Through this project, we learned how to optimize our design to ensure full functionality in a low-end TV set-top box or a compact TV dongle by adjusting the UI transition or changing the asset format, etc. There is still a lot of work left that needs us to optimize, such as user experience, hardware performance, etc. And we are looking forward to relaunching this project."
+        }
+      ],
+      "images": []
+    }
+  ]
+}

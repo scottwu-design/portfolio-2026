@@ -1,0 +1,202 @@
+{
+  "page": "Yadea E-Scooter",
+  "sections": [
+    {
+      "kind": "content",
+      "nodes": [],
+      "images": [
+        "/images/f3cc4e2f6f56eddc.png"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "YADEA E-SCOOTER APP"
+        },
+        {
+          "type": "para",
+          "text": "Yadea is a well-known electric scooter company based in China. It is one of the leading manufacturers and sellers of electric two-wheelers, including electric scooters and motorcycles. I had the opportunity to contribute to their app redesign project, catering to both the iOS and Android platforms on a freelance basis."
+        },
+        {
+          "type": "para",
+          "text": "My contributions to this project were UI design, and prototype. I worked collaboratively with Yadea's UX Designer, PM and developers in Shanghai, China, to ensure the successful launch of products in Greater China."
+        }
+      ],
+      "images": []
+    },
+    {
+      "kind": "roleTeamDuration",
+      "role": [
+        "UI Designer"
+      ],
+      "team": [
+        "UX Designer",
+        "Product Manager",
+        "Front-end Engineer"
+      ],
+      "duration": [
+        "Feb 2018 to Jun 2018",
+        "5 mo."
+      ],
+      "images": []
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "CHALLENGES"
+        },
+        {
+          "type": "para",
+          "text": "The current app is experiencing low usage, primarily due to a lack of user awareness regarding the services it offers. Many users do not perceive the app as necessary because they are unaware of the content of services it provides."
+        }
+      ],
+      "images": []
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "GOAL"
+        },
+        {
+          "type": "para",
+          "text": "Redesign the app to solve current user pain points and enhance user experience by providing supplementary services within the app for daily use. Our focus is on providing features that allow users to conveniently locate scooters, easily start and power off the scooter, perform comprehensive scooter diagnostics, and efficiently schedule repairs at authorized service centers, and so on."
+        },
+        {
+          "type": "para",
+          "text": "By doing so, we aim to encourage users to make full use of the app's services, resulting in increased user engagement and ensuring that they derive maximum benefits from our platform."
+        }
+      ],
+      "images": []
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "APP ANALYSIS"
+        },
+        {
+          "type": "para",
+          "text": "It was essential for me first to do an in-depth analysis of the app. I wanted to understand the different functionalities and the app's overall architecture and navigation."
+        },
+        {
+          "type": "heading",
+          "text": "APP AUDIT"
+        },
+        {
+          "type": "para",
+          "text": "Before involving the UX designer, I did an app audit to analyze and fully understand its features and usability. Throughout this process, I was able to identify some apparent usability issues and pain points from my perspective. However, the downside was I was working remotely outside of China, which prevented me from conducting user interviews and tests to validate my observations."
+        }
+      ],
+      "images": [
+        "/images/d90625018742be03.png"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "DEFINING THE PROBLEM"
+        },
+        {
+          "type": "para",
+          "text": "After conducting an analysis, I have identified several areas that can be improved in the current design:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "The current design fails to incorporate the brand color, orange, as an accent color to highlight key elements of the UI.",
+            "The entire UI lacks visual hierarchy, and as a result, the UI elements such as buttons, input or tabs do not appear clickable to users.",
+            "The theme colors on each page are inconsistent, with some pages adopting a dark theme while the majority of the pages maintain a light theme."
+          ]
+        },
+        {
+          "type": "para",
+          "text": "These identified issues require attention and improvements to enhance the overall user experience."
+        }
+      ],
+      "images": []
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "VISUAL DESIGN"
+        },
+        {
+          "type": "heading",
+          "text": "VISUAL EXPLORATION"
+        },
+        {
+          "type": "para",
+          "text": "I implemented a circular shape for the majority of clickable UI elements. I incorporated the brand color of orange as an accent color consistently across all pages in the dark theme design. To enhance the visual appeal, I introduced gradient colors, contributing to a more sophisticated design."
+        }
+      ],
+      "images": [
+        "/images/82be096203315315.png"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [],
+      "images": [
+        "/images/fa9f81641bb610bf.png",
+        "/images/2e22094234e4fa2e.png"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "KEY SCREENS"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Services",
+            "My Ride",
+            "Settings",
+            "Activity - Week View",
+            "Activity - Day View",
+            "Account",
+            "Controls",
+            "Diagnostic - Completed",
+            "Diagnostic - Checking",
+            "Yadea Store",
+            "Home Picker",
+            "Notifications",
+            "QR Code Scanner",
+            "Sign Up",
+            "Log in"
+          ]
+        }
+      ],
+      "images": [
+        "/images/d10bb3b59d10a2ae.png",
+        "/images/5d076ec9691cc46d.png",
+        "/images/470bf13f9e72f7eb.png",
+        "/images/bb42a49b2e2672a5.png",
+        "/images/f3566022b298ee9a.png",
+        "/images/55be0c7f3cba862b.png",
+        "/images/557a86a3569ba1b4.png",
+        "/images/cac2151f27680bec.png",
+        "/images/68508605da2c425d.png",
+        "/images/f349742225414d09.png",
+        "/images/2f1d890c1ca325a0.png",
+        "/images/606151b7fd134d95.png",
+        "/images/ca90fbd6a16d498a.png",
+        "/images/2452bcefb5dd8fc8.png",
+        "/images/22a2455a3c62e61f.png"
+      ]
+    }
+  ]
+}

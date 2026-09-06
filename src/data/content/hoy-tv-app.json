@@ -1,0 +1,335 @@
+{
+  "page": "HOY TV App",
+  "sections": [
+    {
+      "kind": "content",
+      "nodes": [],
+      "images": [
+        "/images/1bd16d78eac35a36.png"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "REDESIGNING HOY TV APP & WEBSITE"
+        },
+        {
+          "type": "para",
+          "text": "i-CABLE HOY, one of the major TV broadcasters in Hong Kong, is building a video streaming service and app by providing users with live TV, news, variety shows, popular dramas in Cantonese and English. It was my pleasure to team up with HKAI, the AI and online advertising solutions provider, to help HOY redesign and develop a brand new OTT platform, including a mobile & tablet app and webpage."
+        },
+        {
+          "type": "para",
+          "text": "My contributions to this project were UX design, visual design, and prototyping. I worked collaboratively with PM and developers in Hong Kong and United Kingdom to ensure the successful launch of products in Hong Kong."
+        }
+      ],
+      "images": []
+    },
+    {
+      "kind": "roleTeamDuration",
+      "role": [
+        "UX/UI Designer"
+      ],
+      "team": [
+        "Product Manager",
+        "Front-end Engineer",
+        "Data Engineer"
+      ],
+      "duration": [
+        "Apr 2023 to Aug 2023",
+        "5 mo."
+      ],
+      "images": []
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "GOAL"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Revamp the user interface with a cohesive design system, ensuring consistency across a range of platforms such as mobile phones, tablets, and web browsers.",
+            "Elevate the user experience for seamless video content streaming across various devices.",
+            "Expand the user base by encouraging more account sign-ups."
+          ]
+        }
+      ],
+      "images": []
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "UNDERSTAND & IDEATE"
+        },
+        {
+          "type": "para",
+          "text": "The client has already listed the feature requests collected from user feedback and app store reviews. As a UX designer, I assist the client in organizing and prioritizing the features to enhance the user-friendliness of both the app and website."
+        },
+        {
+          "type": "para",
+          "text": "I first needed to do an in-depth analysis of the app and website. I wanted to understand the different functionalities and the app's overall architecture and navigation."
+        },
+        {
+          "type": "heading",
+          "text": "WHAT PROBLEMS DID WE IDENTIFY?"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Finding content is difficult without a search bar; everything is categorized by type.",
+            "Watching programs requires manually activating full-screen mode.",
+            "Users want to save and resume the content they're watching.",
+            "The EPG has limited functionality, showing only current and upcoming broadcast schedules.",
+            "Users dislike seeing both in-app and news ads at the same time.",
+            "Pages/screens appear cluttered and outdated.",
+            "There's no tablet version even though many users want it.",
+            "Users want to cast their phone screen on the TV."
+          ]
+        }
+      ],
+      "images": [
+        "/images/2e9404c58c6bcc87.png"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "IDEATIONS"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Redesigned the home page to prioritize content curation, making it easier for users to discover and explore various content.",
+            "Enhanced search experience by adding a prominent search button to the main pages, allowing users to quickly access the search feature.",
+            "Streamlined the user experience by consolidating the EPG and Live TV pages and incorporating a \"Set reminder\" feature for programs.",
+            "Introduced the \"save to favorites\" and \"watch later\" features for signed-in users to boost account sign-ups and enhance user engagement.",
+            "Users can now preview trailers without having to play the full video, offering a more convenient viewing experience.",
+            "Users now have the ability to cast their phone screen to TV using the \"cast\" button.",
+            "The video automatically plays in fullscreen mode when users press the play button.",
+            "Added dark and light themes to accommodate user preferences, as the dark theme is becoming more popular for video streaming services."
+          ]
+        }
+      ],
+      "images": [
+        "/images/434e1eacbaf01c09.png"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "DESIGN APP FRAMEWORK"
+        },
+        {
+          "type": "heading",
+          "text": "USER FLOW"
+        },
+        {
+          "type": "para",
+          "text": "Our data has shown that prompting users to sign up for an account before accessing video content has resulted in a lower success rate in account sign-ups. Therefore, users can watch content without signing up or logging into their accounts. However, to unlock additional features like \"Watch it Later,\" \"Save to My Favorites,\" \"Set reminders for programs,\" and \"Watch Tailor recommendations,\" signing up or logging into the account is required, providing an incentive for users to do so."
+        }
+      ],
+      "images": [
+        "/images/1a0ac749f2d28cf3.png"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "WIREFRAME"
+        },
+        {
+          "type": "heading",
+          "text": "MOBILE APP"
+        },
+        {
+          "type": "para",
+          "text": "First, I crafted wireframes tailored for mobile devices to ensure seamless usability across both iPhone and Android platforms, extending to tablet apps."
+        },
+        {
+          "type": "heading",
+          "text": "WEBSITE"
+        },
+        {
+          "type": "para",
+          "text": "Later, I created the wireframes for web browsers to ensure consistency and accessibility across all devices, providing a unified experience whether accessed on desktop, laptop, or mobile devices."
+        }
+      ],
+      "images": [
+        "/images/8e0ee7cee0d85302.png",
+        "/images/0052c309ea790ec4.png"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "APPLY VISUAL DESIGN"
+        },
+        {
+          "type": "heading",
+          "text": "VISUAL EXPLORATION"
+        },
+        {
+          "type": "para",
+          "text": "First, I went to visual design to explore 3 distinct visual styles for the client's consideration. I applied HOY's brand color (red-orange) and incorporated circular shapes as the primary visual element in the UI design."
+        },
+        {
+          "type": "heading",
+          "text": "DESIGN SYSTEM"
+        },
+        {
+          "type": "para",
+          "text": "Then, I developed a design system comprising UI components, typefaces, and icons, ensuring consistency across platforms with both dark and light themes. I ensured the system could adapt to mobile, tablet, and web interfaces, providing a unified experience across iPhone and Android platforms."
+        }
+      ],
+      "images": [
+        "/images/ac8b90b5bf610c25.png",
+        "/images/86b946b7f1e811b3.png"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [],
+      "images": [
+        "/images/2f29cf3b4d02f951.png",
+        "/images/38dd73ebd1f395bf.png",
+        "/images/6bbdd1ed505c71b4.png"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "PHONE"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Home 1",
+            "Home 2",
+            "Live TV",
+            "Details",
+            "Events Calendar",
+            "Programs",
+            "Profile",
+            "My Account",
+            "Sign Up"
+          ]
+        }
+      ],
+      "images": [
+        "/images/576813241408af47.png",
+        "/images/d3d96c3181e85125.png",
+        "/images/2d6c0816531aac1f.png",
+        "/images/8bf3acbf69fb0580.png",
+        "/images/b3fd72586fee8d73.png",
+        "/images/b56eb239238e6478.png",
+        "/images/b077118ba67ca8bf.png",
+        "/images/bda9ef96497edf15.png",
+        "/images/3debf721d9c34fc9.png"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "TABELT"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Home",
+            "Live TV",
+            "Video Player",
+            "Details"
+          ]
+        }
+      ],
+      "images": [
+        "/images/5ffb2e6a2355541d.png",
+        "/images/bb466a1d9fbc112c.png",
+        "/images/2e046721302cd775.png",
+        "/images/fb302bca59c11967.png"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "WEBSITE"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Home",
+            "Programs",
+            "Live TV",
+            "Events Calendar",
+            "Details",
+            "Watch History",
+            "Profile Editing"
+          ]
+        }
+      ],
+      "images": [
+        "/images/37b19cf47a38978d.png",
+        "/images/9ae0ac1c35050270.png",
+        "/images/0b501458caa2b72c.png",
+        "/images/02d94de593288b80.png",
+        "/images/61bb2fa13c03d553.png",
+        "/images/c0c1e78495d98140.png",
+        "/images/245d56ce9c358832.png"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "AWARD-WINNING"
+        },
+        {
+          "type": "para",
+          "text": "I am proud to share that my design work and collaboration with i-CABLE HOY Limited and HKAI Limited have led to their being awarded \"Cloud Innovation of the Year\u2014Media\" at the Alibaba Cloud 10th Anniversary Celebration and Award Ceremony 2024. By leveraging cutting-edge cloud solutions and innovative design strategies, we transformed their media operations and achieved this prestigious recognition. Congratulations to both companies on this achievement!"
+        }
+      ],
+      "images": [
+        "/images/90684e0ec494fe81.png"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "WHAT I LEARNED & NEXT STEPS"
+        },
+        {
+          "type": "para",
+          "text": "This project taught me the importance of providing a seamless user experience across devices and content discoverability. I plan to leverage this insight to enhance the platform's offerings and drive engagement."
+        },
+        {
+          "type": "para",
+          "text": "In the next phase, I'll continue to discuss with the client to focus on implementing new features, such as a loyalty rewards program to incentivize membership sign-ups and participation. I'll also continue improving content discoverability and personalizing recommendations through user preference and data analysis to exceed user expectations."
+        }
+      ],
+      "images": []
+    }
+  ]
+}

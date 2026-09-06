@@ -1,0 +1,88 @@
+{
+  "page": "Home Automation",
+  "sections": [
+    {
+      "kind": "content",
+      "nodes": [],
+      "images": [
+        "/images/ac84798518a9207f.png"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "CONCEPT FOR H5OS HOME AUTOMATION"
+        },
+        {
+          "type": "para",
+          "text": "The following demo concept video and UI introduce a home automation system control powered by H5OS. It allows users to control their smart home system and monitor the usage of each device, such as lights, home appliances, security devices, and so on."
+        },
+        {
+          "type": "para",
+          "text": "My contributions to this project were motion design, defined visual direction, and supervised visual designers for the entire UI design."
+        }
+      ],
+      "images": []
+    },
+    {
+      "kind": "roleTeamDuration",
+      "role": [
+        "UI Design Lead",
+        "Motion Designer"
+      ],
+      "team": [
+        "UX Designer",
+        "UI Designer",
+        "Product Manager"
+      ],
+      "duration": [
+        "Oct 2015 to Nov 2015",
+        "2 mo."
+      ],
+      "images": []
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "para",
+          "text": "Animation of home automation from greeting screen to home screen"
+        },
+        {
+          "type": "heading",
+          "text": "Greeting"
+        },
+        {
+          "type": "heading",
+          "text": "Home"
+        },
+        {
+          "type": "heading",
+          "text": "Activities in Now view"
+        },
+        {
+          "type": "heading",
+          "text": "Activities in Timeline view"
+        },
+        {
+          "type": "heading",
+          "text": "Chains"
+        },
+        {
+          "type": "heading",
+          "text": "IoT Devices"
+        }
+      ],
+      "images": [
+        "/images/458ad7d90b917006.jpg",
+        "/images/07118d24d2ef23b9.jpg",
+        "/images/0c31e8995b38d99b.jpg",
+        "/images/86fac73af3560b95.jpg",
+        "/images/247a67da75297cc6.jpg",
+        "/images/ce723fd6ea6c2686.jpg"
+      ]
+    }
+  ]
+}

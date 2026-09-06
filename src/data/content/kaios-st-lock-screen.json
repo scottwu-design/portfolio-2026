@@ -1,0 +1,251 @@
+{
+  "page": "KaiOS ST Lock Screen",
+  "sections": [
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "CASE STUDY"
+        },
+        {
+          "type": "para",
+          "text": "How I led the design sprint to redesign the unlock screen experience on KaiOS SmartTouch phone"
+        }
+      ],
+      "images": [
+        "/images/f6219556491234a1.png"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "para",
+          "text": "THE NEW DESIGN HAS BEEN PRAISED BY USERS FOR ITS SIGNIFICANTLY IMPROVED INTUITIVENESS, WHICH FOSTERS A GREATER SENSE OF CONFIDENCE DURING USE."
+        },
+        {
+          "type": "para",
+          "text": "I joined the KaiOS as a Sr. Design Manager to lead the visual design team for shaping the overall design direction across platforms and products. I adopted the double diamond design process and led design sprint workshops to identify problems to solve."
+        }
+      ],
+      "images": []
+    },
+    {
+      "kind": "roleTeamDuration",
+      "role": [
+        "UX/UI Designer",
+        "Prototyper",
+        "User Testing"
+      ],
+      "team": [
+        "UX Designer",
+        "Product Manager",
+        "Front-end Engineer"
+      ],
+      "duration": [
+        "Oct 20 2022 to Nov 3 2022",
+        "2 weeks"
+      ],
+      "images": []
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "THE PROBLEM"
+        },
+        {
+          "type": "para",
+          "text": "CUSTOMERS ENCOUNTERED DIFFICULTIES UNLOCKING THE DEVICE DUE TO A SMALL BUTTON TOUCH AREA OR STRUGGLED TO UNDERSTAND THE UNLOCK PROCESS."
+        },
+        {
+          "type": "para",
+          "text": "We provided the device to several customers/partners for testing, allowing them to experience the overall design. However, most encountered an issue when attempting to unlock the device."
+        },
+        {
+          "type": "para",
+          "text": "To address this problem, I conducted workshops with a UX designer, a Product Manager, and a software engineer. We identified the critical issues through user testing and developed two design solutions. We then refined and iterated on these solutions to validate which would work best for our target users."
+        },
+        {
+          "type": "heading",
+          "text": "USER INTERVIEWS"
+        },
+        {
+          "type": "heading",
+          "text": "IDENTIFYING PROBLEMS TO SOLVE"
+        },
+        {
+          "type": "para",
+          "text": "The first thing we did was speak to our internal colleagues who had yet to see the product or experience the design to understand how the approach to unlocking the device works and what problems they have. We also asked them how to turn on/off the camera and flashlight through the lock screen and if they could show us how they use it."
+        },
+        {
+          "type": "para",
+          "text": "Note: Due to the budget limitation, we are unable to interview the target users of Smart Touch, which are first-time smartphone users and low-end smartphone users who usually are,"
+        },
+        {
+          "type": "list",
+          "items": [
+            "1. Unfamiliar with the Internet & electronic products",
+            "2. Require effective onboarding due to lower education level",
+            "3. Not able to afford high-end products due to lower income"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "JOURNEY MAP"
+        },
+        {
+          "type": "heading",
+          "text": "HOW DO OUR USERS UNLOCK THE DEVICE ON THE LOCK SCREEN?"
+        },
+        {
+          "type": "para",
+          "text": "Through user testing, we started to notice a pattern in how users unlock the device and turn on/off the camera and flashlight. They usually begin with the swipe-up gesture on the bottom of the screen instead of tapping on the unlock icon in the lower center of the lock screen, as they have experience using iPhone and Android smartphones."
+        },
+        {
+          "type": "para",
+          "text": "The use of emojis helped us identify the pain points in the journey."
+        },
+        {
+          "type": "heading",
+          "text": "CONTROL VERSION"
+        },
+        {
+          "type": "heading",
+          "text": "WHAT PROBLEMS DID WE IDENTIFY?"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Users found the 3-second auto screen-off time too short.",
+            "The touch area of the button size was too small for users to tap successfully.",
+            "Half of the users we tested did not notice the unlock button on the lower center of the screen.",
+            "Most users tried swipe-up gestures to unlock the device on the screen or the button.",
+            "The users felt tapping the unlock button twice to unlock the phone wasn't intuitive and efficient.",
+            "There was a delay issue when turning on the flashlight; users thought they needed to long-press the button."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "CONVERGING ON A PROBLEM"
+        },
+        {
+          "type": "heading",
+          "text": "REWRITING PROBLEMS AS OUTCOMES AND DOT VOTING"
+        },
+        {
+          "type": "para",
+          "text": "To help converge on a few problems to solve, we rewrote them as user outcomes and dot voted as a team. There were only six options so each of us only had three votes. I led this workshop with a UX designer, a product manager, and an engineer from the teams that were involved."
+        },
+        {
+          "type": "heading",
+          "text": "CRAZY 8S"
+        },
+        {
+          "type": "para",
+          "text": "HOW CAN WE DESIGN A SWIPE-UP GESTURE TO UNLOCK AND OPEN THE CAMERA OR FLASHLIGHT FOR NEW TOUCH-SCREEN USERS?"
+        },
+        {
+          "type": "para",
+          "text": "Next, I ran the Crazy 8s workshop. We first looked at competitive products to avoid violating design patents. Each of us came up with eight solutions on our own first through Conceptboard, the collaborative online whiteboard. We shared them and collected feedback from others. We did two rounds, and solutions started to merge."
+        },
+        {
+          "type": "heading",
+          "text": "CONVERGING ON A SOLUTIONS"
+        },
+        {
+          "type": "heading",
+          "text": "NARROWING DOWN TO THE BEST SOLUTIONS"
+        },
+        {
+          "type": "para",
+          "text": "Solutions began to merge as we started to copy aspects of others solutions through the iterations. Through this process we naturally narrowed down the solutions to two, so we didn't have to dot vote at this step."
+        },
+        {
+          "type": "heading",
+          "text": "SOLUTION #1"
+        },
+        {
+          "type": "heading",
+          "text": "ONE TAP TO UNLOCK SOLUTION"
+        },
+        {
+          "type": "para",
+          "text": "We made the unlock menu the wake-up screen after users clicked the power button, allowing users to unlock the device directly. We added the animation to the unlock button to increase users' attention and the touch area of the button size, and added vibration to the flashlight buttons when it is turned on or off."
+        },
+        {
+          "type": "heading",
+          "text": "SOLUTION #1 - USER TESTING"
+        },
+        {
+          "type": "heading",
+          "text": "USER TESTING WITH ACTUAL DEVICE"
+        },
+        {
+          "type": "para",
+          "text": "We then conducted another round of user testing. After users completed the task, they rated their experience from 1 to 5 (1 being poor, 5 being great) to quantify the results."
+        },
+        {
+          "type": "para",
+          "text": "This solution was much more popular than the control version, outperforming it in both task completion time (by 18 seconds) and experience rating (by 0.8)."
+        },
+        {
+          "type": "heading",
+          "text": "SOLUTION #2"
+        },
+        {
+          "type": "heading",
+          "text": "SWIPE UP TO UNLOCK SOLUTION"
+        },
+        {
+          "type": "para",
+          "text": "In this new solution design, we implemented a swipe-up gesture to unlock the device. Users can swipe up from any lower screen area to unlock it. Additionally, we added a text hint to guide users on how to unlock the device or open the flashlight or camera app."
+        },
+        {
+          "type": "heading",
+          "text": "SOLUTION #2 - USER TESTING"
+        },
+        {
+          "type": "heading",
+          "text": "USER TESTING WITH ACTUAL DEVICE"
+        },
+        {
+          "type": "para",
+          "text": "This solution was significantly more popular than the control version. It outperformed the current version (by 14 seconds) in task completion time and received an experience rating (by 1.5)."
+        },
+        {
+          "type": "para",
+          "text": "Unlike Solution One, this design did not cause users to encounter issues. Even experienced smartphone users found the text hint useful, as reflected in their positive ratings."
+        },
+        {
+          "type": "heading",
+          "text": "WHAT I LEARNED & NEXT STEPS"
+        },
+        {
+          "type": "para",
+          "text": "User testing allows us to quickly identify real problems, even when the testers are internal colleagues. Through this process of design sprints, we discovered two solutions that significantly reduce task completion time and improve experience ratings."
+        },
+        {
+          "type": "para",
+          "text": "Our next step is to validate our solution further with real users, specifically first-time touch phone users from Africa and India, who are the target markets for KaiOS Smart Touch. This will ensure our results align with our expectations and meet the needs of our target audience."
+        }
+      ],
+      "images": [
+        "/images/6ee2728c5d2aefa2.png",
+        "/images/c52ab0c7cb1353a3.png",
+        "/images/c3ec51e29fe8a047.png",
+        "/images/c08f1d6f3d6b2b28.png",
+        "/images/a1b65956640eb7b1.png",
+        "/images/a7b3d716305b7402.png",
+        "/images/b38b02ba567701be.png",
+        "/images/2ff6223656850ef3.png",
+        "/images/0e3021817d93b234.png",
+        "/images/b4a66501ddc69673.png",
+        "/images/039a16af99efead8.png",
+        "/images/d60eb46b70e16ff7.png"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,363 @@
+{
+  "page": "h5OS Smart Feature Phone",
+  "sections": [
+    {
+      "kind": "content",
+      "nodes": [],
+      "images": [
+        "/images/ffcecba0151e433f.png"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "H5OS SMART FEATURE PHONE"
+        },
+        {
+          "type": "para",
+          "text": "H5OS Smart feature phone was running on Acadian's core product, H5OS, an HTML5 web-based operating system specialized for mobile, IoT smart devices, and wearables. The project only lasted for 10 months due to insufficient funding, which also caused the closure of the company. Nonetheless, it was still a good design journey for us since we had had such an opportunity to design a mobile operating system from scratch."
+        },
+        {
+          "type": "para",
+          "text": "My contributions to this project were: to define the product's art direction and visual design system, lead 6 visual designers and be responsible for all the app interface design for more than 30 essential apps. I am also in charge of motion design, prototypes, and concept development."
+        }
+      ],
+      "images": []
+    },
+    {
+      "kind": "roleTeamDuration",
+      "role": [
+        "Art Director",
+        "UI Designer",
+        "Motion Designer"
+      ],
+      "team": [
+        "UX Designer",
+        "UI Designer",
+        "Product Manager",
+        "Developer"
+      ],
+      "duration": [
+        "Jul 2015 to Apr 2016",
+        "10 mo."
+      ],
+      "images": []
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "para",
+          "text": "\u2014 Design Philosophy \u2014"
+        },
+        {
+          "type": "para",
+          "text": "Design is the best medium to flow technologies into our lives."
+        },
+        {
+          "type": "para",
+          "text": "The philosophy of Gravity Design presents ideas about nature, truth, knowledge, and our beliefs in design. We aim to bring human-centered approaches to the design from existing and emerging technologies."
+        },
+        {
+          "type": "para",
+          "text": "The interaction and visual principles will help you understand the foundation of Gravity Design, and it can be adaptive to any platform, screen size, and form factors. Still, the idea of putting the user in the center of the universe will never change."
+        }
+      ],
+      "images": [
+        "/images/07ac1d3a2aa404cb.png"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "DESIGN PRINCIPLE"
+        },
+        {
+          "type": "heading",
+          "text": "Essential"
+        },
+        {
+          "type": "para",
+          "text": "The simplicity and essentialness of the elements can give the user a clear mind to focus on performing their intentions."
+        },
+        {
+          "type": "heading",
+          "text": "Adaptive"
+        },
+        {
+          "type": "para",
+          "text": "The flexibility of the UI across different devices is nature in the connected devices era. Always think about adapting the design to various form factors."
+        },
+        {
+          "type": "heading",
+          "text": "Self-explanatory"
+        },
+        {
+          "type": "para",
+          "text": "The UI is organized and shaped well to guide the user clearly on how to perform their intentions with the UI itself and minimize the extra explanation."
+        },
+        {
+          "type": "heading",
+          "text": "Delightful"
+        },
+        {
+          "type": "para",
+          "text": "The UI should give the user positive thinking and make the user's life easier, richer and happier with a warm human touch."
+        }
+      ],
+      "images": [
+        "/images/b36b7bf0ce75d8c2.png",
+        "/images/d1cd4897d7fe8bf2.png",
+        "/images/4cf1771a54222b7c.png",
+        "/images/c58b31e759070487.png"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "VISUAL DIRECTION"
+        },
+        {
+          "type": "para",
+          "text": "H5OS visual style is inspired by outer space, planet, aurora, and galaxy. We elaborately made each element, color, type, and imagery to bring a cosmic look and feel to our UI."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Open, spacious layouts - Serve breathing space and a less ornamental asset to promote a spacious layout.",
+            "Circle & Parallelogram Shapes - Exclusively using only the circle and parallelogram(square, rectangle, rhombus) to create UI elements. This will create a consistent design language and keep the aesthetic timeless.",
+            "Clear visual hierarchy - Bring huge contrast in typography, background, and component accent color to promote visual hierarchy."
+          ]
+        }
+      ],
+      "images": [
+        "/images/ebea979a7a09668f.png"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "COLOR"
+        },
+        {
+          "type": "heading",
+          "text": "COLOR PALETTE"
+        },
+        {
+          "type": "para",
+          "text": "Color plays an essential role in creating a rich visual experience. These 12 colors were chosen as the primary tones presented in H5OS visual design; they've been designed to work harmoniously with each other. Based on color psychology, each app is assigned one of the primary colors. For example, to bring out the image of trust and stability, green is used in communication-oriented apps like Contacts, Dialer, or Message; purple is used in media-related apps like Music, FM radio, and Video for entertaining vibe."
+        },
+        {
+          "type": "para",
+          "text": "Once the primary color is decided for an app, the color will be used on the app icon and appear as part of the color element in highlight and press states within the app. Once the connection between color and app is established, it will be easy to find a particular app from a pool of app icons simply by a glance."
+        },
+        {
+          "type": "heading",
+          "text": "THEME"
+        },
+        {
+          "type": "para",
+          "text": "H5OS offers two theme options: bright and dark theme. In each theme, five different levels of grayscale were used in meaningful combinations to make colors pop out and indicate the hierarchy of each component on-screen; badge icons can also fit in both themes at the same time without sacrificing readability. It is suggested that when in a dark environment, use the dark theme to avoid glare; in an environment with adequate light, use either theme by preference."
+        }
+      ],
+      "images": [
+        "/images/ef6334444c0ba95a.png",
+        "/images/d9d1bb3e867dafc7.png"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "ICONOGRAPHY"
+        },
+        {
+          "type": "heading",
+          "text": "APP LAUNCHER ICON"
+        },
+        {
+          "type": "para",
+          "text": "The launcher icon is the first visual expression of the app; it can work directly and effectively to communicate the main feature and purpose to the user. Through the unified graphic elements, create the simple, intuitive, consistent icons that reflect your product characteristic and quality and stand out from other apps."
+        },
+        {
+          "type": "para",
+          "text": "Characteristic - The launcher icon is circular and contains portion transparency as a visual effect that exposes the wallpaper and makes the icon float in the background."
+        },
+        {
+          "type": "heading",
+          "text": "ACTION ICON"
+        },
+        {
+          "type": "para",
+          "text": "An action icon creates to represent common actions in an app. We create an icon set in icon-font format to fulfill the need of our partners."
+        },
+        {
+          "type": "heading",
+          "text": "BADGE ICON"
+        },
+        {
+          "type": "para",
+          "text": "Badge icons are designed to display on the app's information page to reflect the current status. A badge icon plays the role of adding some delightful touch, giving users a better experience. There are some common types of design: First-time use, Empty data, Information, and Errors."
+        }
+      ],
+      "images": [
+        "/images/c11c892be27de456.gif",
+        "/images/b189eacbf7122eca.png",
+        "/images/8fefd546ac3f7418.png"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "IMAGERY"
+        },
+        {
+          "type": "heading",
+          "text": "WALLPAPER"
+        },
+        {
+          "type": "para",
+          "text": "Imagery is the most effective way to tell stories and is the medium to directly link users to our design philosophy. A fascinating image benefits the product and user experience. The wallpaper set, with more than 30+ images, was designed and crafted by the visual design team, including me, Aaron Sung, Johnny Jao, Ya Ching Yang, CC Chang, and Juny Chen."
+        }
+      ],
+      "images": [
+        "/images/b04e0cc66a078a8b.png"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "TYPOGRAPHY"
+        },
+        {
+          "type": "heading",
+          "text": "TYPEFACE"
+        },
+        {
+          "type": "para",
+          "text": "Open Sans is the standard typeface of H5OS, which provides great legibility on small or large screens and is also very suitable for low and high-density displays."
+        },
+        {
+          "type": "heading",
+          "text": "INVISIBLE BOUNDARY"
+        },
+        {
+          "type": "para",
+          "text": "To achieve the goal of an invisible border, use alignment, repetition, and more \"blank space\" to provide clear contrast and hierarchy. The design could work perfectly under normal and large text mode."
+        }
+      ],
+      "images": [
+        "/images/5b62d7b6a342aac4.png",
+        "/images/d52ef7105548049a.png"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "UI COMPONENTS"
+        },
+        {
+          "type": "heading",
+          "text": "H5OS UI COMPONENTS"
+        },
+        {
+          "type": "para",
+          "text": "Small pieces of design and functionality create a graphic user interface and provide a consistent experience across different apps. The minimal design of the UI component supports the dark and light themes to fulfill the user's preference."
+        },
+        {
+          "type": "para",
+          "text": "My contribution to the UI components was to define the visual direction, assist the visual designer (Morrie Chien) in completing the visual design, and create the animation with a motion spec to help convey the design to developers."
+        },
+        {
+          "type": "heading",
+          "text": "UI Components in motion"
+        }
+      ],
+      "images": [
+        "/images/8669547cc944dece.png",
+        "/images/0a59026b65461e21.png"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "MEET H5OS APPS"
+        },
+        {
+          "type": "heading",
+          "text": "H5OS SMART FEATURE PHONE APPS"
+        },
+        {
+          "type": "para",
+          "text": "We designed more than 30 baseline essential apps for H5OS smart feature phone. My main contributions were creating all the motion designs of each app and supervising the visual designers (Morrie Chien, Aaron Sung, Johnny Jao, Ya Ching Yang, CC Chang, and Juny Chen) for designing all the app UIs."
+        }
+      ],
+      "images": [
+        "/images/213177bff78b0ca0.png"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [],
+      "images": [
+        "/images/1f31565a2257930f.png",
+        "/images/3f83e9f9f18e7177.png",
+        "/images/9f5bfa60357da00b.png",
+        "/images/d1ad47a663b3bca6.png"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "Overview of H5OS apps in motion"
+        },
+        {
+          "type": "heading",
+          "text": "Launcher navigation in motion"
+        },
+        {
+          "type": "heading",
+          "text": "Add a contact to Pinboard in motion"
+        },
+        {
+          "type": "para",
+          "text": "Play FM radio and add a favorite station in motion"
+        },
+        {
+          "type": "heading",
+          "text": "Play songs via Music app in motion"
+        },
+        {
+          "type": "heading",
+          "text": "Incoming call in motion"
+        },
+        {
+          "type": "heading",
+          "text": "A parallax header of Message app in motion"
+        }
+      ],
+      "images": [
+        "/images/71e95373de39d076.png"
+      ]
+    }
+  ]
+}

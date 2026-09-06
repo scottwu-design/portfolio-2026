@@ -1,0 +1,87 @@
+{
+  "page": "Web Design",
+  "sections": [
+    {
+      "kind": "content",
+      "nodes": [],
+      "images": [
+        "/images/eda98159cee8d7e6.jpg"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "WEB DESIGN"
+        },
+        {
+          "type": "para",
+          "text": "The following is the collection of my previous web design works in New York City. My clients include: MTV, TIME Inc., Crawford, Frontline Plus, Energy Stars, etc."
+        }
+      ],
+      "images": []
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "PES Group | January 2011"
+        },
+        {
+          "type": "para",
+          "text": "My contributions to this project were visual design, interaction design, and front-end development."
+        },
+        {
+          "type": "para",
+          "text": "MTV - Get Yourself Tested Campaign | April 2009"
+        },
+        {
+          "type": "para",
+          "text": "My contributions to this project were visual design, and concept development."
+        },
+        {
+          "type": "heading",
+          "text": "Frontline Plus | May 2009"
+        },
+        {
+          "type": "para",
+          "text": "My contributions to this project were visual design, and UI element animation in Flash."
+        },
+        {
+          "type": "heading",
+          "text": "Time Inc. Mine Magazine | April 2009"
+        },
+        {
+          "type": "para",
+          "text": "My contributions to this project were visual design, and UI element animation in Flash."
+        },
+        {
+          "type": "heading",
+          "text": "Crawford | March 2009"
+        },
+        {
+          "type": "para",
+          "text": "My contributions to this project were visual design, and UI element animation in Flash."
+        },
+        {
+          "type": "heading",
+          "text": "Banner Ad Design | 2008 - 2010"
+        },
+        {
+          "type": "para",
+          "text": "Here are my collection of banner ad works. My contributions to these projects were visual design, motion design, and Flash development."
+        }
+      ],
+      "images": [
+        "/images/bccca5521743649a.jpg",
+        "/images/9d575943beb4ea30.jpg",
+        "/images/3102dd5d3aec4b0a.png",
+        "/images/6b79dac7f70ec0e4.png",
+        "/images/e0eb45cdf517fcbe.png",
+        "/images/0ee0805a08cc35d1.jpg"
+      ]
+    }
+  ]
+}

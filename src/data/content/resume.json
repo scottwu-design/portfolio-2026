@@ -1,0 +1,380 @@
+{
+  "page": "Resume",
+  "sections": [
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "SUMMARY"
+        },
+        {
+          "type": "para",
+          "text": "I'm a creative professional with 10+ years of experience in visual, UX, and motion design in New York and Taipei, specializing in the fields of mobile phone, TV, wearable, web, and IoT. My work ranges from interaction design, user interface visual design, motion graphic design, and print design to brand identity. I strive to create successful and engaging work with newfound everyday influences."
+        },
+        {
+          "type": "heading",
+          "text": "RESUME"
+        }
+      ],
+      "images": [
+        "/images/8c9b725b8fb063b4.jpg"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "UX CAREER ROADMAP"
+        }
+      ],
+      "images": [
+        "/images/9fa95eb6dcb21dbe.png"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "Sr. UX Design Manager, KaiOS"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Oct 2023 - Present",
+            "Taipei City"
+          ]
+        },
+        {
+          "type": "para",
+          "text": "Projects: KaiStore Apps, KaiOS Smart Feature Phone, KaiOS Smart Touch"
+        },
+        {
+          "type": "para",
+          "text": "\ud83c\udfc6 Award: SFF Global FinTech Hackcelerator Winner 2024 \u2013 Award by The Monetary Authority of Singapore (MAS) and the Singapore FinTech Association (SFA)"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Responsible for UX, visual, motion design, and execution across all KaiOS products worldwide.",
+            "Creating concept videos, prototypes, and high-level flow in UX and UI motion mockups to help convey interaction and design ideas to vendors and stakeholders.",
+            "Creating the design and implementation guidelines of KaiOS products and services for partners and 3rd party developers."
+          ]
+        }
+      ],
+      "images": [
+        "/images/101b3e4a5f504651.jpg"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "Sr. Visual Design Manager, KaiOS"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Jun 2016 - Sep 2023",
+            "Taipei City"
+          ]
+        },
+        {
+          "type": "para",
+          "text": "Projects: Alcatel Go Flip 2, Reliance JioPhone, Reliance JioPhone 2, Nokia 8110 4G, Nokia 2720 Flip, Nokia 6300 4G, Doro 7050/7060, CAT B35, and Orange Sanza 3G, etc."
+        },
+        {
+          "type": "para",
+          "text": "\ud83c\udfc6 Award: Red Dot Winner 2021, Interface Design \u2013 Awarded by Red Dot Design Award"
+        },
+        {
+          "type": "para",
+          "text": "Leads a visual design team of 4 members, responsible for all UI design, motion design, prototype, and execution of all KaiOS products, including:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Defining the visual design direction of KaiOS Smart Touch, Smart Feature Phone, Smart Watch, and Set-top Box.",
+            "Creating concept videos, prototypes, and high-level flow in UX and UI motion mockups to help convey interaction and design ideas to vendors and stakeholders.",
+            "Supervising the designers on plan execution from scratch to completion, from concept design to developed product, bringing the team's collaborative ideas to life.",
+            "Supporting the brand and product creatives for the marketing team. Works range from web design, product video, and brand identity to brand guidelines.",
+            "Creating the design and implementation guidelines of KaiOS products and services for partners and 3rd party developers.",
+            "Designing the interaction of the ads on KaiOS ecosystem to help grow revenue."
+          ]
+        }
+      ],
+      "images": [
+        "/images/101b3e4a5f504651.jpg"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "Visual Design Manager, Acadine"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Jul 2015 - May 2015",
+            "Taipei City"
+          ]
+        },
+        {
+          "type": "para",
+          "text": "Projects: H5OS for Feature Phone, Home Automation, Smart Watch"
+        },
+        {
+          "type": "para",
+          "text": "Led a design teams of 6 members, responsible for all visual/motion design and execution of all Acadine products, including:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Defining the visual design direction of Acadine's products through leading ideation exercises, and brainstorming workshops.",
+            "Supervising the designers on plan execution from scratch to completion.",
+            "Providing guidance and insights to team members on visual design skills, elevating team members' aesthetic standards.",
+            "Creating concept videos and UI motion mockups to help convey interaction and design ideas to vendors and stakeholders."
+          ]
+        }
+      ],
+      "images": [
+        "/images/cb9c0c80ab54ef3c.jpg"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "UX Designer, Mozilla"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Sep 2014 - Jun 2015",
+            "Taipei City"
+          ]
+        },
+        {
+          "type": "para",
+          "text": "Projects: Firefox OS for Panasonic TV, Smartphone, Smart Watch, Feature Phone"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Served as visual design lead, supervising and guiding a design team of 5 members to provide UI design for new and existing Firefox OS Connected device products and features.",
+            "Responsible for UX, visual, motion design, and execution across all Firefox OS Connected device products worldwide.",
+            "Built up UX design for Firefox OS Panasonic TV project; worked collaboratively with client's PMs and developers to ensure successful launch worldwide."
+          ]
+        }
+      ],
+      "images": [
+        "/images/f00d92cc26c6462e.jpg"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "Interaction Design Lead, HTC"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Sep 2013 - Aug 2014",
+            "Taipei CIty"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Projects: HTC One M7, HTC One M8"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Led a team of 2 interaction designers to ensure successful feature product delivery.",
+            "Developed mockup videos and prototypes to help effectively communicate interaction and design ideas.",
+            "Worked collaboratively with PMs, visual designers, developers, and the marketing team to ensure design concepts were fully conveyed and implemented."
+          ]
+        }
+      ],
+      "images": [
+        "/images/1f681c502641a1e8.jpg"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "Principal Visual UI Designer, HTC"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Apr 2011 - Sep 2013",
+            "Taipei City"
+          ]
+        },
+        {
+          "type": "para",
+          "text": "Projects: HTC Sensation, HTC Flyer, HTC One X, HTC Titan Windows Phone 7"
+        },
+        {
+          "type": "para",
+          "text": "Led a team of 3 UI designers. Responsible for ensuring successful feature product delivery from beginning to end, including initiating design concepts, coordinating with other teams, controlling the qualities of the production process, to the completion of the products. Provided user interface design for new and existing HTC Sense products and features. Developed detailed storyboards, high-fidelity mockups, and prototypes to help convey interaction and design concepts visually. Worked collaboratively with PMs, UX designers, developers, and the marketing team to ensure design concepts were fully conveyed and implemented."
+        }
+      ],
+      "images": [
+        "/images/1f681c502641a1e8.jpg"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "Interaction & Multimedia Designer, Skypunch Creative"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Jun 2009 - Apr 2011",
+            "New York City"
+          ]
+        },
+        {
+          "type": "para",
+          "text": "Clients: Energy Stars, U.S. Department of Energy (DOE), etc."
+        },
+        {
+          "type": "para",
+          "text": "Responsible for web design and development, motion graphic design, and print design."
+        }
+      ],
+      "images": [
+        "/images/198d659ff6a3e186.jpg"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "Visual & Motion Graphic Design (Intern), Click 3X"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Jan 2009 - May 2009",
+            "New York City"
+          ]
+        },
+        {
+          "type": "para",
+          "text": "Clients: MTV, TIME Inc., Crawford, Frontline Plus."
+        },
+        {
+          "type": "para",
+          "text": "Web design - designed and developed the look and feel for sites, and was responsible for site navigation design, banner ads, and visual execution."
+        },
+        {
+          "type": "para",
+          "text": "Clients: Crawford, E*Trade."
+        },
+        {
+          "type": "para",
+          "text": "Motion graphic design - responsible for concept development and motion design such as broadcast television, advertisement, and film titling from concept storyboard sketch to completion."
+        }
+      ],
+      "images": [
+        "/images/cc610b8f623611a3.jpg"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "SPECIALTIES"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Creative Leadership & Design Management Concept development",
+            "Creative Direction & Art Direction",
+            "Product Innovation",
+            "User Experience Design",
+            "Visual Design",
+            "Motion Graphics Design",
+            "High Fidelity Prototyping",
+            "Production Management"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "TOOLS"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Figma",
+            "Sketch",
+            "Principle",
+            "Photoshop",
+            "Illustrator",
+            "After Effects",
+            "InDesign",
+            "Maya",
+            "HTML & CSS"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "STUDY"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Parsons School of Design | The New School",
+            "2006 - 2008",
+            "MFA, Photography and Related Media"
+          ]
+        },
+        {
+          "type": "list",
+          "items": [
+            "Kun Shan University of Technology",
+            "2000 - 2004",
+            "BFA, Department of Motion Pictures and Video"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "LANGUAGE"
+        },
+        {
+          "type": "list",
+          "items": [
+            "ENGLISH",
+            "Professional Working Proficiency"
+          ]
+        },
+        {
+          "type": "list",
+          "items": [
+            "MANDARIN",
+            "Native"
+          ]
+        }
+      ],
+      "images": []
+    }
+  ]
+}

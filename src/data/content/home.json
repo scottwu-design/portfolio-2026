@@ -1,0 +1,127 @@
+{
+  "page": "Portfolio",
+  "sections": [
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "list",
+          "items": [
+            "HELLO, I'M SCOTT WU, A CREATIVE PROFESSIONAL FOCUSED ON DIGITAL PRODUCT DESIGN.",
+            "WORKS CONTACT"
+          ]
+        }
+      ],
+      "images": [
+        "/images/804a177782632f59.png"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "I AM..."
+        },
+        {
+          "type": "heading",
+          "text": "A Designer of Global Backgrounds"
+        },
+        {
+          "type": "para",
+          "text": "I completed my master' at Parsons Design School and gained valuable work experience in New York and Taipei. Working with top designers shaped my high standards and distinctive design sensibilities."
+        },
+        {
+          "type": "heading",
+          "text": "Adaptive in Different Workplace"
+        },
+        {
+          "type": "para",
+          "text": "From New York to Taipei, my career led me into all kinds of companies, from creative agencies to multinational corporates to start-ups. The different scales of these companies gave me perfect opportunities to learn different ways of working and how we bring our products to life."
+        },
+        {
+          "type": "heading",
+          "text": "Capable in Both Visual and UX"
+        },
+        {
+          "type": "para",
+          "text": "I specialize in UI, interaction, and motion design for a wide range of products, such as mobile phones, wearables, websites, TVs, and Set-top boxes. My expertise spans from small-scale applications to large-scale operating systems and ecosystems."
+        }
+      ],
+      "images": []
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "SELECTED WORKS"
+        },
+        {
+          "type": "para",
+          "text": "The best way to understand what I do is to see what I have done. Here's a list of selected projects."
+        }
+      ],
+      "images": [
+        "/images/a76f69ed6efdc7ee.png",
+        "/images/8ffa0341b074e423.png",
+        "/images/9bfed6150e3b7515.png",
+        "/images/4e24eb3fe3344be8.png",
+        "/images/d353f689c7d77254.png",
+        "/images/af506f3f4a1f351d.png",
+        "/images/9040265b91c68b4c.png",
+        "/images/e3e4a03f54121336.png",
+        "/images/5f42dc2305db2771.png",
+        "/images/175fd634218ae9f1.jpg",
+        "/images/770089d4c418e213.jpg",
+        "/images/39e7332235503201.png",
+        "/images/ca0df39f683087f3.jpg",
+        "/images/caf0fa5a2b1b7026.jpg",
+        "/images/4927d6d8dad7fae0.jpg",
+        "/images/dc08dbb48ad10433.jpg"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "list",
+          "items": [
+            "WANT TO SAY HELLO?",
+            "WRITE ME AN EMAIL"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Taipei City, Taiwan | +886 911 621113"
+        }
+      ],
+      "images": []
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "Let's get social"
+        }
+      ],
+      "images": [
+        "/images/9cf388ba2ea50bcd.png",
+        "/images/70687357e2ef3d12.png",
+        "/images/6597c834071c4a1c.png",
+        "/images/14485076feace914.png"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "Copyright \u00a9 2022 Scott Wu all reserved"
+        }
+      ],
+      "images": []
+    }
+  ]
+}

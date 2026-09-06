@@ -1,0 +1,58 @@
+{
+  "page": "HTC Multi-widnows",
+  "sections": [
+    {
+      "kind": "content",
+      "nodes": [],
+      "images": [
+        "/images/24337a2e5c0ae1c4.jpg"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "HTC MULTI-WINDOW MODE"
+        },
+        {
+          "type": "para",
+          "text": "Multi-window mode feature allows smartphone or tablet to run two or more apps side-by-side simultaneously. This really takes multitasking to the next level as it allows users to juggle tasks efficiently without having to enter and exit applications to switch between apps."
+        },
+        {
+          "type": "para",
+          "text": "My responsibilities to this project was interaction design. I also worked as a design lead in a cross-functional team with visual and motion designers, user researchers, prototypers, project managers and developers."
+        }
+      ],
+      "images": []
+    },
+    {
+      "kind": "roleTeamDuration",
+      "role": [
+        "UX Designer",
+        "Design Lead"
+      ],
+      "team": [
+        "UI Designer",
+        "User Researcher",
+        "Prototyper",
+        "Product Manager",
+        "Android Developer"
+      ],
+      "duration": [
+        "Apr 2013 to Jun 2013",
+        "3 mo."
+      ],
+      "images": []
+    },
+    {
+      "kind": "content",
+      "nodes": [],
+      "images": [
+        "/images/8cbe231f7f9edf13.jpg",
+        "/images/e9f7b400e76a2789.jpg",
+        "/images/3ff13123f28d699b.jpg"
+      ]
+    }
+  ]
+}

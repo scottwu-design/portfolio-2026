@@ -1,0 +1,26 @@
+{
+  "page": "About",
+  "sections": [
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "I'M SCOTT WU,"
+        },
+        {
+          "type": "para",
+          "text": "Hi, I'm Scott Wu. I have a passion for both tennis and working out, and I enjoy the physical and mental challenges that come with these activities. When I'm not on the court or in the gym, I'm exploring new cities and discovering diverse artistic expressions as an urban explorer and outdoor lifestyle adventurer. I'm also a beginner in hand lettering and type design, which I love to practice and incorporate into my design work. Whether I'm playing sports or pursuing creative endeavors, I'm always pushing myself to grow and learn new things."
+        },
+        {
+          "type": "para",
+          "text": "Currently, I'm leading UX Design team at KaiOS, with a mission to empower people with the internet through technology."
+        }
+      ],
+      "images": [
+        "/images/d24a8874968cc013.jpg",
+        "/images/c60fa277d215e63f.png"
+      ]
+    }
+  ]
+}

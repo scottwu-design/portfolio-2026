@@ -1,0 +1,56 @@
+{
+  "page": "FxOS Smart Feature Phone",
+  "sections": [
+    {
+      "kind": "content",
+      "nodes": [],
+      "images": [
+        "/images/9b01b4d1d7f8aa64.jpg"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "FIREFOX OS FOR SMART FEATURE PHONE"
+        },
+        {
+          "type": "para",
+          "text": "The following animated video introduces a future smart feature phone powered by Firefox OS. An entry-level traditional phone powered by Firefox OS can function as a smartphone."
+        },
+        {
+          "type": "para",
+          "text": "My personal contribution to this project were: concept development, storyboard, motion design. I also supervised visual designers for the entire UI design."
+        }
+      ],
+      "images": []
+    },
+    {
+      "kind": "roleTeamDuration",
+      "role": [
+        "Strategy Designer",
+        "UI Design Lead",
+        "Motion Designer"
+      ],
+      "team": [
+        "UX Designer",
+        "UI Designer",
+        "Product Manager"
+      ],
+      "duration": [
+        "Jun 2015 to Jun 2015",
+        "1 mo."
+      ],
+      "images": []
+    },
+    {
+      "kind": "content",
+      "nodes": [],
+      "images": [
+        "/images/7d8b9067d2ed1854.jpg",
+        "/images/600034ca51fb3feb.jpg"
+      ]
+    }
+  ]
+}

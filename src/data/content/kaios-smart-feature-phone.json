@@ -1,0 +1,477 @@
+{
+  "page": "KaiOS Smart Feature Phone",
+  "sections": [
+    {
+      "kind": "content",
+      "nodes": [],
+      "images": [
+        "/images/11ff258dac663aae.png"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "KAIOS SMART FEATURE PHONE"
+        },
+        {
+          "type": "para",
+          "text": "KaiOS powers an emerging global ecosystem of affordable digital products and services. We overcome hardware limits to bring smartphone-like features to affordable non-touch devices. Our mission is to connect billions without the Internet in emerging markets and offer an alternative to smartphones."
+        },
+        {
+          "type": "para",
+          "text": "Today KaiOS has shipped 175+ million devices to over 150 countries. To us, this is a meaningful innovation around internet access as it is bridging the gap from zero to a complete mobile internet experience."
+        },
+        {
+          "type": "para",
+          "text": "My contributions to this project were: to define the art direction and visual design system of the product, lead 4 visual designers, and be responsible for all the app interface design for more than 40 essential apps and service apps like KaiStore, Payment, and utility apps to enrich KaiOS ecosystem. I am also in charge of motion design, prototypes, and design guidelines. And run UX workshops for the new features, UX improvement, or requirements/feedback from partners and end-users."
+        }
+      ],
+      "images": []
+    },
+    {
+      "kind": "roleTeamDuration",
+      "role": [
+        "Visual Design Lead",
+        "UI Designer",
+        "Prototyper"
+      ],
+      "team": [
+        "UX Designer",
+        "UI Designer",
+        "Researcher",
+        "Product Manager",
+        "Front-end Engineer",
+        "Data Engineer",
+        "QA Engineer"
+      ],
+      "duration": [
+        "Jun 2016 to Jul 2022",
+        "6 Yr. 1 Mo."
+      ],
+      "images": []
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "WHAT'S SMART FEATURE PHONE?"
+        },
+        {
+          "type": "para",
+          "text": "Smart feature phones are a hybrid of feature phones and smartphones. They look and feel like feature phones but have smartphone functionalities, including multimedia and internet capabilities."
+        },
+        {
+          "type": "para",
+          "text": "Because they are non-touch devices with little memory, smart feature phones cost less to produce than smartphones. Not having large touchscreens makes them more durable and resistant to impact, which means they last longer than smartphones."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Smart Feature Phones can be divided into four types:",
+            "Candy bar phones, Flip phones, Rugged phones, Keyboard phones"
+          ]
+        },
+        {
+          "type": "list",
+          "items": [
+            "WHAT'S OUR PROPOSITION?",
+            "A bridge from feature to smartphone"
+          ]
+        },
+        {
+          "type": "para",
+          "text": "Smart feature phones look and feel like feature phones. But unlike average feature phones, \"smart\" feature phones connect to the internet and offer access to apps. Simple, durable, and inexpensive, these hybrid devices cater to niche customers, including low-income individuals in emerging markets. Their affordability makes them essential to closing the digital divide."
+        },
+        {
+          "type": "heading",
+          "text": "WHO'S OUR USERS?"
+        },
+        {
+          "type": "para",
+          "text": "Smart feature phones aren't for everyone, but meet the needs of niche customers, including:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Low-income individuals priced out of the smartphone market",
+            "Older adults with a preference for simpler interfaces and physical keyboards",
+            "Manual laborers and people who practice outdoor activities",
+            "Organizations that need simple, affordable internet-enabled devices for work",
+            "Individuals looking for a companion phone"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "UX DESIGN MISSION"
+        },
+        {
+          "type": "para",
+          "text": "To bridge the User experience gap between a feature phone and smartphone through a simple and intuitive user interface design that empowers users to adapt to KaiOS easily."
+        }
+      ],
+      "images": [
+        "/images/801e24a18aa33109.png",
+        "/images/968861c0acda55d0.png",
+        "/images/b7cce6cfae2192a3.png",
+        "/images/02841fca6f1d6053.png"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "DESIGN PRINCIPLE"
+        },
+        {
+          "type": "heading",
+          "text": "Essential"
+        },
+        {
+          "type": "para",
+          "text": "Focus on basics, and promote the simplicity and essentialness of the UI elements"
+        },
+        {
+          "type": "heading",
+          "text": "Concise"
+        },
+        {
+          "type": "para",
+          "text": "Keep necessities, the size of each visual elements matters"
+        },
+        {
+          "type": "heading",
+          "text": "Assist"
+        },
+        {
+          "type": "para",
+          "text": "Optimized UX and content for assisting the first time phone users or users with low literacy skills"
+        },
+        {
+          "type": "heading",
+          "text": "Light"
+        },
+        {
+          "type": "para",
+          "text": "Design a lightweight OS to work well on low-end hardware"
+        }
+      ],
+      "images": [
+        "/images/4ead8a4c43e78107.png",
+        "/images/98be6ac0a5a78440.png",
+        "/images/2c0f4a2942c79105.png",
+        "/images/08b287167465bd06.png"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "VISUAL DESIGN DIRECTION"
+        },
+        {
+          "type": "heading",
+          "text": "COLOR"
+        },
+        {
+          "type": "para",
+          "text": "Dark mode has been widely discussed for years, and it's still trending. Its ability to conserve battery while also reducing eye strain is its biggest appeal. For this reason, we established the color palettes, individually and in combination, on both light and dark backgrounds and modes."
+        },
+        {
+          "type": "list",
+          "items": [
+            "SHAPE",
+            "Circles and round corners are widely deemed as friendly and usable UI components in both images and UI elements. They also perfectly reflect KaiOS's brand identity."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "TYPE"
+        },
+        {
+          "type": "para",
+          "text": "We kept the same font we use in all KaiOS products \u2014 Open Sans \u2014 but got rid of the light and italic typefaces and used size, space, and weight to improve legibility and readability on a small display."
+        },
+        {
+          "type": "heading",
+          "text": "ICONOGRAPHY"
+        },
+        {
+          "type": "para",
+          "text": "We found in the research that iconography can be a helper in conveying the meaning to users, especially emerging market users with low literacy skills. The action, status bar, and emoji icons are created in icon font, which helps improve the performance compared to SVG and BMP format."
+        }
+      ],
+      "images": [
+        "/images/34a384735577f202.gif",
+        "/images/e139aad8cbd4058c.png",
+        "/images/1030d8b23fa8be78.png"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "UI COMPONENT"
+        },
+        {
+          "type": "para",
+          "text": "KaiOS apps are created from UI Components that define common interface elements. In the latest version of UI Components, we introduced the dark & light theme with minimal design touches to allow app designers to achieve a consistent appearance across the system."
+        },
+        {
+          "type": "heading",
+          "text": "MEET KAIOS APPS"
+        },
+        {
+          "type": "para",
+          "text": "We designed more than 40 baseline essential apps and service apps like KaiStore, Payment, and utility apps to enrich KaiOS ecosystem."
+        },
+        {
+          "type": "heading",
+          "text": "THE EVOLUTION OF HOME SCREEN"
+        },
+        {
+          "type": "para",
+          "text": "We introduced the first version 1.0 of KaiOS in 2017 and continually updated the new features to users, such as the favorite apps that allow users quickly access without going into Apps Menu and cards that increase user engagement and enrich the internet onboarding experience."
+        }
+      ],
+      "images": [
+        "/images/683e8dcebb55b78d.gif",
+        "/images/f7e72bc8dca9360b.png",
+        "/images/03e6be7621dbb3ca.png"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "AWARDS"
+        }
+      ],
+      "images": [
+        "/images/4c4966039b66bf93.png",
+        "/images/dd95a43fcdd0d44f.png",
+        "/images/4519cceba80e384a.png",
+        "/images/40885477c21112a1.png",
+        "/images/823262fed011b046.png",
+        "/images/939e7502bc7edc88.png"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "INDIVIDUAL CONTRIBUTIONS TO THIS PROJECT"
+        }
+      ],
+      "images": []
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "para",
+          "text": "20+"
+        },
+        {
+          "type": "heading",
+          "text": "App Designs"
+        },
+        {
+          "type": "para",
+          "text": "8"
+        },
+        {
+          "type": "heading",
+          "text": "Patents"
+        },
+        {
+          "type": "para",
+          "text": "4"
+        },
+        {
+          "type": "heading",
+          "text": "Guidelines"
+        },
+        {
+          "type": "para",
+          "text": "2"
+        },
+        {
+          "type": "heading",
+          "text": "Publications"
+        }
+      ],
+      "images": []
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "THE INTERNET ENABLER"
+        },
+        {
+          "type": "para",
+          "text": "I created this product video to enter the Red Dot Design Award. We're thrilled to be the winner of the Red Dot Design Award 2021 in the Brand and Communications: Interface & User Experience category. Please visit The Red Dot online exhibition to learn more about the winning project."
+        }
+      ],
+      "images": [
+        "/images/683e8dcebb55b78d.gif"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "UX IMPROVEMENT"
+        },
+        {
+          "type": "heading",
+          "text": "FIRST TIME USE"
+        },
+        {
+          "type": "para",
+          "text": "We are introduced to the essential phone hardware keys in the first mobile experience and then progressively taught how to use the key to operate the phone interactively; compared to the older version, users need to explore and learn by themselves. This improvement is particularly essential for users who have never owned a mobile phone or are digitally illiterate."
+        },
+        {
+          "type": "heading",
+          "text": "HOME FEATURES GUIDE"
+        },
+        {
+          "type": "para",
+          "text": "We found in our Africa research that the multi-page tutorial was not an effective design for users as most of the users finished the guide without reading or remembering it. So we re-design the tutorial in an interactive way to progressively encourage users to learn and explore the features."
+        },
+        {
+          "type": "heading",
+          "text": "OPTION OF APPS MENU"
+        },
+        {
+          "type": "para",
+          "text": "Flexibility can be seen throughout the interface design, even in the Apps Menu, where four designs are provided. Users can decide what works best for them, from the simplest single view to the more advanced list view or grid view."
+        },
+        {
+          "type": "heading",
+          "text": "TYPING GUIDE"
+        },
+        {
+          "type": "para",
+          "text": "Using the Keypad to send a message is not easy, particularly for users who have never owned a mobile phone. So we create a series of tutorials to teach users how to type, input a symbol and emoji, or use the Speech-to-text feature instead of typing."
+        },
+        {
+          "type": "heading",
+          "text": "MAKE IN-APP PAYMENT"
+        },
+        {
+          "type": "para",
+          "text": "KaiOS teams up with multiple mobile payment partners to provide a wide range of payment methods to users, such as mobile wallets, card-based payments, and carrier billing. We also feature a redeem code service to increase user engagement of products."
+        },
+        {
+          "type": "heading",
+          "text": "CARDS"
+        },
+        {
+          "type": "para",
+          "text": "Cards allow instant access for first-time internet users to understand and explore the Internet. The \"What is Internet\" card is designed as a game to incentivize users to explore the Internet in an interactive and fun way. Cards also support KaiOS and 3rd party service promotion/campaigns."
+        },
+        {
+          "type": "para",
+          "text": "My contribution to this feature is to provide the game design concept, create an onboarding silence animation to convey the concepts to users, collaborate with the UX designer (Tina Chen), and assist the UI designer (Johnny Jao) in completing the project."
+        }
+      ],
+      "images": [
+        "/images/6037a43ff83762c1.gif",
+        "/images/c8ff524c444b4cd0.gif",
+        "/images/d2f5238b288efef1.png",
+        "/images/90d3347148fc3f3e.png",
+        "/images/0f8b28316d83b5e8.gif"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "VISUAL REFRESH"
+        }
+      ],
+      "images": [
+        "/images/92d37567f5b5f873.png",
+        "/images/e374b2852b164997.png",
+        "/images/6a1a0695c3239458.png"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "DESIGN GUIDES & APP SUBMISSION PORTAL"
+        },
+        {
+          "type": "heading",
+          "text": "DESIGN GUIDE"
+        },
+        {
+          "type": "para",
+          "text": "I created and maintained this guide to serve as a resource to designers and developers to help define the visual style for their KaiOS applications. For more info, please visit KaiOS developer portal website."
+        },
+        {
+          "type": "heading",
+          "text": "KAISTORE PARTNER GUIDE"
+        },
+        {
+          "type": "para",
+          "text": "I created and maintained this guide to serve as a resource to partners and developers to ensure their products, such as app icon, app name, description, and marketing banner, are ready to display on KaiStore. For more info, please visit KaiOS developer portal website."
+        },
+        {
+          "type": "heading",
+          "text": "APP SUBMISSION PORTAL"
+        },
+        {
+          "type": "para",
+          "text": "KaiOS App Submission Portal is the website for partners and 3rd party developers to submit their applications on KaiStore. My contribution to this project is to define the visual direction and assist the UI designer (Johnny Jao) in completing the project."
+        },
+        {
+          "type": "heading",
+          "text": "HOW-TO VIDEOS"
+        },
+        {
+          "type": "para",
+          "text": "I created a series of How-to videos and posted them on KaiOS YouTube channel. The how-to video series is designed to help new KaiOS users to get onboard with KaiOS-enabled devices quickly and better understand how to make the most out of them."
+        }
+      ],
+      "images": [
+        "/images/15599738bb8b886b.png",
+        "/images/c5da3b865ebfcf5d.png",
+        "/images/3adf690a11975fb9.png",
+        "/images/296c58eaf6e9abf0.png"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "TAKEAWAY"
+        },
+        {
+          "type": "para",
+          "text": "Designing an operating system for mobile phones is the most exciting and rewarding project for me so far. It is especially meaningful as my design enables internet service for our consumers through affordable mobile technology and has changed the worldview of 150+million people, making real impacts on people in the most remote corners of the world."
+        },
+        {
+          "type": "para",
+          "text": "As a designer, my daily challenge is continuously optimizing the user experience of Smart feature phones, which ultimately improves our products' usability and performance. Empowering people around the world through our technology is my biggest motivation."
+        }
+      ],
+      "images": []
+    }
+  ]
+}

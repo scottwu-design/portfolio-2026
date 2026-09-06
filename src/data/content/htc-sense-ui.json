@@ -1,0 +1,135 @@
+{
+  "page": "HTC Sense UI",
+  "sections": [
+    {
+      "kind": "content",
+      "nodes": [],
+      "images": [
+        "/images/0f15d4f34e573773.jpg"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "UI & MOTION DESIGN FOR HTC SENSE"
+        },
+        {
+          "type": "para",
+          "text": "HTC Sense is a software suite developed by HTC, primarily for its Android-based devices. Here are some of my UI and motion design works showcasing my contributions at HTC."
+        },
+        {
+          "type": "para",
+          "text": "I played a key role in several hero projects, including HTC Sensation, HTC Flyer, HTC One X, HTC One M7, and HTC One M8."
+        },
+        {
+          "type": "para",
+          "text": "Throughout these projects, I contributed to UI and motion design innovations, some of which were granted design patents. These include music visualization with live lyrics, panoramic photo capture, and transitional weather graphical on the home screen, enhancing user engagement and experience."
+        }
+      ],
+      "images": []
+    },
+    {
+      "kind": "roleTeamDuration",
+      "role": [
+        "UI Designer",
+        "Motion Designer"
+      ],
+      "team": [
+        "UX Designer",
+        "Product Manager",
+        "Android Developer"
+      ],
+      "duration": [
+        "Apr 2011 to Sep 2013",
+        "2 yr. and 6 mo."
+      ],
+      "images": []
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "HTC Music Channel"
+        },
+        {
+          "type": "para",
+          "text": "The HTC Music app enhances your listening experience with dynamic song lyrics and immersive music visualizations, creating a more engaging and interactive way to enjoy your favorite tracks."
+        },
+        {
+          "type": "heading",
+          "text": "Patent number: US 20140210812 A1"
+        },
+        {
+          "type": "heading",
+          "text": "HTC Weather Clock"
+        },
+        {
+          "type": "para",
+          "text": "Display screen with transitional weather graphical user interface."
+        },
+        {
+          "type": "heading",
+          "text": "Patent number: US D711921 S1"
+        },
+        {
+          "type": "heading",
+          "text": "Panorama mode"
+        },
+        {
+          "type": "para",
+          "text": "The Panorama mode designed for HTC Windows Phone project(Titan). It stitches three images together into a single image with remarkable precision and speed. Helpful guides are imposed on the screen to show users where to rotate to."
+        },
+        {
+          "type": "heading",
+          "text": "Patent number: US D689874 S1"
+        }
+      ],
+      "images": [
+        "/images/bd85b7a21a42750f.jpg",
+        "/images/b10b25b4935685fe.jpg",
+        "/images/e6385fc9a3e70fcf.jpg"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "para",
+          "text": "HTC Sense 6.0 - Easy Mode is designed specifically for senior users or those who prefer a simplified smartphone experience. It features a clean, easy-to-read interface with larger icons, bold text, and an intuitive layout, ensuring effortless navigation."
+        },
+        {
+          "type": "para",
+          "text": "HTC Sense 5.0 - fluid UI component motions, smooth tab page transition, and intuitive call motion designs"
+        },
+        {
+          "type": "para",
+          "text": "HTC Sense 6.0 - Seamless in-app transition and dynamic window activity motion designs"
+        },
+        {
+          "type": "heading",
+          "text": "HTC Sense 4.0 - Parter showcase promotional video"
+        },
+        {
+          "type": "para",
+          "text": "I created a promotional video for HTC Sense 4.0 to showcase its key features and user experience enhancements to our partners. Through engaging visuals and dynamic motion graphics, it effectively highlighted HTC's design and innovation."
+        },
+        {
+          "type": "para",
+          "text": "HTC Sense 4.0 - Home screen Music, FM Radio, and Calendar widget designs"
+        },
+        {
+          "type": "para",
+          "text": "HTC Sense 3.0 - Home screen Gallery, Email, and Message widget designs"
+        }
+      ],
+      "images": [
+        "/images/9c5728c5886f58b0.jpg",
+        "/images/c83fa97b19edb121.jpg",
+        "/images/41dff92ecda34f8f.jpg"
+      ]
+    }
+  ]
+}

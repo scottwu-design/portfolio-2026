@@ -1,0 +1,72 @@
+{
+  "page": "HTC Lifeme",
+  "sections": [
+    {
+      "kind": "content",
+      "nodes": [],
+      "images": [
+        "/images/59d78f217fdd7ad4.jpg"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "HTC LIFE.ME"
+        },
+        {
+          "type": "para",
+          "text": "Life.me is a personal timeline application that traces users' phone activity by capturing events happening around them. It's like a personal secretary that helps users bring up their memories in an effortless, smart and fun way."
+        },
+        {
+          "type": "para",
+          "text": "My responsibilities to this project was interaction design. I also worked as a design lead in a cross-functional team with visual and motion designers, user researchers, prototypers, project managers and developers."
+        }
+      ],
+      "images": []
+    },
+    {
+      "kind": "roleTeamDuration",
+      "role": [
+        "UX Designer",
+        "Design Lead"
+      ],
+      "team": [
+        "UI Designer",
+        "User Researcher",
+        "Prototyper",
+        "Product Manager",
+        "Android Developer"
+      ],
+      "duration": [
+        "Mar 2014 to Jun 2014",
+        "4 mo."
+      ],
+      "images": []
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "Timeline view in Day, Month, and Year"
+        },
+        {
+          "type": "heading",
+          "text": "Summary view"
+        },
+        {
+          "type": "heading",
+          "text": "A look back video themes"
+        }
+      ],
+      "images": [
+        "/images/5670b3b55ecf4bd3.jpg",
+        "/images/14d196b6b8ef9df1.jpg",
+        "/images/38ff16cb0722c9ec.jpg",
+        "/images/33a268fc4d62e12d.jpg"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,581 @@
+{
+  "page": "KaiOS Smart Touch Confidential",
+  "sections": [
+    {
+      "kind": "content",
+      "nodes": [],
+      "images": [
+        "/images/d56c2cb34a04914c.png"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "KAIOS SMART TOUCH"
+        },
+        {
+          "type": "para",
+          "text": "KaiOS smart touch is the product to fill the gap of 1GB RAM smartphones and enable the migration of 2G network phones to 3G/4G. The affordable low-end Smart Touch is designed with an affordable price, necessary features, and easy-to-use and learn designs."
+        },
+        {
+          "type": "para",
+          "text": "My contributions to this project were: to collaborate with UX designers to design the launcher navigation model, define the art direction and visual design system of the product, lead 4 visual designers and be responsible for prototypes, UI components, and all the app interface design for more than 40 essential apps and service apps like KaiStore, Payment, and utility apps to enrich KaiOS ecosystem. I am also in charge of motion design and design guidelines."
+        }
+      ],
+      "images": []
+    },
+    {
+      "kind": "roleTeamDuration",
+      "role": [
+        "Visual Design Lead",
+        "UI Designer",
+        "Prototyper"
+      ],
+      "team": [
+        "UX Designer",
+        "UI Designer",
+        "Product Manager",
+        "Front-end Engineer",
+        "Data Engineer",
+        "QA Engineer"
+      ],
+      "duration": [
+        "Mar 2019 to Jul 2020",
+        "1 Yr. 4 Mo."
+      ],
+      "images": []
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "WHAT'S SMART TOUCH?"
+        },
+        {
+          "type": "para",
+          "text": "KaiOS is in pole position to enable the migration of 2G phones to 3/4G. Smart Touch is the \"missing link\" between 2G and more expensive smartphones with 2GB memory. There is a 1.5-billion-unit accessible market over the next five years."
+        },
+        {
+          "type": "heading",
+          "text": "PRODUCT POSITIONING MAP"
+        },
+        {
+          "type": "para",
+          "text": "Besides 4G Smart feature phone, KaiOS provides the next level product, a mainstream touch experience for first-time phone users or 2G network users to migrate."
+        },
+        {
+          "type": "heading",
+          "text": "FOB PRICING"
+        },
+        {
+          "type": "para",
+          "text": "The price range is from $34 for a 3G network phone to $41 for a 4G network phone, the sweet spot of the price to bridge the digital gap with an affordable price for first-time internet users."
+        },
+        {
+          "type": "heading",
+          "text": "WHAT'S THE PRODUCT PROPOSITION?"
+        },
+        {
+          "type": "para",
+          "text": "Smart Touch completes the bridge from feature to the smartphone. It is a light phone with all essentials (i.e. larger display, affordable prices, intuitive UX design, user engagement, accessible to the internet)."
+        },
+        {
+          "type": "heading",
+          "text": "WHO ARE THE TARGET USERS?"
+        },
+        {
+          "type": "para",
+          "text": "The target user is one of the key factors when designing Smart Touch."
+        },
+        {
+          "type": "para",
+          "text": "Our target user includes first-time smartphone users and low-end smartphone users who usually are,"
+        },
+        {
+          "type": "list",
+          "items": [
+            "1. Unfamiliar with the internet & electronic products",
+            "2. Require effective onboarding due to lower education level",
+            "3. Not able to afford high-end products due to lower-income"
+          ]
+        }
+      ],
+      "images": [
+        "/images/ec5c19ba272b1f0f.png",
+        "/images/5331824ccb9a645a.png",
+        "/images/5ecc02c0a560dc4a.png",
+        "/images/e040f63eb9474442.png",
+        "/images/24cb665b1d7b3c79.png"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "EMERGING MARKET USERS BEHAVIOR INSIGHTS"
+        },
+        {
+          "type": "heading",
+          "text": "Content Type"
+        },
+        {
+          "type": "para",
+          "text": "The most important types of contents are: News, Music, Video, and Sports"
+        },
+        {
+          "type": "heading",
+          "text": "Hard Drive"
+        },
+        {
+          "type": "para",
+          "text": "Users use the devices as a \"hard drive\" to store and share files such as video and music"
+        },
+        {
+          "type": "heading",
+          "text": "Simplicity"
+        },
+        {
+          "type": "heading",
+          "text": "Complicate navigation confuses potential, first-time internet users"
+        },
+        {
+          "type": "heading",
+          "text": "Memory & Storage"
+        },
+        {
+          "type": "para",
+          "text": "A \"heavy\" app that eats memory and storage can be difficult for the user"
+        },
+        {
+          "type": "heading",
+          "text": "Typing Method"
+        },
+        {
+          "type": "para",
+          "text": "Due to the lower literacy rate, users can find keypad or software keyboard typing difficult and would appreciate voice typing more"
+        },
+        {
+          "type": "heading",
+          "text": "Wi-Fi Router"
+        },
+        {
+          "type": "para",
+          "text": "Users will set up one device at home as a Wi-fi router for other family members to connect to internet"
+        }
+      ],
+      "images": [
+        "/images/d499c1544e91ac12.png",
+        "/images/952d703504c87936.png",
+        "/images/c6b16d3c6e6fa557.png",
+        "/images/2e10f745a42d6e82.png",
+        "/images/873b15c2c1293541.png",
+        "/images/62fcffd938bef651.png"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "DESIGN PRINCIPLE"
+        },
+        {
+          "type": "heading",
+          "text": "Simple is our answer for first-time users"
+        },
+        {
+          "type": "heading",
+          "text": "Meaningful"
+        },
+        {
+          "type": "para",
+          "text": "Focus on self-explanatory interface design for first-time phone users or users with low literacy skills"
+        },
+        {
+          "type": "heading",
+          "text": "Minimal"
+        },
+        {
+          "type": "heading",
+          "text": "Focus on essentials by reinforcing the visual hierarchy"
+        },
+        {
+          "type": "heading",
+          "text": "Intuitive"
+        },
+        {
+          "type": "para",
+          "text": "Simplified experience, make clickable buttons and entrances visible and accessible"
+        },
+        {
+          "type": "heading",
+          "text": "Consistent"
+        },
+        {
+          "type": "para",
+          "text": "Consistent experience across multiple devices with different screen sizes"
+        }
+      ],
+      "images": [
+        "/images/e3a6f3420d0ead76.png",
+        "/images/e84c442f657a0bf7.png",
+        "/images/5f5b0d0f9fdda881.png",
+        "/images/fc6e52376f155e82.png"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "UX DESIGN"
+        },
+        {
+          "type": "heading",
+          "text": "HOME SCREEN"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Favorite apps are customizable and placed in a \"natural area\" for both right- and left-handed users.",
+            "Infogation bar (combination of device information and navigation bar) at the lower edge of the screen.",
+            "Internet Search benefits users to explore the internet world directly.",
+            "Cards is a unique design that benefits users, carriers, and KaiOS for user engagement opportunities."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "INFOGATION BAR"
+        },
+        {
+          "type": "para",
+          "text": "Infogation Bar was invented when it came to a design thinking process on how to design a navigation model on a touch-screen-based device; how easily our target users can interact and navigate the screens through the UI components. We found several designs on Android and iOS that can be improved, especially for our target users, first-time smartphone users."
+        },
+        {
+          "type": "list",
+          "items": [
+            "The status bar and navigation bar are occupied too much screen space.",
+            "Notifications and Quick Settings/Control Center are hidden; it requires users to use the \"swipe down gestures\" to get access without any clues.",
+            "Return to the Home screen requires users to use the \"swipe up gesture\" by swiping up the home bar from the bottom.",
+            "The back button on the upper left in the navigation bar is not easy to reach and press."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "THE ADVANTAGE OF INFOGATION BAR"
+        },
+        {
+          "type": "para",
+          "text": "The Infogation bar combines information (Status Button) and navigation (Home and Back Buttons). In various scenarios, each element on Infogation Bar would have a different state and behavior."
+        },
+        {
+          "type": "para",
+          "text": "I was one of the inventors of Infogation Bar (the design patent is filed and being processed)."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Users can use their thumbs to access different screens and monitor phone status.",
+            "The Center button not only enters the apps menu, returns to the Home screen, but also tells users the current time and battery status.",
+            "Notifications and Quick Settings are easy to access by pressing the Status button at the lower right button.",
+            "Combining the navigation bar and phone information maximizes the content view for users and increases 5-8% more viewing area."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "CARDS"
+        },
+        {
+          "type": "para",
+          "text": "Cards allow instant access for first-time internet users to understand and explore the Internet. The \"What is Internet\" card is designed as a game to incentivize users to explore the Internet in an interactive and fun way. Cards also support KaiOS and 3rd party service promotion/campaigns."
+        },
+        {
+          "type": "para",
+          "text": "My contribution to this feature is to provide the game design concept, collaborate with the UX designer (Tina Chen), and assist the UI designer (Johnny Jao) in completing the project."
+        },
+        {
+          "type": "heading",
+          "text": "THE NAVIGATION OF SCREENS FLOW"
+        },
+        {
+          "type": "para",
+          "text": "Major screens/actions are One Tap Away from the Home screen. No hidden gestures nor complicated navigation behavior exists."
+        }
+      ],
+      "images": [
+        "/images/fae0f72a4dd7cc45.png",
+        "/images/b9880f9eaae81372.png",
+        "/images/b6162b8bc7134402.png",
+        "/images/baaecf9a66d5d2a7.png",
+        "/images/2eca6dea05b3de7b.png"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "ANIMATION OF LAUNCHER NAVIGATION"
+        },
+        {
+          "type": "para",
+          "text": "This animation showcases how to interact with the main screens and apps, from unlocking the device, entering the Apps menu and Quick Settings, returning to the Home screen, launching an app and cards, etc."
+        }
+      ],
+      "images": [
+        "/images/683e8dcebb55b78d.gif"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "VISUAL DESIGN DIRECTION"
+        },
+        {
+          "type": "heading",
+          "text": "RETRO-FUTURE DESIGN"
+        },
+        {
+          "type": "para",
+          "text": "The inspiration came from a street culture that combines Retro style and infuses Modern sensibilities for Smart Touch. The nostalgic style provides a sense of security for users as they might be using a touch screen device for the first time. The futuristic style embraces the power of the internet/technology in the digital world."
+        },
+        {
+          "type": "heading",
+          "text": "VISUAL CHARACTERISTICS"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Airy - Air is responsible, and it exists in our environment. It feels light as we're trying to build for this OS. We use Airly as a metaphor to promote visual hierarchy and reinforce the design to organize content.",
+            "Bulgy - Circle reflects the endless, no boundary. It reinforces KaiOS brand identity with delighted and user-friendly touches, and the outline stroke provides a nostalgic and futuristic feel.",
+            "Spacious - Blank area provides enough space on the UI so that it doesn't feel cluttered. Contrast enhances visual hierarchy that sets users' focus on core elements and reduces distraction."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "COLOR"
+        },
+        {
+          "type": "para",
+          "text": "We use the same system color palette across all the KaiOS digital products. The solid color works well on the low-end display; in contrast, the gradient color isn't."
+        }
+      ],
+      "images": [
+        "/images/67393da6ffa32904.png",
+        "/images/8caaeaa0436f3354.png",
+        "/images/f6f9b7b62fa01ec0.gif"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "UI COMPONENT"
+        },
+        {
+          "type": "para",
+          "text": "Small pieces of design and functionality create a graphic user interface and provide a consistent experience across different apps. The minimal design of UI component is responsive to KaiOS supportive display resolutions for both portrait and landscape modes."
+        },
+        {
+          "type": "heading",
+          "text": "MEET KAIOS APPS"
+        },
+        {
+          "type": "para",
+          "text": "We designed more than 40 baseline essential apps and service apps like KaiStore, Payment, and utility apps to enrich KaiOS ecosystem."
+        }
+      ],
+      "images": [
+        "/images/26e31207f76c4230.gif",
+        "/images/a1eea2f6221b8ef9.gif"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "para",
+          "text": "18"
+        },
+        {
+          "type": "heading",
+          "text": "App Designs"
+        },
+        {
+          "type": "para",
+          "text": "6"
+        },
+        {
+          "type": "heading",
+          "text": "Patents"
+        },
+        {
+          "type": "para",
+          "text": "2"
+        },
+        {
+          "type": "heading",
+          "text": "Guidelines"
+        }
+      ],
+      "images": []
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "APP DESIGNS"
+        },
+        {
+          "type": "heading",
+          "text": "ONBOARDING TUTORIAL"
+        },
+        {
+          "type": "para",
+          "text": "The interactive tutorial guides users to operate the phone without a mental burden. This onboarding tutorial teaches users how to access the key features through Infogation bar progressively."
+        },
+        {
+          "type": "heading",
+          "text": "KAISTORE"
+        },
+        {
+          "type": "para",
+          "text": "KaiStore, the ecosystem offers a variety of apps, tools, games, and social media apps to users and enables them to embrace the power of the Internet."
+        },
+        {
+          "type": "heading",
+          "text": "INTERNET BROWSER"
+        },
+        {
+          "type": "para",
+          "text": "The internet search bar on the Home screen was designed to benefit users to explore the internet world. There are two access, the input field lets users search content on the Internet directly, and the tab button allows them to revisit a recent webpage with ease."
+        },
+        {
+          "type": "heading",
+          "text": "FIRST TIME USE"
+        },
+        {
+          "type": "para",
+          "text": "FTU, the onboarding experience is tailored and crafted to suit first-time internet users and traditional voice users. We kept the navigation in a linear flow with consistent behavior for less mental burden."
+        }
+      ],
+      "images": [
+        "/images/ab4d0ddd60a6a836.png",
+        "/images/64ab51ce03c440d6.png",
+        "/images/c5fdadf33da3c8b4.png",
+        "/images/9535f899e933d964.png"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "MEET OTHER APPS AT A GLANCE"
+        }
+      ],
+      "images": [
+        "/images/1cdbd980f2023c37.gif",
+        "/images/cad52a41223513a3.gif"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "WALLPAPER DESIGN"
+        },
+        {
+          "type": "para",
+          "text": "The wallpaper theme was designed to follow the visual direction of the Retro-future design, and I took the '80s fashion as the art direction to create the wallpapers."
+        },
+        {
+          "type": "heading",
+          "text": "IDEATION"
+        },
+        {
+          "type": "para",
+          "text": "Design elements, such as the high-voltage colors and textures, were adopted from the clothes in the '80s. The scenes were inspired by the graffiti on the street and laboratory in Sci-fi movies. I tried to draw the artworks in Sketch software to simulate 3D and 2D perspectives for the experiment."
+        },
+        {
+          "type": "heading",
+          "text": "'80S TEXTURE"
+        },
+        {
+          "type": "heading",
+          "text": "3D SPACE OF LABORATORY"
+        },
+        {
+          "type": "heading",
+          "text": "2D FIGURE OF SCI-FI SCENE"
+        }
+      ],
+      "images": [
+        "/images/3f59a41d0b08fa3e.png",
+        "/images/6f62a97d996d47be.png",
+        "/images/88624f8d1305293f.png",
+        "/images/531f5f2297dd6c08.png"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "DESIGN GUIDES"
+        },
+        {
+          "type": "heading",
+          "text": "DESIGN GUIDE"
+        },
+        {
+          "type": "para",
+          "text": "I created and maintained this guide to serve as a resource to designers and developers to help define the visual style for their KaiOS applications."
+        },
+        {
+          "type": "heading",
+          "text": "KAISTORE PARTNER GUIDE"
+        },
+        {
+          "type": "para",
+          "text": "I created and maintained this guide to serve as a resource to partners and developers to ensure their products, such as app icon, app name, description, and marketing banner, are ready to display on KaiStore."
+        }
+      ],
+      "images": [
+        "/images/7dc3d3a507b71bf3.png",
+        "/images/45d135fab4f5efea.png"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "TAKEAWAY"
+        },
+        {
+          "type": "para",
+          "text": "Designing a new operating system for the smartphone from the ground up is a remarkable experience. The entire UX design, including all the essential apps of the core OS and ecosystem, took us 6 months from scratch to hatch. The design team comprises 6 interaction designers and 5 visual designers, and I'm the team lead of the visual design team, and also a contributor to the visual design."
+        },
+        {
+          "type": "para",
+          "text": "Most app design projects I designed previously were for either Android or iOS, the two major mobile operating systems in the industry."
+        },
+        {
+          "type": "para",
+          "text": "This project, however, allows us to design and define from scratch the navigation model, UX patterns, visual design system, ecosystem of KaiStore, and much more. Implementing the design on a 512MB low-end smartphone device requires a lot of back-and-forth adjustment and feature take-downs to pass the stability test. The screen color didn't always match the design, the transition didn't play smoothly as we expected, the app froze and crashed due to multiple apps running at the same time, etc. Though we've encountered countless issues during the implementation process, we've successfully overcome the obstacles and created this mobile operating system that we're truly proud of, and deeply believe in that could help level the playing fields for the underserved people and make a positive impact to the world."
+        }
+      ],
+      "images": []
+    }
+  ]
+}

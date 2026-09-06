@@ -1,0 +1,106 @@
+{
+  "page": "FxOS Smart TV",
+  "sections": [
+    {
+      "kind": "content",
+      "nodes": [],
+      "images": [
+        "/images/e406c6cfb100ac2c.jpg"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "FIREFOX OS FOR SMART TV"
+        },
+        {
+          "type": "para",
+          "text": "Panasonic TVs powered by Firefox OS are already available globally, enabling consumers to find their favorite channels, apps, videos, websites and content quickly and pin content and apps to their TV's home screen."
+        },
+        {
+          "type": "para",
+          "text": "My contributions to this project were UX design, motion design, and visual design. I also supervised 5 visual designers on plan execution from scratch to completion. I worked collaboratively with Panasonic's PMs and developers to ensure the successful launch of products worldwide."
+        },
+        {
+          "type": "para",
+          "text": "Click here for an article written by me on how we designed Firefox OS TV."
+        }
+      ],
+      "images": []
+    },
+    {
+      "kind": "roleTeamDuration",
+      "role": [
+        "UX Designer",
+        "UI Design Lead",
+        "Motion Designer"
+      ],
+      "team": [
+        "UI Designer",
+        "Product Manager",
+        "Developer"
+      ],
+      "duration": [
+        "Sep 2014 to May 2015",
+        "9 mo."
+      ],
+      "images": []
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "para",
+          "text": "Animation of home in pin an channel/app to home"
+        },
+        {
+          "type": "heading",
+          "text": "Home"
+        },
+        {
+          "type": "heading",
+          "text": "A customized version of home in folder feature"
+        },
+        {
+          "type": "heading",
+          "text": "Dashboard"
+        },
+        {
+          "type": "para",
+          "text": "Animation of Dashboard in entering floating mode and transition of widget panels"
+        },
+        {
+          "type": "heading",
+          "text": "Devices Deck"
+        },
+        {
+          "type": "heading",
+          "text": "Applications Deck"
+        },
+        {
+          "type": "heading",
+          "text": "UX Wireframe"
+        },
+        {
+          "type": "heading",
+          "text": "Animation of UI components"
+        },
+        {
+          "type": "heading",
+          "text": "Animation of Popup UI components"
+        }
+      ],
+      "images": [
+        "/images/d0a7942b5138ece0.png",
+        "/images/5be2668b56647255.jpg",
+        "/images/f49ad02989096bd8.jpg",
+        "/images/c88b0e2cf1a63921.png",
+        "/images/e476b84f3bdb52a3.png",
+        "/images/e7efb4aa82f578c4.jpg",
+        "/images/3f9014533302b08d.jpg"
+      ]
+    }
+  ]
+}
