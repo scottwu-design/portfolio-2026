@@ -11,6 +11,16 @@
   --color-accent-light: oklch(72% 0.16 255);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 @keyframes rise {
   from {
     opacity: 0;
