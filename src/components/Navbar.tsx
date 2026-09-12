@@ -2,8 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-
-const NAVBAR_PADDING = "px-14 py-[30px]";
+import { CONTAINER } from "@/lib/layout";
 
 const NAV_LINKS = [
   { href: "/work", label: "Work" },
@@ -17,7 +16,7 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-navy">
-      <div className={`${NAVBAR_PADDING} flex items-center justify-between`}>
+      <div className={`${CONTAINER} flex items-center justify-between py-[30px]`}>
         <Link
           href="/"
           className="font-display text-base font-bold tracking-tight text-ink"
@@ -51,7 +50,7 @@ export function Navbar() {
       </div>
 
       {open && (
-        <nav className="flex flex-col gap-1 border-t border-white/10 px-14 py-4 text-[15px] text-ink/75 md:hidden">
+        <nav className={`${CONTAINER} flex flex-col gap-1 border-t border-white/10 py-4 text-[15px] text-ink/75 md:hidden`}>
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}
