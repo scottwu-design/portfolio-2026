@@ -23,9 +23,8 @@ export function WorksMosaic({ projects }: { projects: ProjectSummary[] }) {
             <h3 className="font-display text-xl font-bold text-white sm:text-2xl">
               {project.title}
             </h3>
-            <p className="mt-2 text-sm text-white/70">
-              {project.meta} · {project.year}
-            </p>
+            <p className="mt-2 text-sm text-white/70">{project.meta}</p>
+            <p className="mt-1 text-sm text-white/70">{project.year}</p>
           </div>
         </Link>
       ))}
