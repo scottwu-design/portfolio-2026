@@ -16,7 +16,7 @@ export function Hero() {
         </h1>
         <div className="mt-10 flex animate-[rise_0.8s_0.3s_ease_forwards] items-center gap-4 opacity-0">
           <Link
-            href="/work"
+            href="/#selected-works"
             className="rounded-full bg-accent px-8 py-3 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
           >
             View My Work

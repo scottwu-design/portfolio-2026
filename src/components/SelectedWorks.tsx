@@ -5,7 +5,7 @@ import { WorksMosaic } from "@/components/WorksMosaic";
 
 export function SelectedWorks({ projects }: { projects: ProjectSummary[] }) {
   return (
-    <section className="py-20 sm:py-24">
+    <section id="selected-works" className="scroll-mt-24 py-20 sm:py-24">
       <div className={`${CONTAINER} text-center`}>
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-light">
           Selected Works
