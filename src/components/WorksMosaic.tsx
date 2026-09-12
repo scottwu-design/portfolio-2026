@@ -1,10 +1,11 @@
 import Link from "next/link";
 import type { ProjectSummary } from "@/data/types";
 import { asset } from "@/lib/asset";
+import { CONTAINER } from "@/lib/layout";
 
 export function WorksMosaic({ projects }: { projects: ProjectSummary[] }) {
   return (
-    <div className="grid grid-cols-1 gap-6 bg-navy sm:grid-cols-2 sm:gap-8">
+    <div className={`grid grid-cols-1 gap-6 bg-navy sm:grid-cols-2 sm:gap-8 ${CONTAINER}`}>
       {projects.map((project) => (
         <Link
           key={project.slug}

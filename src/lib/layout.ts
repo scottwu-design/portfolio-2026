@@ -1,3 +1,4 @@
-/** Shared horizontal container used by every section so content edges
- * line up consistently across the page (nav, footer, hero, etc). */
-export const CONTAINER = "mx-auto max-w-6xl px-6";
+/** Shared horizontal padding used by every section so content edges
+ * line up consistently across the page (nav, footer, hero, etc). Full
+ * width by design — matches WorksMosaic, no max-width cap. */
+export const CONTAINER = "px-6 sm:px-8";

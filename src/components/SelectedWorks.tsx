@@ -15,7 +15,6 @@ export function SelectedWorks({ projects }: { projects: ProjectSummary[] }) {
         </h2>
       </div>
 
-      {/* Deliberately full-bleed — the one section that breaks the shared container. */}
       <div className="mt-12">
         <WorksMosaic projects={projects} />
       </div>
