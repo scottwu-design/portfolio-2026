@@ -1,4 +1,5 @@
 import { asset } from "@/lib/asset";
+import { CONTAINER } from "@/lib/layout";
 
 const SOCIAL_LINKS = [
   {
@@ -26,7 +27,7 @@ const SOCIAL_LINKS = [
 export function Footer() {
   return (
     <footer id="contact" className="bg-accent text-white">
-      <div className="mx-auto max-w-6xl px-6 py-16 sm:py-20">
+      <div className={`${CONTAINER} py-16 sm:py-20`}>
         <h2 className="font-display text-[15vw] font-bold leading-[0.85] tracking-tight sm:text-[9rem]">
           Scott Wu
         </h2>

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { CONTAINER } from "@/lib/layout";
 
 const NAV_LINKS = [
   { href: "/work", label: "Work" },
@@ -10,12 +11,12 @@ const NAV_LINKS = [
   { href: "/#contact", label: "Contact" },
 ];
 
-export function Header() {
+export function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-navy">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
+      <div className={`${CONTAINER} flex items-center justify-between py-5`}>
         <Link
           href="/"
           className="font-display text-base font-bold tracking-tight text-ink"
@@ -49,7 +50,7 @@ export function Header() {
       </div>
 
       {open && (
-        <nav className="flex flex-col gap-1 border-t border-white/10 px-6 py-4 text-[15px] text-ink/75 md:hidden">
+        <nav className={`${CONTAINER} flex flex-col gap-1 border-t border-white/10 py-4 text-[15px] text-ink/75 md:hidden`}>
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}

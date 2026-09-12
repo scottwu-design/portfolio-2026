@@ -4,7 +4,7 @@ import { asset } from "@/lib/asset";
 
 export function WorksMosaic({ projects }: { projects: ProjectSummary[] }) {
   return (
-    <div className="grid grid-cols-1 gap-6 bg-navy px-6 sm:grid-cols-2 sm:gap-8 sm:px-8">
+    <div className="grid grid-cols-1 gap-6 bg-navy sm:grid-cols-2 sm:gap-8">
       {projects.map((project) => (
         <Link
           key={project.slug}

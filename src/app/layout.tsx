@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Syne, Wix_Madefor_Text } from "next/font/google";
-import { Header } from "@/components/Header";
+import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import "./globals.css";
 
@@ -32,7 +32,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${syne.variable} ${wixMadefor.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col bg-white text-neutral-900">
-        <Header />
+        <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
       </body>
