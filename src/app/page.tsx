@@ -1,7 +1,6 @@
 import Link from "next/link";
-import { ProjectGrid } from "@/components/ProjectGrid";
+import { WorksMosaic } from "@/components/WorksMosaic";
 import { projects } from "@/lib/content";
-import { asset } from "@/lib/asset";
 
 const I_AM = [
   {
@@ -22,71 +21,82 @@ export default function Home() {
   const featured = projects.slice(0, 6);
 
   return (
-    <>
-      <section
-        className="relative flex min-h-[85vh] items-center justify-center overflow-hidden bg-black bg-cover bg-center px-6 py-24 text-center text-white"
-        style={{ backgroundImage: `url(${asset("/images/804a177782632f59.png")})` }}
-      >
-        <div className="absolute inset-0 bg-black/40" />
-        <div className="relative mx-auto max-w-3xl">
-          <h1 className="text-3xl font-bold leading-tight sm:text-5xl">
-            Hello, I&apos;m Scott Wu, a creative professional focused on
-            digital product design.
+    <div className="bg-navy text-ink">
+      {/* Hero — nav sits directly on navy, thin rule below like the reference nav */}
+      <section className="border-b border-white/10 px-6 pb-20 pt-20 sm:pb-28 sm:pt-28">
+        <div className="mx-auto max-w-5xl">
+          <p className="animate-[rise_0.7s_ease_forwards] text-xs font-semibold uppercase tracking-[0.2em] text-accent-light opacity-0">
+            Digital Product Designer
+          </p>
+          <h1 className="mt-6 animate-[rise_0.8s_0.1s_ease_forwards] font-display text-4xl font-bold leading-[1.05] tracking-tight opacity-0 sm:text-6xl sm:leading-[1.02]">
+            Hello, I&apos;m Scott Wu, a creative professional focused on{" "}
+            <span className="bg-gradient-to-r from-accent-light to-accent bg-clip-text text-transparent">
+              digital product design.
+            </span>
           </h1>
-          <div className="mt-10 flex items-center justify-center gap-4">
+          <div className="mt-10 flex animate-[rise_0.8s_0.3s_ease_forwards] items-center gap-4 opacity-0">
             <Link
               href="/work"
-              className="rounded-full border border-white px-8 py-3 text-sm font-medium uppercase tracking-wide transition-colors hover:bg-white hover:text-black"
+              className="rounded-full bg-accent px-8 py-3 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
             >
-              Works
+              View My Work
             </Link>
             <Link
               href="/#contact"
-              className="rounded-full border border-white px-8 py-3 text-sm font-medium uppercase tracking-wide transition-colors hover:bg-white hover:text-black"
+              className="rounded-full border border-white/25 px-8 py-3 text-sm font-semibold text-ink transition-colors hover:border-accent-light"
             >
-              Contact
+              Get in Touch
             </Link>
           </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-5xl px-6 py-24">
-        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-neutral-400">
-          I am...
-        </p>
-        <div className="mt-8 grid grid-cols-1 gap-12 sm:grid-cols-3">
-          {I_AM.map((item) => (
-            <div key={item.title}>
-              <h2 className="text-lg font-semibold text-neutral-900">
-                {item.title}
-              </h2>
-              <p className="mt-3 leading-relaxed text-neutral-600">
-                {item.body}
-              </p>
-            </div>
-          ))}
+      {/* I Am — bordered capability cards, real content */}
+      <section className="border-b border-white/10 px-6 py-20 sm:py-24">
+        <div className="mx-auto max-w-5xl">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-light">
+            I am...
+          </p>
+          <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-3">
+            {I_AM.map((item) => (
+              <div
+                key={item.title}
+                className="rounded-sm border border-white/15 p-7 transition-colors hover:border-accent-light"
+              >
+                <h2 className="font-display text-lg font-bold leading-snug">
+                  {item.title}
+                </h2>
+                <p className="mt-4 text-sm leading-relaxed text-ink/60">
+                  {item.body}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-5xl px-6 pb-24">
-        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-neutral-400">
-          Selected works
-        </p>
-        <h2 className="mt-2 max-w-2xl text-2xl font-semibold text-neutral-900 sm:text-3xl">
-          The best way to understand what I do is to see what I have done.
-        </h2>
-        <div className="mt-10">
-          <ProjectGrid projects={featured} />
+      {/* Selected Works — edge-to-edge mosaic */}
+      <section className="px-6 py-20 sm:py-24">
+        <div className="mx-auto max-w-5xl text-center">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-light">
+            Selected Works
+          </p>
+          <h2 className="mx-auto mt-2 max-w-2xl font-display text-2xl font-bold sm:text-4xl">
+            The best way to understand what I do is to see what I have done.
+          </h2>
+        </div>
+        <div className="mx-auto mt-12 max-w-5xl">
+          <WorksMosaic projects={featured} />
         </div>
         <div className="mt-12 text-center">
           <Link
             href="/work"
-            className="inline-block rounded-full border border-neutral-300 px-8 py-3 text-sm font-medium uppercase tracking-wide transition-colors hover:border-neutral-900 hover:bg-neutral-900 hover:text-white"
+            className="inline-block rounded-full border border-white/25 px-8 py-3 text-sm font-semibold text-ink transition-colors hover:border-accent-light"
           >
-            View all work
+            View All Work
           </Link>
         </div>
       </section>
-    </>
+    </div>
   );
 }

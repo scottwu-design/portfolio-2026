@@ -1,6 +1,23 @@
 @import "tailwindcss";
 
 @theme inline {
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-wix-madefor);
+  --font-display: var(--font-syne);
+
+  --color-navy: oklch(18% 0.035 260);
+  --color-navy-soft: oklch(23% 0.035 260);
+  --color-ink: oklch(94% 0.012 260);
+  --color-accent: oklch(58% 0.2 265);
+  --color-accent-light: oklch(72% 0.16 255);
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
