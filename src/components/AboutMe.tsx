@@ -15,22 +15,22 @@ const I_AM = [
   },
 ];
 
-export function IntroHighlights() {
+export function AboutMe() {
   return (
-    <section className="border-b border-white/10 py-20 sm:py-24">
+    <section className="py-20 sm:py-24">
       <div className={CONTAINER}>
-        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-light">
+        <h2 className="font-display text-2xl font-bold sm:text-4xl">
           I am...
-        </p>
+        </h2>
         <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-3">
           {I_AM.map((item) => (
             <div
               key={item.title}
               className="rounded-sm border border-white/15 p-7 transition-colors hover:border-accent-light"
             >
-              <h2 className="font-display text-lg font-bold leading-snug">
+              <h3 className="font-display text-lg font-bold leading-snug">
                 {item.title}
-              </h2>
+              </h3>
               <p className="mt-4 text-sm leading-relaxed text-ink/60">
                 {item.body}
               </p>

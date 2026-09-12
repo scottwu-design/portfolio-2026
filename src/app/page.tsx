@@ -1,5 +1,5 @@
 import { Hero } from "@/components/Hero";
-import { IntroHighlights } from "@/components/IntroHighlights";
+import { AboutMe } from "@/components/AboutMe";
 import { SelectedWorks } from "@/components/SelectedWorks";
 import { projects } from "@/lib/content";
 
@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div className="bg-navy text-ink">
       <Hero />
-      <IntroHighlights />
+      <AboutMe />
       <SelectedWorks projects={featured} />
     </div>
   );
