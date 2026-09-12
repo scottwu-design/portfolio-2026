@@ -75,9 +75,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Selected Works — edge-to-edge mosaic */}
-      <section className="px-6 py-20 sm:py-24">
-        <div className="mx-auto max-w-5xl text-center">
+      {/* Selected Works — full-bleed edge-to-edge mosaic */}
+      <section className="py-20 sm:py-24">
+        <div className="mx-auto max-w-5xl px-6 text-center">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-light">
             Selected Works
           </p>
@@ -85,7 +85,7 @@ export default function Home() {
             The best way to understand what I do is to see what I have done.
           </h2>
         </div>
-        <div className="mx-auto mt-12 max-w-5xl">
+        <div className="mt-12">
           <WorksMosaic projects={featured} />
         </div>
         <div className="mt-12 text-center">

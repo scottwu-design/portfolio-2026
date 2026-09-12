@@ -14,7 +14,7 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-navy/90 backdrop-blur supports-[backdrop-filter]:bg-navy/75">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-navy">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
         <Link
           href="/"
