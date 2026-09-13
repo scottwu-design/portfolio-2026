@@ -30,7 +30,6 @@ export default function AboutPage() {
   return (
     <div className="bg-navy text-ink">
       <Hero
-        eyebrow="About"
         title="I'm Scott Wu,"
         background={{
           type: "image",

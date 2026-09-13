@@ -9,7 +9,6 @@ export default function Home() {
   return (
     <div className="bg-navy text-ink">
       <Hero
-        eyebrow="Digital Product Designer"
         title={
           <>
             Hello, I&apos;m Scott Wu, a creative professional focused on{" "}
