@@ -6,6 +6,7 @@ import {
   STUDY,
   TOOLS,
 } from "@/data/resume";
+import { asset } from "@/lib/asset";
 import { CONTAINER } from "@/lib/layout";
 
 export const metadata: Metadata = {
@@ -32,21 +33,32 @@ function TagList({ items }: { items: string[] }) {
 export default function ResumePage() {
   return (
     <div className="bg-navy text-ink">
-      <section className={`${CONTAINER} border-b border-white/10 py-20 sm:py-28`}>
-        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-light">
-          Summary
-        </p>
-        <p className="mt-6 max-w-3xl font-display text-xl font-bold leading-snug sm:text-3xl">
-          I&apos;m a creative professional with 10+ years of experience in
-          visual, UX, and motion design in New York and Taipei, specializing
-          in the fields of mobile phone, TV, wearable, web, and IoT.
-        </p>
-        <p className="mt-6 max-w-2xl leading-relaxed text-ink/70">
-          My work ranges from interaction design, user interface visual
-          design, motion graphic design, and print design to brand identity.
-          I strive to create successful and engaging work with newfound
-          everyday influences.
-        </p>
+      <section className="relative overflow-hidden border-b border-white/10 py-20 sm:py-28">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={asset("/images/8c9b725b8fb063b4.jpg")}
+          alt=""
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-navy/70" />
+
+        <div className={`relative ${CONTAINER}`}>
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-light">
+            Summary
+          </p>
+          <p className="mt-6 max-w-3xl font-display text-xl font-bold leading-snug sm:text-3xl">
+            I&apos;m a creative professional with 10+ years of experience in
+            visual, UX, and motion design in New York and Taipei,
+            specializing in the fields of mobile phone, TV, wearable, web,
+            and IoT.
+          </p>
+          <p className="mt-6 max-w-2xl leading-relaxed text-ink/70">
+            My work ranges from interaction design, user interface visual
+            design, motion graphic design, and print design to brand
+            identity. I strive to create successful and engaging work with
+            newfound everyday influences.
+          </p>
+        </div>
       </section>
 
       <section className={`${CONTAINER} py-20 sm:py-24`}>
