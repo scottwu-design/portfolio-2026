@@ -1,6 +1,6 @@
 import { Hero } from "@/components/Hero";
 import { Services } from "@/components/Services";
-import { SelectedWorks } from "@/components/SelectedWorks";
+import { Projects } from "@/components/Projects";
 import { projects } from "@/lib/content";
 
 export default function Home() {
@@ -10,7 +10,7 @@ export default function Home() {
     <div className="bg-navy text-ink">
       <Hero />
       <Services />
-      <SelectedWorks projects={featured} />
+      <Projects projects={featured} />
     </div>
   );
 }

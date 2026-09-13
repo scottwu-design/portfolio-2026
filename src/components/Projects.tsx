@@ -3,7 +3,7 @@ import type { ProjectSummary } from "@/data/types";
 import { CONTAINER } from "@/lib/layout";
 import { ProjectGrid } from "@/components/ProjectGrid";
 
-export function SelectedWorks({ projects }: { projects: ProjectSummary[] }) {
+export function Projects({ projects }: { projects: ProjectSummary[] }) {
   return (
     <section id="selected-works" className="scroll-mt-24 py-20 sm:py-24">
       <div className={`${CONTAINER} text-center`}>
