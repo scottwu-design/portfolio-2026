@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { CONTAINER } from "@/lib/layout";
 
 const NAV_LINKS = [
@@ -13,9 +13,21 @@ const NAV_LINKS = [
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-navy">
+    <header
+      className={`sticky top-0 z-50 border-b border-white/10 transition-colors duration-300 ${
+        scrolled ? "bg-navy/90 backdrop-blur-md" : "bg-navy"
+      }`}
+    >
       <div className={`${CONTAINER} flex items-center justify-between py-[30px]`}>
         <Link
           href="/"
