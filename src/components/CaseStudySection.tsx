@@ -56,31 +56,6 @@ function ImageGallery({ images }: { images: string[] }) {
   );
 }
 
-function AnnotatedGallery({
-  images,
-  captions,
-}: {
-  images: string[];
-  captions: string[];
-}) {
-  return (
-    <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 sm:gap-8">
-      {images.map((src, i) => (
-        <Reveal key={src} delay={(i % 3) * 100}>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={asset(src)}
-            alt={captions[i]}
-            loading="lazy"
-            className="w-full rounded-sm"
-          />
-          <p className="mt-3 text-sm text-ink/60">{captions[i]}</p>
-        </Reveal>
-      ))}
-    </div>
-  );
-}
-
 function ContentNodes({ nodes }: { nodes: ContentNode[] }) {
   const elements: React.ReactNode[] = [];
   let i = 0;
@@ -409,7 +384,9 @@ export function CaseStudySection({ section }: { section: Section }) {
       {section.images.length > 0 && (
         <div className="mt-6">
           {captions ? (
-            <AnnotatedGallery images={section.images} captions={captions} />
+            <Reveal>
+              <Carousel images={section.images} captions={captions} />
+            </Reveal>
           ) : (
             <ImageGallery images={section.images} />
           )}

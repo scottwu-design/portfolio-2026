@@ -3,7 +3,13 @@
 import { useRef } from "react";
 import { asset } from "@/lib/asset";
 
-export function Carousel({ images }: { images: string[] }) {
+export function Carousel({
+  images,
+  captions,
+}: {
+  images: string[];
+  captions?: string[];
+}) {
   const trackRef = useRef<HTMLDivElement>(null);
 
   const scrollByCard = (direction: 1 | -1) => {
@@ -20,7 +26,7 @@ export function Carousel({ images }: { images: string[] }) {
         ref={trackRef}
         className="flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
       >
-        {images.map((src) => (
+        {images.map((src, i) => (
           <div
             key={src}
             data-carousel-card
@@ -29,10 +35,13 @@ export function Carousel({ images }: { images: string[] }) {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={asset(src)}
-              alt=""
+              alt={captions?.[i] ?? ""}
               loading="lazy"
               className="h-[400px] w-auto rounded-sm border border-white/10 object-contain"
             />
+            {captions?.[i] && (
+              <p className="mt-3 text-sm text-ink/60">{captions[i]}</p>
+            )}
           </div>
         ))}
       </div>
