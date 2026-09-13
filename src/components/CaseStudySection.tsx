@@ -206,6 +206,88 @@ function WireframeSection({
   );
 }
 
+// Finds where the LAST heading group starts (a heading not itself the
+// second line of a preceding eyebrow+heading pair), so that trailing
+// content can be split off and paired with a single image while
+// earlier content stays full-width.
+function findLastGroupStart(nodes: ContentNode[]): number | null {
+  let lastStart: number | null = null;
+  let i = 0;
+  while (i < nodes.length) {
+    if (nodes[i].type === "heading") {
+      lastStart = i;
+      i += nodes[i + 1]?.type === "heading" ? 2 : 1;
+    } else {
+      i += 1;
+    }
+  }
+  return lastStart;
+}
+
+// Renders heading/para/list nodes as plain elements (no individual
+// Reveal wrapping) for use inside a single surrounding Reveal, e.g. a
+// side-by-side text+image pair.
+function renderPlainNodes(nodes: ContentNode[]): React.ReactNode[] {
+  const elements: React.ReactNode[] = [];
+  let i = 0;
+  let key = 0;
+
+  while (i < nodes.length) {
+    const node = nodes[i];
+
+    if (node.type === "heading") {
+      const next = nodes[i + 1];
+      if (next && next.type === "heading") {
+        elements.push(
+          <div key={key++} className="mt-4 first:mt-0">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-light">
+              {node.text}
+            </p>
+            <h3 className="mt-1 font-display text-xl font-bold sm:text-2xl">
+              {next.text}
+            </h3>
+          </div>,
+        );
+        i += 2;
+        continue;
+      }
+      elements.push(
+        <h3
+          key={key++}
+          className="mt-4 font-display text-xl font-bold first:mt-0 sm:text-2xl"
+        >
+          {node.text}
+        </h3>,
+      );
+      i += 1;
+      continue;
+    }
+
+    if (node.type === "list") {
+      elements.push(
+        <ul key={key++} className="mt-4 list-disc space-y-1.5 pl-5 text-ink/70">
+          {node.items.map((item, idx) => (
+            <li key={idx} className="leading-relaxed">
+              {item}
+            </li>
+          ))}
+        </ul>,
+      );
+      i += 1;
+      continue;
+    }
+
+    elements.push(
+      <p key={key++} className="mt-4 leading-relaxed text-ink/70">
+        {node.text}
+      </p>,
+    );
+    i += 1;
+  }
+
+  return elements;
+}
+
 function RoleTeamDuration({
   role,
   team,
@@ -278,6 +360,28 @@ export function CaseStudySection({ section }: { section: Section }) {
     lastNode.items.length === section.images.length
       ? lastNode.items
       : null;
+
+  // A section with exactly one image pairs its trailing heading group
+  // (e.g. "What problems did we identify?", "Ideations", "Award-winning")
+  // side by side with that image; any earlier content stays full-width.
+  if (!captions && section.images.length === 1) {
+    const splitIndex = findLastGroupStart(section.nodes);
+    if (splitIndex !== null) {
+      const before = section.nodes.slice(0, splitIndex);
+      const group = section.nodes.slice(splitIndex);
+      return (
+        <div className={`${CONTAINER} py-6`}>
+          {before.length > 0 && <ContentNodes nodes={before} />}
+          <Reveal className={before.length > 0 ? "mt-10" : undefined}>
+            <div className="grid grid-cols-1 items-center gap-8 sm:grid-cols-2">
+              <div>{renderPlainNodes(group)}</div>
+              <SingleImage src={section.images[0]} />
+            </div>
+          </Reveal>
+        </div>
+      );
+    }
+  }
 
   return (
     <div className={`${CONTAINER} py-6`}>

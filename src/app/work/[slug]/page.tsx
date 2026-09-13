@@ -3,12 +3,14 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CaseStudySection } from "@/components/CaseStudySection";
 import { Hero } from "@/components/Hero";
+import { ProjectNav } from "@/components/ProjectNav";
 import { SectionRenderer } from "@/components/SectionRenderer";
 import { asset } from "@/lib/asset";
 import {
   getAllProjectSlugs,
   getProjectContent,
   getProjectSummary,
+  projects,
 } from "@/lib/content";
 
 // Staged rollout of the Option D redesign for case study pages: trying
@@ -56,6 +58,14 @@ export default async function ProjectPage({
   }
 
   if (OPTION_D_SLUGS.has(slug)) {
+    const projectIndex = projects.findIndex((p) => p.slug === slug);
+    const previous =
+      projectIndex > 0 ? projects[projectIndex - 1] : undefined;
+    const next =
+      projectIndex >= 0 && projectIndex < projects.length - 1
+        ? projects[projectIndex + 1]
+        : undefined;
+
     return (
       <article className="bg-navy text-ink">
         <Hero
@@ -74,6 +84,8 @@ export default async function ProjectPage({
             <CaseStudySection key={idx} section={section} />
           ))}
         </div>
+
+        <ProjectNav previous={previous} next={next} />
       </article>
     );
   }
