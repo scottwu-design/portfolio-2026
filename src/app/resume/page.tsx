@@ -6,6 +6,7 @@ import {
   STUDY,
   TOOLS,
 } from "@/data/resume";
+import { Reveal } from "@/components/Reveal";
 import { asset } from "@/lib/asset";
 import { CONTAINER } from "@/lib/layout";
 
@@ -62,13 +63,15 @@ export default function ResumePage() {
       </section>
 
       <section className={`${CONTAINER} py-20 sm:py-24`}>
-        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-light">
-          Experience
-        </p>
+        <Reveal>
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-light">
+            Experience
+          </p>
+        </Reveal>
 
         <ol className="mt-8 space-y-12 border-l border-white/15 pl-8">
           {EXPERIENCE.map((entry) => (
-            <li key={entry.title} className="relative">
+            <Reveal as="li" key={entry.title} className="relative">
               <span className="absolute -left-[calc(2rem+5px)] top-1.5 h-2.5 w-2.5 rounded-full bg-accent" />
               <div className="flex items-center gap-3">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -100,26 +103,26 @@ export default function ResumePage() {
                   </li>
                 ))}
               </ul>
-            </li>
+            </Reveal>
           ))}
         </ol>
       </section>
 
       <section className="border-t border-white/10 py-20 sm:py-24">
         <div className={`${CONTAINER} grid grid-cols-1 gap-10 sm:grid-cols-2`}>
-          <div>
+          <Reveal delay={0}>
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-light">
               Specialties
             </p>
             <TagList items={SPECIALTIES} />
-          </div>
-          <div>
+          </Reveal>
+          <Reveal delay={100}>
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-light">
               Tools
             </p>
             <TagList items={TOOLS} />
-          </div>
-          <div>
+          </Reveal>
+          <Reveal delay={200}>
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-light">
               Study
             </p>
@@ -133,8 +136,8 @@ export default function ResumePage() {
                 </li>
               ))}
             </ul>
-          </div>
-          <div>
+          </Reveal>
+          <Reveal delay={300}>
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-light">
               Language
             </p>
@@ -146,7 +149,7 @@ export default function ResumePage() {
                 </li>
               ))}
             </ul>
-          </div>
+          </Reveal>
         </div>
       </section>
     </div>

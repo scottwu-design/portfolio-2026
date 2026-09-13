@@ -1,3 +1,4 @@
+import { Reveal } from "@/components/Reveal";
 import { CONTAINER } from "@/lib/layout";
 
 const I_AM = [
@@ -19,22 +20,23 @@ export function Services() {
   return (
     <section className="py-20 sm:py-24">
       <div className={CONTAINER}>
-        <h2 className="font-display text-2xl font-bold sm:text-4xl">
-          I am...
-        </h2>
+        <Reveal>
+          <h2 className="font-display text-2xl font-bold sm:text-4xl">
+            I am...
+          </h2>
+        </Reveal>
         <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-3">
-          {I_AM.map((item) => (
-            <div
-              key={item.title}
-              className="rounded-sm border border-white/15 p-7 transition-colors hover:border-accent-light"
-            >
-              <h3 className="font-display text-lg font-bold leading-snug">
-                {item.title}
-              </h3>
-              <p className="mt-4 text-sm leading-relaxed text-ink/60">
-                {item.body}
-              </p>
-            </div>
+          {I_AM.map((item, i) => (
+            <Reveal key={item.title} delay={i * 100} className="h-full">
+              <div className="h-full rounded-sm border border-white/15 p-7 transition-colors hover:border-accent-light">
+                <h3 className="font-display text-lg font-bold leading-snug">
+                  {item.title}
+                </h3>
+                <p className="mt-4 text-sm leading-relaxed text-ink/60">
+                  {item.body}
+                </p>
+              </div>
+            </Reveal>
           ))}
         </div>
       </div>

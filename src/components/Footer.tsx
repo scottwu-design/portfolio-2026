@@ -1,3 +1,4 @@
+import { Reveal } from "@/components/Reveal";
 import { asset } from "@/lib/asset";
 import { CONTAINER } from "@/lib/layout";
 
@@ -28,11 +29,16 @@ export function Footer() {
   return (
     <footer id="contact" className="bg-accent text-white">
       <div className={`${CONTAINER} py-16 sm:py-20`}>
-        <h2 className="font-display text-[15vw] font-bold leading-[0.85] tracking-tight sm:text-[9rem]">
-          Scott Wu
-        </h2>
+        <Reveal>
+          <h2 className="font-display text-[15vw] font-bold leading-[0.85] tracking-tight sm:text-[9rem]">
+            Scott Wu
+          </h2>
+        </Reveal>
 
-        <div className="mt-14 flex flex-col gap-12 sm:flex-row sm:justify-between">
+        <Reveal
+          delay={100}
+          className="mt-14 flex flex-col gap-12 sm:flex-row sm:justify-between"
+        >
           <div>
             <p className="text-sm font-semibold">Scott Wu</p>
             <p className="mt-3 text-sm text-white/80">+886 911 621113</p>
@@ -72,7 +78,7 @@ export function Footer() {
               Write Me an Email
             </a>
           </div>
-        </div>
+        </Reveal>
 
         <p className="mt-16 text-xs text-white/60">
           Copyright &copy; {new Date().getFullYear()} Scott Wu. All rights reserved.
