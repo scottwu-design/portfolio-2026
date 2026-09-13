@@ -1,5 +1,6 @@
 export interface ResumeEntry {
   title: string;
+  logo: string;
   dateRange: string;
   location: string;
   projects?: string;
@@ -11,6 +12,7 @@ export interface ResumeEntry {
 export const EXPERIENCE: ResumeEntry[] = [
   {
     title: "Sr. UX Design Manager, KaiOS",
+    logo: "/images/logo-kaios.jpg",
     dateRange: "Oct 2023 - Present",
     location: "Taipei City",
     projects: "Projects: KaiStore Apps, KaiOS Smart Feature Phone, KaiOS Smart Touch",
@@ -24,6 +26,7 @@ export const EXPERIENCE: ResumeEntry[] = [
   },
   {
     title: "Sr. Visual Design Manager, KaiOS",
+    logo: "/images/logo-kaios.jpg",
     dateRange: "Jun 2016 - Sep 2023",
     location: "Taipei City",
     projects:
@@ -43,6 +46,7 @@ export const EXPERIENCE: ResumeEntry[] = [
   },
   {
     title: "Visual Design Manager, Acadine",
+    logo: "/images/logo-acadine.jpg",
     dateRange: "Jul 2015 - May 2015",
     location: "Taipei City",
     projects: "Projects: H5OS for Feature Phone, Home Automation, Smart Watch",
@@ -57,6 +61,7 @@ export const EXPERIENCE: ResumeEntry[] = [
   },
   {
     title: "UX Designer, Mozilla",
+    logo: "/images/logo-mozilla.jpg",
     dateRange: "Sep 2014 - Jun 2015",
     location: "Taipei City",
     projects: "Projects: Firefox OS for Panasonic TV, Smartphone, Smart Watch, Feature Phone",
@@ -68,6 +73,7 @@ export const EXPERIENCE: ResumeEntry[] = [
   },
   {
     title: "Interaction Design Lead, HTC",
+    logo: "/images/logo-htc.jpg",
     dateRange: "Sep 2013 - Aug 2014",
     location: "Taipei City",
     projects: "Projects: HTC One M7, HTC One M8",
@@ -79,6 +85,7 @@ export const EXPERIENCE: ResumeEntry[] = [
   },
   {
     title: "Principal Visual UI Designer, HTC",
+    logo: "/images/logo-htc.jpg",
     dateRange: "Apr 2011 - Sep 2013",
     location: "Taipei City",
     projects: "Projects: HTC Sensation, HTC Flyer, HTC One X, HTC Titan Windows Phone 7",
@@ -91,6 +98,7 @@ export const EXPERIENCE: ResumeEntry[] = [
   },
   {
     title: "Interaction & Multimedia Designer, Skypunch Creative",
+    logo: "/images/logo-skypunch.jpg",
     dateRange: "Jun 2009 - Apr 2011",
     location: "New York City",
     projects: "Clients: Energy Stars, U.S. Department of Energy (DOE), etc.",
@@ -100,6 +108,7 @@ export const EXPERIENCE: ResumeEntry[] = [
   },
   {
     title: "Visual & Motion Graphic Design (Intern), Click 3X",
+    logo: "/images/logo-click3x.jpg",
     dateRange: "Jan 2009 - May 2009",
     location: "New York City",
     projects: "Clients: MTV, TIME Inc., Crawford, Frontline Plus, E*Trade.",

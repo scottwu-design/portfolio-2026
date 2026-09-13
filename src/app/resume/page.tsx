@@ -70,9 +70,17 @@ export default function ResumePage() {
           {EXPERIENCE.map((entry) => (
             <li key={entry.title} className="relative">
               <span className="absolute -left-[calc(2rem+5px)] top-1.5 h-2.5 w-2.5 rounded-full bg-accent" />
-              <h3 className="font-display text-lg font-bold">
-                {entry.title}
-              </h3>
+              <div className="flex items-center gap-3">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={asset(entry.logo)}
+                  alt=""
+                  className="h-9 w-9 rounded-full bg-white object-contain p-1"
+                />
+                <h3 className="font-display text-lg font-bold">
+                  {entry.title}
+                </h3>
+              </div>
               <p className="mt-1 text-sm text-ink/50">
                 {entry.dateRange} · {entry.location}
               </p>
