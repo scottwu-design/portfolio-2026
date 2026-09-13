@@ -24,7 +24,7 @@ export function Carousel({
     <div className="relative">
       <div
         ref={trackRef}
-        className="flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+        className="flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth px-6 pb-2 sm:px-8 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
       >
         {images.map((src, i) => (
           <div
@@ -37,7 +37,7 @@ export function Carousel({
               src={asset(src)}
               alt={captions?.[i] ?? ""}
               loading="lazy"
-              className="h-[400px] w-auto rounded-sm border border-white/10 object-contain"
+              className="h-[400px] w-auto rounded-sm object-contain"
             />
             {captions?.[i] && (
               <p className="mt-3 text-sm text-ink/60">{captions[i]}</p>
