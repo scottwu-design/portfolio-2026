@@ -69,9 +69,7 @@ export default async function ProjectPage({
     return (
       <article className="bg-navy text-ink">
         <Hero
-          eyebrow={summary.meta}
           title={summary.title}
-          subtitle={summary.year}
           background={{
             type: "image",
             src: asset(HERO_IMAGE_OVERRIDES[slug] ?? summary.thumbnail),
