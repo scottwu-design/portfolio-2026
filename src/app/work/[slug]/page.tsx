@@ -69,7 +69,6 @@ export default async function ProjectPage({
     return (
       <article className="bg-navy text-ink">
         <Hero
-          backLink={{ label: "← All Work", href: "/work" }}
           eyebrow={summary.meta}
           title={summary.title}
           subtitle={summary.year}
