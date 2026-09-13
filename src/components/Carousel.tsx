@@ -24,14 +24,14 @@ export function Carousel({ images }: { images: string[] }) {
           <div
             key={src}
             data-carousel-card
-            className="w-72 flex-shrink-0 snap-start sm:w-96"
+            className="flex-shrink-0 snap-start"
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={asset(src)}
               alt=""
               loading="lazy"
-              className="w-full rounded-sm border border-white/10"
+              className="h-[400px] w-auto rounded-sm border border-white/10 object-contain"
             />
           </div>
         ))}
