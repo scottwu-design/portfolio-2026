@@ -22,6 +22,15 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    if (!open) return;
+    const previous = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = previous;
+    };
+  }, [open]);
+
   return (
     <header
       className={`sticky top-0 z-50 border-b border-white/10 transition-colors duration-300 ${
@@ -51,30 +60,45 @@ export function Navbar() {
 
         <button
           type="button"
-          aria-label="Toggle menu"
+          aria-label={open ? "Close menu" : "Open menu"}
+          aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className="flex flex-col gap-1.5 md:hidden"
+          className="relative z-50 flex h-6 w-6 flex-col items-center justify-center gap-1.5 md:hidden"
         >
-          <span className="h-0.5 w-6 bg-ink" />
-          <span className="h-0.5 w-6 bg-ink" />
-          <span className="h-0.5 w-6 bg-ink" />
+          <span
+            className={`h-0.5 w-6 bg-ink transition-transform duration-300 ${
+              open ? "translate-y-2 rotate-45" : ""
+            }`}
+          />
+          <span
+            className={`h-0.5 w-6 bg-ink transition-opacity duration-300 ${
+              open ? "opacity-0" : "opacity-100"
+            }`}
+          />
+          <span
+            className={`h-0.5 w-6 bg-ink transition-transform duration-300 ${
+              open ? "-translate-y-2 -rotate-45" : ""
+            }`}
+          />
         </button>
       </div>
 
-      {open && (
-        <nav className={`${CONTAINER} flex flex-col gap-1 border-t border-white/10 py-4 text-[15px] text-ink/75 md:hidden`}>
-          {NAV_LINKS.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              onClick={() => setOpen(false)}
-              className="py-2 transition-colors hover:text-ink"
-            >
-              {link.label}
-            </Link>
-          ))}
-        </nav>
-      )}
+      <nav
+        className={`fixed inset-0 z-40 flex flex-col items-center justify-center gap-8 bg-navy/90 text-center text-3xl backdrop-blur-md transition-opacity duration-300 md:hidden ${
+          open ? "opacity-100" : "pointer-events-none opacity-0"
+        }`}
+      >
+        {NAV_LINKS.map((link) => (
+          <Link
+            key={link.href}
+            href={link.href}
+            onClick={() => setOpen(false)}
+            className="font-display font-bold tracking-tight text-ink transition-colors hover:text-accent-light"
+          >
+            {link.label}
+          </Link>
+        ))}
+      </nav>
     </header>
   );
 }
