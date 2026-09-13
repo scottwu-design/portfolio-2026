@@ -1,7 +1,8 @@
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { asset } from "@/lib/asset";
+import { CONTAINER } from "@/lib/layout";
 
 export function Carousel({
   images,
@@ -11,6 +12,13 @@ export function Carousel({
   captions?: string[];
 }) {
   const trackRef = useRef<HTMLDivElement>(null);
+
+  // The track's leading padding (matching CONTAINER) can make some
+  // browsers auto-snap-scroll past it on load, canceling out the
+  // intended peek of the first card. Force it back to the start.
+  useEffect(() => {
+    if (trackRef.current) trackRef.current.scrollLeft = 0;
+  }, []);
 
   const scrollByCard = (direction: 1 | -1) => {
     const track = trackRef.current;
@@ -24,7 +32,7 @@ export function Carousel({
     <div className="relative">
       <div
         ref={trackRef}
-        className="flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+        className={`flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden [scroll-padding-inline:1.5rem] sm:[scroll-padding-inline:2rem] lg:[scroll-padding-inline:3.5rem] ${CONTAINER}`}
       >
         {images.map((src, i) => (
           <div
@@ -46,7 +54,7 @@ export function Carousel({
         ))}
       </div>
 
-      <div className="mt-4 hidden justify-end gap-3 sm:flex">
+      <div className={`mt-4 hidden justify-end gap-3 sm:flex ${CONTAINER}`}>
         <button
           type="button"
           aria-label="Previous"

@@ -334,8 +334,10 @@ export function CaseStudySection({ section }: { section: Section }) {
   );
   if (hasDesignSystemHeading && section.images.length > 0) {
     return (
-      <div className={`${CONTAINER} py-6`}>
-        <ContentNodes nodes={section.nodes} />
+      <div className="py-6">
+        <div className={CONTAINER}>
+          <ContentNodes nodes={section.nodes} />
+        </div>
         <Reveal className="mt-6">
           <Carousel images={section.images} />
         </Reveal>
@@ -377,10 +379,12 @@ export function CaseStudySection({ section }: { section: Section }) {
   }
 
   return (
-    <div className={`${CONTAINER} py-6`}>
-      <ContentNodes
-        nodes={captions ? section.nodes.slice(0, -1) : section.nodes}
-      />
+    <div className="py-6">
+      <div className={CONTAINER}>
+        <ContentNodes
+          nodes={captions ? section.nodes.slice(0, -1) : section.nodes}
+        />
+      </div>
       {section.images.length > 0 && (
         <div className="mt-6">
           {captions ? (
@@ -388,7 +392,9 @@ export function CaseStudySection({ section }: { section: Section }) {
               <Carousel images={section.images} captions={captions} />
             </Reveal>
           ) : (
-            <ImageGallery images={section.images} />
+            <div className={CONTAINER}>
+              <ImageGallery images={section.images} />
+            </div>
           )}
         </div>
       )}
