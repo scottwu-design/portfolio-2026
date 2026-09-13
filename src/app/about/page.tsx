@@ -85,7 +85,7 @@ export default function AboutPage() {
             memorable curation for my family.
           </p>
 
-          <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3">
+          <div className="mt-8 grid grid-cols-2 gap-6 sm:grid-cols-3 sm:gap-8">
             {ANNIVERSARY_PHOTOS.map((src, i) => (
               // eslint-disable-next-line @next/next/no-img-element
               <img
@@ -110,7 +110,7 @@ export default function AboutPage() {
             and meaningful ways.
           </p>
 
-          <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3">
+          <div className="mt-8 grid grid-cols-2 gap-6 sm:grid-cols-3 sm:gap-8">
             {HAND_LETTERING_PHOTOS.map((src, i) => (
               // eslint-disable-next-line @next/next/no-img-element
               <img
