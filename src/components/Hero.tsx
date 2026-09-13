@@ -20,8 +20,11 @@ export interface HeroProps {
   /** Optional background image/video. Falls back to the plain navy
    * background (inherited from the page) when omitted. */
   background?: HeroBackground;
-  /** Optional extra content (e.g. a profile photo + bio) rendered
-   * below the subtitle and above the action buttons. */
+  /** Optional content (e.g. a profile photo) rendered below the
+   * eyebrow and above the title. */
+  media?: ReactNode;
+  /** Optional extra content (e.g. a bio) rendered below the subtitle
+   * and above the action buttons. */
   children?: ReactNode;
 }
 
@@ -32,6 +35,7 @@ export function Hero({
   primaryAction,
   secondaryAction,
   background,
+  media,
   children,
 }: HeroProps) {
   return (
@@ -63,6 +67,8 @@ export function Hero({
             {eyebrow}
           </p>
         )}
+
+        {media && <div className="mt-6">{media}</div>}
 
         <h1 className="mt-6 animate-[rise_0.8s_0.1s_ease_forwards] font-display text-4xl font-bold leading-[1.05] tracking-tight opacity-0 sm:text-6xl sm:leading-[1.02]">
           {title}

@@ -37,15 +37,16 @@ export default function AboutPage() {
           src: asset("/images/d24a8874968cc013.jpg"),
           alt: "Scott Wu playing tennis",
         }}
+        media={
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={asset("/images/c60fa277d215e63f.png")}
+            alt="Scott Wu"
+            className="h-28 w-28 rounded-full object-cover"
+          />
+        }
       >
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={asset("/images/c60fa277d215e63f.png")}
-          alt="Scott Wu"
-          className="h-28 w-28 rounded-full object-cover"
-        />
-
-        <p className="mt-6 max-w-xl leading-relaxed text-ink/70">
+        <p className="max-w-xl leading-relaxed text-ink/70">
           Hi, I&apos;m Scott Wu. I have a passion for both tennis and working
           out, and I enjoy the physical and mental challenges that come with
           these activities. When I&apos;m not on the court or in the gym,
