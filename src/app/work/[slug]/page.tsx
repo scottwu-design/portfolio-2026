@@ -74,6 +74,7 @@ export default async function ProjectPage({
             type: "image",
             src: asset(HERO_IMAGE_OVERRIDES[slug] ?? summary.thumbnail),
           }}
+          size="tall"
         />
 
         <div className="py-12">

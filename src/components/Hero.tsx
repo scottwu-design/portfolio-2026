@@ -28,6 +28,9 @@ export interface HeroProps {
   /** Optional extra content (e.g. a bio) rendered below the subtitle
    * and above the action buttons. */
   children?: ReactNode;
+  /** "tall" adds extra vertical padding on large screens, for a more
+   * dramatic full-bleed banner. Defaults to the standard height. */
+  size?: "default" | "tall";
 }
 
 export function Hero({
@@ -40,9 +43,14 @@ export function Hero({
   background,
   media,
   children,
+  size = "default",
 }: HeroProps) {
   return (
-    <section className="relative overflow-hidden border-b border-white/10 py-20 sm:py-28">
+    <section
+      className={`relative overflow-hidden border-b border-white/10 py-20 sm:py-28 ${
+        size === "tall" ? "lg:py-48" : ""
+      }`}
+    >
       {background?.type === "image" && (
         // eslint-disable-next-line @next/next/no-img-element
         <img
