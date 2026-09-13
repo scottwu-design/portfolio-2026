@@ -1,12 +1,20 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { CaseStudySection } from "@/components/CaseStudySection";
+import { Hero } from "@/components/Hero";
 import { SectionRenderer } from "@/components/SectionRenderer";
+import { asset } from "@/lib/asset";
 import {
   getAllProjectSlugs,
   getProjectContent,
   getProjectSummary,
 } from "@/lib/content";
+
+// Staged rollout of the Option D redesign for case study pages: trying
+// it out on Hoy TV App first before applying it to every project.
+// Remove this once every slug has moved over to CaseStudySection.
+const OPTION_D_SLUGS = new Set(["hoy-tv-app"]);
 
 export function generateStaticParams() {
   return getAllProjectSlugs().map((slug) => ({ slug }));
@@ -37,6 +45,26 @@ export default async function ProjectPage({
 
   if (!summary || !content) {
     notFound();
+  }
+
+  if (OPTION_D_SLUGS.has(slug)) {
+    return (
+      <article className="bg-navy text-ink">
+        <Hero
+          backLink={{ label: "← All Work", href: "/work" }}
+          eyebrow={summary.meta}
+          title={summary.title}
+          subtitle={summary.year}
+          background={{ type: "image", src: asset(summary.thumbnail) }}
+        />
+
+        <div className="py-12">
+          {content.sections.map((section, idx) => (
+            <CaseStudySection key={idx} section={section} />
+          ))}
+        </div>
+      </article>
+    );
   }
 
   return (

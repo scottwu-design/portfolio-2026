@@ -12,6 +12,8 @@ export type HeroBackground =
   | { type: "video"; src: string; poster?: string };
 
 export interface HeroProps {
+  /** Optional small link rendered above the eyebrow (e.g. "← All Work"). */
+  backLink?: HeroAction;
   eyebrow?: string;
   title: ReactNode;
   subtitle?: ReactNode;
@@ -29,6 +31,7 @@ export interface HeroProps {
 }
 
 export function Hero({
+  backLink,
   eyebrow,
   title,
   subtitle,
@@ -62,6 +65,15 @@ export function Hero({
       {background && <div className="absolute inset-0 bg-navy/70" />}
 
       <div className={`relative ${CONTAINER}`}>
+        {backLink && (
+          <Link
+            href={backLink.href}
+            className="mb-6 inline-flex animate-[rise_0.6s_ease_forwards] items-center gap-1.5 text-sm font-medium text-ink/60 opacity-0 transition-colors hover:text-accent-light"
+          >
+            {backLink.label}
+          </Link>
+        )}
+
         {eyebrow && (
           <p className="animate-[rise_0.7s_ease_forwards] text-xs font-semibold uppercase tracking-[0.2em] text-accent-light opacity-0">
             {eyebrow}
