@@ -37,6 +37,31 @@ function ImageGallery({ images }: { images: string[] }) {
   );
 }
 
+function AnnotatedGallery({
+  images,
+  captions,
+}: {
+  images: string[];
+  captions: string[];
+}) {
+  return (
+    <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 sm:gap-8">
+      {images.map((src, i) => (
+        <Reveal key={src} delay={(i % 3) * 100}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={asset(src)}
+            alt={captions[i]}
+            loading="lazy"
+            className="w-full rounded-sm border border-white/10"
+          />
+          <p className="mt-3 text-sm text-ink/60">{captions[i]}</p>
+        </Reveal>
+      ))}
+    </div>
+  );
+}
+
 function ContentNodes({ nodes }: { nodes: ContentNode[] }) {
   const elements: React.ReactNode[] = [];
   let i = 0;
@@ -145,12 +170,29 @@ export function CaseStudySection({ section }: { section: Section }) {
     );
   }
 
+  // When a section's trailing list has exactly one item per image (e.g.
+  // a screen-by-screen breakdown like "Home / Live TV / Details..."),
+  // treat each item as that image's caption instead of a separate list.
+  const lastNode = section.nodes[section.nodes.length - 1];
+  const captions =
+    lastNode?.type === "list" &&
+    section.images.length > 0 &&
+    lastNode.items.length === section.images.length
+      ? lastNode.items
+      : null;
+
   return (
     <div className={`${CONTAINER} py-6`}>
-      <ContentNodes nodes={section.nodes} />
+      <ContentNodes
+        nodes={captions ? section.nodes.slice(0, -1) : section.nodes}
+      />
       {section.images.length > 0 && (
         <div className="mt-6">
-          <ImageGallery images={section.images} />
+          {captions ? (
+            <AnnotatedGallery images={section.images} captions={captions} />
+          ) : (
+            <ImageGallery images={section.images} />
+          )}
         </div>
       )}
     </div>
