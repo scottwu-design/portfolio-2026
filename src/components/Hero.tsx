@@ -20,6 +20,9 @@ export interface HeroProps {
   /** Optional background image/video. Falls back to the plain navy
    * background (inherited from the page) when omitted. */
   background?: HeroBackground;
+  /** Optional extra content (e.g. a profile photo + bio) rendered
+   * below the subtitle and above the action buttons. */
+  children?: ReactNode;
 }
 
 export function Hero({
@@ -29,6 +32,7 @@ export function Hero({
   primaryAction,
   secondaryAction,
   background,
+  children,
 }: HeroProps) {
   return (
     <section className="relative overflow-hidden border-b border-white/10 py-20 sm:py-28">
@@ -69,6 +73,8 @@ export function Hero({
             {subtitle}
           </p>
         )}
+
+        {children && <div className="mt-8">{children}</div>}
 
         {(primaryAction || secondaryAction) && (
           <div className="mt-10 flex animate-[rise_0.8s_0.3s_ease_forwards] items-center gap-4 opacity-0">

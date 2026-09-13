@@ -37,9 +37,7 @@ export default function AboutPage() {
           src: asset("/images/d24a8874968cc013.jpg"),
           alt: "Scott Wu playing tennis",
         }}
-      />
-
-      <section className={`${CONTAINER} py-20 sm:py-24`}>
+      >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={asset("/images/c60fa277d215e63f.png")}
@@ -47,7 +45,7 @@ export default function AboutPage() {
           className="h-28 w-28 rounded-full object-cover"
         />
 
-        <p className="mt-6 max-w-2xl leading-relaxed text-ink/70">
+        <p className="mt-6 max-w-xl leading-relaxed text-ink/70">
           Hi, I&apos;m Scott Wu. I have a passion for both tennis and working
           out, and I enjoy the physical and mental challenges that come with
           these activities. When I&apos;m not on the court or in the gym,
@@ -58,7 +56,7 @@ export default function AboutPage() {
           I&apos;m playing sports or pursuing creative endeavors, I&apos;m
           always pushing myself to grow and learn new things.
         </p>
-        <p className="mt-4 max-w-2xl leading-relaxed text-ink/70">
+        <p className="mt-4 max-w-xl leading-relaxed text-ink/70">
           Currently, I&apos;m leading the UX Design team at{" "}
           <a
             href="https://www.kaiostech.com/"
@@ -71,7 +69,7 @@ export default function AboutPage() {
           , with a mission to empower people with the internet through
           technology.
         </p>
-      </section>
+      </Hero>
 
       <section className="border-t border-white/10 py-20 sm:py-24">
         <div className={CONTAINER}>
