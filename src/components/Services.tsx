@@ -15,7 +15,7 @@ const I_AM = [
   },
 ];
 
-export function AboutMe() {
+export function Services() {
   return (
     <section className="py-20 sm:py-24">
       <div className={CONTAINER}>

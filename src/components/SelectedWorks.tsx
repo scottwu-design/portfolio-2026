@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { ProjectSummary } from "@/data/types";
 import { CONTAINER } from "@/lib/layout";
-import { WorksMosaic } from "@/components/WorksMosaic";
+import { ProjectGrid } from "@/components/ProjectGrid";
 
 export function SelectedWorks({ projects }: { projects: ProjectSummary[] }) {
   return (
@@ -16,7 +16,7 @@ export function SelectedWorks({ projects }: { projects: ProjectSummary[] }) {
       </div>
 
       <div className="mt-12">
-        <WorksMosaic projects={projects} />
+        <ProjectGrid projects={projects} />
       </div>
 
       <div className={`${CONTAINER} mt-12 text-center`}>
