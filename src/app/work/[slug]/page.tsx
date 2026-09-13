@@ -16,6 +16,14 @@ import {
 // Remove this once every slug has moved over to CaseStudySection.
 const OPTION_D_SLUGS = new Set(["hoy-tv-app"]);
 
+// Some projects have a dedicated banner image (usually the first
+// section's sole image in the original content) that reads better as
+// the Hero's background than the grid thumbnail. Falls back to the
+// project thumbnail when a slug has no override.
+const HERO_IMAGE_OVERRIDES: Record<string, string> = {
+  "hoy-tv-app": "/images/1bd16d78eac35a36.png",
+};
+
 export function generateStaticParams() {
   return getAllProjectSlugs().map((slug) => ({ slug }));
 }
@@ -55,7 +63,10 @@ export default async function ProjectPage({
           eyebrow={summary.meta}
           title={summary.title}
           subtitle={summary.year}
-          background={{ type: "image", src: asset(summary.thumbnail) }}
+          background={{
+            type: "image",
+            src: asset(HERO_IMAGE_OVERRIDES[slug] ?? summary.thumbnail),
+          }}
         />
 
         <div className="py-12">

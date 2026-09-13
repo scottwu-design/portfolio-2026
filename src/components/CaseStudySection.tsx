@@ -3,19 +3,42 @@ import { Reveal } from "@/components/Reveal";
 import { asset } from "@/lib/asset";
 import { CONTAINER } from "@/lib/layout";
 
+// Diagrams/screenshots that ship as transparent PNGs and need a white
+// card behind them instead of blending into the navy page background.
+const WHITE_BG_IMAGES = new Set([
+  "/images/434e1eacbaf01c09.png", // Ideations
+  "/images/1a0ac749f2d28cf3.png", // User flow
+  "/images/90684e0ec494fe81.png", // Award-winning
+]);
+
+function SingleImage({ src }: { src: string }) {
+  if (WHITE_BG_IMAGES.has(src)) {
+    return (
+      <div className="rounded-sm bg-white p-6 sm:p-10">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={asset(src)} alt="" loading="lazy" className="w-full" />
+      </div>
+    );
+  }
+
+  return (
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src={asset(src)}
+      alt=""
+      loading="lazy"
+      className="w-full rounded-sm border border-white/10"
+    />
+  );
+}
+
 function ImageGallery({ images }: { images: string[] }) {
   if (images.length === 0) return null;
 
   if (images.length === 1) {
     return (
       <Reveal>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={asset(images[0])}
-          alt=""
-          className="w-full rounded-sm border border-white/10"
-          loading="lazy"
-        />
+        <SingleImage src={images[0]} />
       </Reveal>
     );
   }
@@ -24,13 +47,7 @@ function ImageGallery({ images }: { images: string[] }) {
     <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 sm:gap-8">
       {images.map((src, i) => (
         <Reveal key={src} delay={(i % 3) * 100}>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={asset(src)}
-            alt=""
-            className="w-full rounded-sm border border-white/10"
-            loading="lazy"
-          />
+          <SingleImage src={src} />
         </Reveal>
       ))}
     </div>
@@ -53,7 +70,7 @@ function AnnotatedGallery({
             src={asset(src)}
             alt={captions[i]}
             loading="lazy"
-            className="w-full rounded-sm border border-white/10"
+            className="w-full rounded-sm"
           />
           <p className="mt-3 text-sm text-ink/60">{captions[i]}</p>
         </Reveal>

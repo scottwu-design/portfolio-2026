@@ -3,13 +3,6 @@
   "sections": [
     {
       "kind": "content",
-      "nodes": [],
-      "images": [
-        "/images/1bd16d78eac35a36.png"
-      ]
-    },
-    {
-      "kind": "content",
       "nodes": [
         {
           "type": "heading",
@@ -248,7 +241,7 @@
       "nodes": [
         {
           "type": "heading",
-          "text": "TABELT"
+          "text": "TABLET"
         },
         {
           "type": "list",
