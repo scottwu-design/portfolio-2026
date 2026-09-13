@@ -8,7 +8,19 @@ export default function Home() {
 
   return (
     <div className="bg-navy text-ink">
-      <Hero />
+      <Hero
+        eyebrow="Digital Product Designer"
+        title={
+          <>
+            Hello, I&apos;m Scott Wu, a creative professional focused on{" "}
+            <span className="bg-gradient-to-r from-accent-light to-accent bg-clip-text text-transparent">
+              digital product design.
+            </span>
+          </>
+        }
+        primaryAction={{ label: "View My Work", href: "/#selected-works" }}
+        secondaryAction={{ label: "Get in Touch", href: "/#contact" }}
+      />
       <Services />
       <Projects projects={featured} />
     </div>
