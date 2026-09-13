@@ -326,21 +326,41 @@ export function CaseStudySection({ section }: { section: Section }) {
     );
   }
 
-  // The DESIGN SYSTEM section has several images (components, screen
-  // captures, etc.) — show them as a horizontally scrollable carousel
-  // instead of a static grid.
+  // The APPLY VISUAL DESIGN / DESIGN SYSTEM section: "Visual
+  // Exploration" pairs side by side with the first image, and "Design
+  // System" keeps the remaining images as a horizontally scrollable
+  // carousel instead of a static grid.
   const hasDesignSystemHeading = section.nodes.some(
     (n) => n.type === "heading" && n.text === "DESIGN SYSTEM",
   );
   if (hasDesignSystemHeading && section.images.length > 0) {
+    const splitIndex = findLastGroupStart(section.nodes);
+    const before =
+      splitIndex !== null ? section.nodes.slice(0, splitIndex) : [];
+    const group =
+      splitIndex !== null ? section.nodes.slice(splitIndex) : section.nodes;
+    const [firstImage, ...restImages] = section.images;
+
     return (
       <div className="py-6">
         <div className={CONTAINER}>
-          <ContentNodes nodes={section.nodes} />
+          {before.length > 0 && (
+            <Reveal>
+              <div className="grid grid-cols-1 items-center gap-8 sm:grid-cols-2">
+                <div>{renderPlainNodes(before)}</div>
+                {firstImage && <SingleImage src={firstImage} />}
+              </div>
+            </Reveal>
+          )}
+          <div className={before.length > 0 ? "mt-10" : undefined}>
+            <ContentNodes nodes={group} />
+          </div>
         </div>
-        <Reveal className="mt-6">
-          <Carousel images={section.images} />
-        </Reveal>
+        {restImages.length > 0 && (
+          <Reveal className="mt-6">
+            <Carousel images={restImages} />
+          </Reveal>
+        )}
       </div>
     );
   }
