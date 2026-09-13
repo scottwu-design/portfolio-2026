@@ -16,7 +16,7 @@ export default function WorkPage() {
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-light">
           Work
         </p>
-        <h1 className="mt-2 font-display text-3xl font-bold sm:text-4xl">
+        <h1 className="mt-2 font-display text-4xl font-bold leading-[1.05] tracking-tight sm:text-6xl sm:leading-[1.02]">
           All Work
         </h1>
         <p className="mt-4 max-w-2xl text-ink/60">
