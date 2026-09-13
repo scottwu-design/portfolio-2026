@@ -6,6 +6,7 @@ import { CONTAINER } from "@/lib/layout";
 // Diagrams/screenshots that ship as transparent PNGs and need a white
 // card behind them instead of blending into the navy page background.
 const WHITE_BG_IMAGES = new Set([
+  "/images/2e9404c58c6bcc87.png", // What problems did we identify?
   "/images/434e1eacbaf01c09.png", // Ideations
   "/images/1a0ac749f2d28cf3.png", // User flow
   "/images/90684e0ec494fe81.png", // Award-winning
@@ -141,6 +142,70 @@ function ContentNodes({ nodes }: { nodes: ContentNode[] }) {
   return <>{elements}</>;
 }
 
+interface HeadingGroup {
+  heading: string;
+  paras: string[];
+}
+
+// Splits nodes like [heading, para, para, heading, para, ...] into one
+// group per heading, collecting the paragraphs that follow it.
+function groupByHeading(nodes: ContentNode[]): HeadingGroup[] {
+  const groups: HeadingGroup[] = [];
+  for (const node of nodes) {
+    if (node.type === "heading") {
+      groups.push({ heading: node.text, paras: [] });
+    } else if (node.type === "para" && groups.length > 0) {
+      groups[groups.length - 1].paras.push(node.text);
+    }
+  }
+  return groups;
+}
+
+// The WIREFRAME section pairs each sub-heading (e.g. "Mobile App",
+// "Website") with its own screenshot, side by side, instead of the
+// default stacked text-then-gallery layout.
+function WireframeSection({
+  title,
+  groups,
+  images,
+}: {
+  title: string;
+  groups: HeadingGroup[];
+  images: string[];
+}) {
+  return (
+    <>
+      <Reveal className="max-w-2xl first:mt-0">
+        <h3 className="font-display text-xl font-bold sm:text-2xl">
+          {title}
+        </h3>
+      </Reveal>
+
+      <div className="mt-6 space-y-12">
+        {groups.map((group, i) => (
+          <Reveal
+            key={group.heading}
+            delay={i * 100}
+            className="grid grid-cols-1 items-center gap-8 sm:grid-cols-2"
+          >
+            <div>
+              <h4 className="font-display text-lg font-bold">
+                {group.heading}
+              </h4>
+              {group.paras.map((p, pi) => (
+                <p key={pi} className="mt-3 leading-relaxed text-ink/70">
+                  {p}
+                </p>
+              ))}
+            </div>
+            {images[i] && <SingleImage src={images[i]} />}
+          </Reveal>
+        ))}
+      </div>
+    </>
+  );
+}
+
 function RoleTeamDuration({
   role,
   team,
@@ -182,6 +247,22 @@ export function CaseStudySection({ section }: { section: Section }) {
           role={section.role}
           team={section.team}
           duration={section.duration}
+        />
+      </div>
+    );
+  }
+
+  // The WIREFRAME section pairs "Mobile App" / "Website" with their own
+  // screenshot, side by side, instead of the default layout.
+  const firstNode = section.nodes[0];
+  if (firstNode?.type === "heading" && firstNode.text === "WIREFRAME") {
+    const groups = groupByHeading(section.nodes.slice(1));
+    return (
+      <div className={`${CONTAINER} py-6`}>
+        <WireframeSection
+          title={firstNode.text}
+          groups={groups}
+          images={section.images}
         />
       </div>
     );
