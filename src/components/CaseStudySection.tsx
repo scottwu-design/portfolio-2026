@@ -1,4 +1,5 @@
 import type { ContentNode, Section } from "@/data/types";
+import { Carousel } from "@/components/Carousel";
 import { Reveal } from "@/components/Reveal";
 import { asset } from "@/lib/asset";
 import { CONTAINER } from "@/lib/layout";
@@ -346,6 +347,23 @@ export function CaseStudySection({ section }: { section: Section }) {
           groups={groups}
           images={section.images}
         />
+      </div>
+    );
+  }
+
+  // The DESIGN SYSTEM section has several images (components, screen
+  // captures, etc.) — show them as a horizontally scrollable carousel
+  // instead of a static grid.
+  const hasDesignSystemHeading = section.nodes.some(
+    (n) => n.type === "heading" && n.text === "DESIGN SYSTEM",
+  );
+  if (hasDesignSystemHeading && section.images.length > 0) {
+    return (
+      <div className={`${CONTAINER} py-6`}>
+        <ContentNodes nodes={section.nodes} />
+        <Reveal className="mt-6">
+          <Carousel images={section.images} />
+        </Reveal>
       </div>
     );
   }
