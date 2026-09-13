@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { asset } from "@/lib/asset";
 
 export function Carousel({
@@ -11,13 +11,6 @@ export function Carousel({
   captions?: string[];
 }) {
   const trackRef = useRef<HTMLDivElement>(null);
-
-  // Some browsers auto-snap the scroll position on load, which — combined
-  // with the leading padding — can scroll the track just far enough to
-  // hide the intended peek of the first card. Force it back to the start.
-  useEffect(() => {
-    if (trackRef.current) trackRef.current.scrollLeft = 0;
-  }, []);
 
   const scrollByCard = (direction: 1 | -1) => {
     const track = trackRef.current;
@@ -31,7 +24,7 @@ export function Carousel({
     <div className="relative">
       <div
         ref={trackRef}
-        className="flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth px-6 pb-2 sm:px-8 [scroll-padding-inline:1.5rem] sm:[scroll-padding-inline:2rem] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+        className="flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
       >
         {images.map((src, i) => (
           <div
