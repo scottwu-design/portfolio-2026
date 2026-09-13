@@ -6,7 +6,7 @@ import {
   STUDY,
   TOOLS,
 } from "@/data/resume";
-import { asset } from "@/lib/asset";
+import { CONTAINER } from "@/lib/layout";
 
 export const metadata: Metadata = {
   title: "Resume",
@@ -20,7 +20,7 @@ function TagList({ items }: { items: string[] }) {
       {items.map((item) => (
         <li
           key={item}
-          className="rounded-full border border-neutral-200 px-3 py-1 text-sm text-neutral-700"
+          className="rounded-full border border-white/15 px-3 py-1 text-sm text-ink/70"
         >
           {item}
         </li>
@@ -31,55 +31,49 @@ function TagList({ items }: { items: string[] }) {
 
 export default function ResumePage() {
   return (
-    <>
-      <section
-        className="relative flex min-h-[50vh] items-center bg-black bg-cover bg-center text-white"
-        style={{ backgroundImage: `url(${asset("/images/8c9b725b8fb063b4.jpg")})` }}
-      >
-        <div className="absolute inset-0 bg-black/50" />
-        <div className="relative mx-auto max-w-3xl px-6 py-20">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/70">
-            Summary
-          </p>
-          <p className="mt-4 text-xl leading-relaxed sm:text-2xl">
-            I&apos;m a creative professional with 10+ years of experience in
-            visual, UX, and motion design in New York and Taipei,
-            specializing in the fields of mobile phone, TV, wearable, web,
-            and IoT. My work ranges from interaction design, user interface
-            visual design, motion graphic design, and print design to brand
-            identity. I strive to create successful and engaging work with
-            newfound everyday influences.
-          </p>
-        </div>
+    <div className="bg-navy text-ink">
+      <section className={`${CONTAINER} border-b border-white/10 py-20 sm:py-28`}>
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-light">
+          Summary
+        </p>
+        <p className="mt-6 max-w-3xl font-display text-xl font-bold leading-snug sm:text-3xl">
+          I&apos;m a creative professional with 10+ years of experience in
+          visual, UX, and motion design in New York and Taipei, specializing
+          in the fields of mobile phone, TV, wearable, web, and IoT.
+        </p>
+        <p className="mt-6 max-w-2xl leading-relaxed text-ink/70">
+          My work ranges from interaction design, user interface visual
+          design, motion graphic design, and print design to brand identity.
+          I strive to create successful and engaging work with newfound
+          everyday influences.
+        </p>
       </section>
 
-      <section className="mx-auto max-w-3xl px-6 py-16">
-        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-neutral-400">
+      <section className={`${CONTAINER} py-20 sm:py-24`}>
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-light">
           Experience
         </p>
 
-        <ol className="mt-8 space-y-12 border-l border-neutral-200 pl-8">
+        <ol className="mt-8 space-y-12 border-l border-white/15 pl-8">
           {EXPERIENCE.map((entry) => (
             <li key={entry.title} className="relative">
-              <span className="absolute -left-[calc(2rem+5px)] top-1.5 h-2.5 w-2.5 rounded-full bg-neutral-900" />
-              <h3 className="text-lg font-semibold text-neutral-900">
+              <span className="absolute -left-[calc(2rem+5px)] top-1.5 h-2.5 w-2.5 rounded-full bg-accent" />
+              <h3 className="font-display text-lg font-bold">
                 {entry.title}
               </h3>
-              <p className="mt-1 text-sm text-neutral-500">
+              <p className="mt-1 text-sm text-ink/50">
                 {entry.dateRange} · {entry.location}
               </p>
               {entry.projects && (
-                <p className="mt-3 text-sm text-neutral-600">
-                  {entry.projects}
-                </p>
+                <p className="mt-3 text-sm text-ink/60">{entry.projects}</p>
               )}
               {entry.award && (
-                <p className="mt-2 text-sm text-neutral-600">{entry.award}</p>
+                <p className="mt-2 text-sm text-ink/60">{entry.award}</p>
               )}
               {entry.intro && (
-                <p className="mt-3 text-neutral-700">{entry.intro}</p>
+                <p className="mt-3 text-ink/70">{entry.intro}</p>
               )}
-              <ul className="mt-3 list-disc space-y-1.5 pl-5 text-neutral-700">
+              <ul className="mt-3 list-disc space-y-1.5 pl-5 text-ink/70">
                 {entry.bullets.map((b, i) => (
                   <li key={i} className="leading-relaxed">
                     {b}
@@ -91,29 +85,29 @@ export default function ResumePage() {
         </ol>
       </section>
 
-      <section className="border-t border-neutral-100 bg-neutral-50">
-        <div className="mx-auto grid max-w-3xl grid-cols-1 gap-10 px-6 py-16 sm:grid-cols-2">
+      <section className="border-t border-white/10 py-20 sm:py-24">
+        <div className={`${CONTAINER} grid grid-cols-1 gap-10 sm:grid-cols-2`}>
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-neutral-400">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-light">
               Specialties
             </p>
             <TagList items={SPECIALTIES} />
           </div>
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-neutral-400">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-light">
               Tools
             </p>
             <TagList items={TOOLS} />
           </div>
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-neutral-400">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-light">
               Study
             </p>
             <ul className="mt-3 space-y-4">
               {STUDY.map((s) => (
                 <li key={s.school}>
-                  <p className="font-medium text-neutral-900">{s.school}</p>
-                  <p className="text-sm text-neutral-500">
+                  <p className="font-medium text-ink">{s.school}</p>
+                  <p className="text-sm text-ink/50">
                     {s.dateRange} · {s.degree}
                   </p>
                 </li>
@@ -121,22 +115,20 @@ export default function ResumePage() {
             </ul>
           </div>
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-neutral-400">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-light">
               Language
             </p>
             <ul className="mt-3 space-y-2">
               {LANGUAGES.map((l) => (
                 <li key={l.name}>
-                  <span className="font-medium text-neutral-900">
-                    {l.name}
-                  </span>{" "}
-                  <span className="text-sm text-neutral-500">{l.level}</span>
+                  <span className="font-medium text-ink">{l.name}</span>{" "}
+                  <span className="text-sm text-ink/50">{l.level}</span>
                 </li>
               ))}
             </ul>
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }
