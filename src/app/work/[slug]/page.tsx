@@ -24,6 +24,7 @@ const OPTION_D_SLUGS = new Set(["hoy-tv-app", "kaios-st-lock-screen"]);
 // project thumbnail when a slug has no override.
 const HERO_IMAGE_OVERRIDES: Record<string, string> = {
   "hoy-tv-app": "/images/1bd16d78eac35a36.png",
+  "kaios-st-lock-screen": "/images/f6219556491234a1.png",
 };
 
 export function generateStaticParams() {

@@ -11,6 +11,13 @@ const WHITE_BG_IMAGES = new Set([
   "/images/434e1eacbaf01c09.png", // Ideations
   "/images/1a0ac749f2d28cf3.png", // User flow
   "/images/90684e0ec494fe81.png", // Award-winning
+  "/images/a7b3d716305b7402.png", // Crazy 8s
+  "/images/b38b02ba567701be.png", // Narrowing down to the best solutions
+  "/images/2ff6223656850ef3.png", // One tap to unlock solution
+  "/images/0e3021817d93b234.png", // User testing with actual device (solution 1)
+  "/images/b4a66501ddc69673.png", // Swipe up to unlock solution
+  "/images/039a16af99efead8.png", // User testing with actual device (solution 2)
+  "/images/d60eb46b70e16ff7.png", // What I learned & next steps
 ]);
 
 function SingleImage({ src }: { src: string }) {
@@ -29,7 +36,7 @@ function SingleImage({ src }: { src: string }) {
       src={asset(src)}
       alt=""
       loading="lazy"
-      className="w-full rounded-sm border border-white/10"
+      className="w-full rounded-sm"
     />
   );
 }
