@@ -30,28 +30,45 @@ const WHITE_BG_IMAGES = new Set([
   "/images/24cb665b1d7b3c79.png", // Who are the target users?
   "/images/fae0f72a4dd7cc45.png", // UX design
   "/images/b9880f9eaae81372.png", // Infogation bar
-  "/images/b6162b8bc7134402.png", // The advantage of infogation bar
   "/images/baaecf9a66d5d2a7.png", // Cards
   "/images/2eca6dea05b3de7b.png", // The navigation of screens flow
-  "/images/683e8dcebb55b78d.gif", // Animation of launcher navigation
-  "/images/67393da6ffa32904.png", // Visual design direction
   "/images/8caaeaa0436f3354.png", // Visual characteristics
-  "/images/f6f9b7b62fa01ec0.gif", // Color
-  "/images/26e31207f76c4230.gif", // UI component
   "/images/a1eea2f6221b8ef9.gif", // Meet KaiOS apps
-  "/images/ab4d0ddd60a6a836.png", // App designs
   "/images/64ab51ce03c440d6.png", // KaiStore
   "/images/c5fdadf33da3c8b4.png", // Internet browser
   "/images/9535f899e933d964.png", // First time use
   "/images/3f59a41d0b08fa3e.png", // Wallpaper design
-  "/images/6f62a97d996d47be.png", // Ideation
-  "/images/88624f8d1305293f.png", // '80s texture
-  "/images/531f5f2297dd6c08.png", // 2D figure of sci-fi scene
-  "/images/7dc3d3a507b71bf3.png", // Design guides
-  "/images/45d135fab4f5efea.png", // KaiStore partner guide
 ]);
 
+// Sections whose static screenshot/gif reads much better as the
+// actual motion/prototype recording — keyed by the image path they
+// replace so SingleImage can swap in the embed at the same spot.
+const VIDEO_OVERRIDES: Record<string, string> = {
+  "/images/b6162b8bc7134402.png": // The advantage of Infogation Bar
+    "https://player.vimeo.com/video/718534971?h=d1ca59d48b",
+  "/images/683e8dcebb55b78d.gif": // Animation of launcher navigation
+    "https://player.vimeo.com/video/715438836?h=0328e68ef8",
+  "/images/ab4d0ddd60a6a836.png": // Onboarding tutorial
+    "https://player.vimeo.com/video/718986407?h=3fc668e351",
+};
+
 function SingleImage({ src }: { src: string }) {
+  const videoSrc = VIDEO_OVERRIDES[src];
+  if (videoSrc) {
+    return (
+      <div className="aspect-video w-full overflow-hidden rounded-sm">
+        <iframe
+          src={videoSrc}
+          title="Vimeo video"
+          className="h-full w-full border-0"
+          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+        />
+      </div>
+    );
+  }
+
   if (WHITE_BG_IMAGES.has(src)) {
     return (
       <div className="rounded-sm bg-white p-3 sm:p-5">
