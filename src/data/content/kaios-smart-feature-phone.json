@@ -409,7 +409,7 @@
         },
         {
           "type": "para",
-          "text": "I created and maintained this guide to serve as a resource to designers and developers to help define the visual style for their KaiOS applications. For more info, please visit KaiOS developer portal website."
+          "text": "I created and maintained this guide to serve as a resource to designers and developers to help define the visual style for their KaiOS applications. For more info, please visit [KaiOS developer portal](https://developer.kaiostech.com/docs/design-guide/launcher-icon/) website."
         },
         {
           "type": "heading",
@@ -417,7 +417,7 @@
         },
         {
           "type": "para",
-          "text": "I created and maintained this guide to serve as a resource to partners and developers to ensure their products, such as app icon, app name, description, and marketing banner, are ready to display on KaiStore. For more info, please visit KaiOS developer portal website."
+          "text": "I created and maintained this guide to serve as a resource to partners and developers to ensure their products, such as app icon, app name, description, and marketing banner, are ready to display on KaiStore. For more info, please visit [KaiOS developer portal](https://developer.kaiostech.com/docs/distribution/kaistore/) website."
         },
         {
           "type": "heading",
@@ -425,7 +425,7 @@
         },
         {
           "type": "para",
-          "text": "KaiOS App Submission Portal is the website for partners and 3rd party developers to submit their applications on KaiStore. My contribution to this project is to define the visual direction and assist the UI designer (Johnny Jao) in completing the project."
+          "text": "KaiOS App Submission Portal is the website for partners and 3rd party developers to submit their applications on KaiStore. My contribution to this project is to define the visual direction and assist the UI designer ([Johnny Jao](https://www.linkedin.com/in/johnny-jao-a7a709101/)) in completing the project."
         },
         {
           "type": "heading",
@@ -433,7 +433,7 @@
         },
         {
           "type": "para",
-          "text": "I created a series of How-to videos and posted them on KaiOS YouTube channel. The how-to video series is designed to help new KaiOS users to get onboard with KaiOS-enabled devices quickly and better understand how to make the most out of them."
+          "text": "I created a series of How-to videos and posted them on [KaiOS YouTube channel](https://www.youtube.com/playlist?list=PL7hIFgvhicXTqGdfUzXU4HHn_tt2cdMbW). The how-to video series is designed to help new KaiOS users to get onboard with KaiOS-enabled devices quickly and better understand how to make the most out of them."
         }
       ],
       "images": [

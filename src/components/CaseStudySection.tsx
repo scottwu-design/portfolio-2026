@@ -167,6 +167,38 @@ function ImageGallery({ images, slug }: { images: string[]; slug: string }) {
   );
 }
 
+// Renders paragraph text, turning any [label](url) markdown-style
+// links into real external links (opened in a new tab) — the source
+// data is otherwise plain strings, so this is the one place inline
+// links get parsed out.
+const INLINE_LINK = /\[([^\]]+)\]\(([^)]+)\)/g;
+
+function renderTextWithLinks(text: string): React.ReactNode[] {
+  const parts: React.ReactNode[] = [];
+  let lastIndex = 0;
+  let key = 0;
+
+  for (const match of text.matchAll(INLINE_LINK)) {
+    const index = match.index ?? 0;
+    if (index > lastIndex) parts.push(text.slice(lastIndex, index));
+    parts.push(
+      <a
+        key={key++}
+        href={match[2]}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="underline decoration-ink/30 underline-offset-2 transition-colors hover:text-accent-light hover:decoration-accent-light"
+      >
+        {match[1]}
+      </a>,
+    );
+    lastIndex = index + match[0].length;
+  }
+  if (lastIndex < text.length) parts.push(text.slice(lastIndex));
+
+  return parts;
+}
+
 function ContentNodes({ nodes }: { nodes: ContentNode[] }) {
   const elements: React.ReactNode[] = [];
   let i = 0;
@@ -220,7 +252,9 @@ function ContentNodes({ nodes }: { nodes: ContentNode[] }) {
 
     elements.push(
       <Reveal key={key++} className="mt-4 max-w-2xl">
-        <p className="leading-relaxed text-ink/70">{node.text}</p>
+        <p className="leading-relaxed text-ink/70">
+          {renderTextWithLinks(node.text)}
+        </p>
       </Reveal>,
     );
     i += 1;
@@ -283,7 +317,7 @@ function WireframeSection({
               </h4>
               {group.paras.map((p, pi) => (
                 <p key={pi} className="mt-3 leading-relaxed text-ink/70">
-                  {p}
+                  {renderTextWithLinks(p)}
                 </p>
               ))}
             </div>
@@ -445,7 +479,7 @@ function renderPlainNodes(nodes: ContentNode[]): React.ReactNode[] {
 
     elements.push(
       <p key={key++} className="mt-4 leading-relaxed text-ink/70">
-        {node.text}
+        {renderTextWithLinks(node.text)}
       </p>,
     );
     i += 1;
