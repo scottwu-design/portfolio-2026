@@ -52,6 +52,9 @@ const WHITE_BG_IMAGES: Record<string, Set<string>> = {
     "/images/968861c0acda55d0.png", // What's our proposition?
     "/images/e139aad8cbd4058c.png", // Type
     "/images/1030d8b23fa8be78.png", // Iconography
+    "/images/d2f5238b288efef1.png", // Option of Apps Menu
+    "/images/90d3347148fc3f3e.png", // Typing Guide
+    "/images/0f8b28316d83b5e8.gif", // Make In-App Payment
   ]),
 };
 
@@ -64,8 +67,12 @@ const CAROUSEL_HEADINGS = new Set([
 ]);
 
 // Sections whose static screenshot/gif reads much better as the
-// actual motion/prototype recording — keyed by slug then the image
-// path they replace (same collision risk as WHITE_BG_IMAGES above).
+// actual motion/prototype recording — keyed by slug then by the
+// group's HEADING text (not the image path): the same uploaded asset
+// gets reused for unrelated images even within one page (e.g. one gif
+// used both as a UI Component thumbnail and as The Internet Enabler's
+// video-teaser image on kaios-smart-feature-phone), so only the
+// heading reliably identifies a single occurrence.
 // autoplay requires muted in every browser, and loop repeats playback
 // continuously — matching the looping gif/screen-recording feel these
 // videos replaced.
@@ -73,17 +80,30 @@ const VIDEO_PLAYER_PARAMS = "autoplay=1&loop=1&muted=1";
 
 const VIDEO_OVERRIDES: Record<string, Record<string, string>> = {
   "kaios-smart-touch": {
-    "/images/b6162b8bc7134402.png": // The advantage of Infogation Bar
+    "THE ADVANTAGE OF INFOGATION BAR":
       `https://player.vimeo.com/video/718534971?h=d1ca59d48b&${VIDEO_PLAYER_PARAMS}`,
-    "/images/683e8dcebb55b78d.gif": // Animation of launcher navigation
+    "ANIMATION OF LAUNCHER NAVIGATION":
       `https://player.vimeo.com/video/715438836?h=0328e68ef8&${VIDEO_PLAYER_PARAMS}`,
-    "/images/ab4d0ddd60a6a836.png": // Onboarding tutorial
+    "ONBOARDING TUTORIAL":
       `https://player.vimeo.com/video/718986407?h=3fc668e351&${VIDEO_PLAYER_PARAMS}`,
+  },
+  "kaios-smart-feature-phone": {
+    "THE INTERNET ENABLER":
+      `https://player.vimeo.com/video/711522349?h=d0550afd25&${VIDEO_PLAYER_PARAMS}`,
+    CARDS: `https://player.vimeo.com/video/824962055?h=f584ea1789&${VIDEO_PLAYER_PARAMS}`,
   },
 };
 
-function SingleImage({ src, slug }: { src: string; slug: string }) {
-  const videoSrc = VIDEO_OVERRIDES[slug]?.[src];
+function SingleImage({
+  src,
+  slug,
+  videoKey,
+}: {
+  src: string;
+  slug: string;
+  videoKey?: string;
+}) {
+  const videoSrc = VIDEO_OVERRIDES[slug]?.[videoKey ?? ""];
   if (videoSrc) {
     return (
       <div className="aspect-video w-full overflow-hidden rounded-sm">
@@ -261,7 +281,9 @@ function WireframeSection({
                 </p>
               ))}
             </div>
-            {images[i] && <SingleImage src={images[i]} slug={slug} />}
+            {images[i] && (
+              <SingleImage src={images[i]} slug={slug} videoKey={group.heading} />
+            )}
           </Reveal>
         ))}
       </div>
@@ -332,17 +354,23 @@ function GroupedGallery({
     <div className="space-y-16">
       {groups.map((group, i) => {
         const image = images[i];
+        const headingNode = group.find((n) => n.type === "heading");
+        const heading = headingNode?.type === "heading" ? headingNode.text : undefined;
+        const hasVideo = Boolean(heading && VIDEO_OVERRIDES[slug]?.[heading]);
+        const showMedia = Boolean(image) || hasVideo;
         return (
           <Reveal
             key={i}
             className={
-              image
+              showMedia
                 ? "grid grid-cols-1 items-center gap-8 sm:grid-cols-2"
                 : "max-w-2xl"
             }
           >
             <div>{renderPlainNodes(group)}</div>
-            {image && <SingleImage src={image} slug={slug} />}
+            {showMedia && (
+              <SingleImage src={image ?? ""} slug={slug} videoKey={heading} />
+            )}
           </Reveal>
         );
       })}
@@ -657,13 +685,20 @@ export function CaseStudySection({
     if (splitIndex !== null) {
       const before = section.nodes.slice(0, splitIndex);
       const group = section.nodes.slice(splitIndex);
+      const groupHeadingNode = group.find((n) => n.type === "heading");
+      const groupHeading =
+        groupHeadingNode?.type === "heading" ? groupHeadingNode.text : undefined;
       return (
         <div className={`${CONTAINER} py-12`}>
           {before.length > 0 && <ContentNodes nodes={before} />}
           <Reveal className={before.length > 0 ? "mt-10" : undefined}>
             <div className="grid grid-cols-1 items-center gap-8 sm:grid-cols-2">
               <div>{renderPlainNodes(group)}</div>
-              <SingleImage src={section.images[0]} slug={slug} />
+              <SingleImage
+                src={section.images[0]}
+                slug={slug}
+                videoKey={groupHeading}
+              />
             </div>
           </Reveal>
         </div>
