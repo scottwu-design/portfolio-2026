@@ -1,5 +1,6 @@
 import type { ContentNode, Section } from "@/data/types";
 import { CarouselSection } from "@/components/CarouselSection";
+import { FeatureGrid, type FeatureGridItem } from "@/components/FeatureGrid";
 import { Reveal } from "@/components/Reveal";
 import { asset } from "@/lib/asset";
 import { CONTAINER } from "@/lib/layout";
@@ -21,6 +22,33 @@ const WHITE_BG_IMAGES = new Set([
   "/images/c3ec51e29fe8a047.png", // How do our users unlock the device on the lock screen?
   "/images/c08f1d6f3d6b2b28.png", // What problems did we identify? (KaiOS ST lock screen)
   "/images/a1b65956640eb7b1.png", // Rewriting problems as outcomes and dot voting
+  // kaios-smart-touch: every side-by-side paired image on the page
+  "/images/ec5c19ba272b1f0f.png", // What's Smart Touch?
+  "/images/5331824ccb9a645a.png", // Product positioning map
+  "/images/5ecc02c0a560dc4a.png", // FOB pricing
+  "/images/e040f63eb9474442.png", // What's the product proposition?
+  "/images/24cb665b1d7b3c79.png", // Who are the target users?
+  "/images/fae0f72a4dd7cc45.png", // UX design
+  "/images/b9880f9eaae81372.png", // Infogation bar
+  "/images/b6162b8bc7134402.png", // The advantage of infogation bar
+  "/images/baaecf9a66d5d2a7.png", // Cards
+  "/images/2eca6dea05b3de7b.png", // The navigation of screens flow
+  "/images/683e8dcebb55b78d.gif", // Animation of launcher navigation
+  "/images/67393da6ffa32904.png", // Visual design direction
+  "/images/8caaeaa0436f3354.png", // Visual characteristics
+  "/images/f6f9b7b62fa01ec0.gif", // Color
+  "/images/26e31207f76c4230.gif", // UI component
+  "/images/a1eea2f6221b8ef9.gif", // Meet KaiOS apps
+  "/images/ab4d0ddd60a6a836.png", // App designs
+  "/images/64ab51ce03c440d6.png", // KaiStore
+  "/images/c5fdadf33da3c8b4.png", // Internet browser
+  "/images/9535f899e933d964.png", // First time use
+  "/images/3f59a41d0b08fa3e.png", // Wallpaper design
+  "/images/6f62a97d996d47be.png", // Ideation
+  "/images/88624f8d1305293f.png", // '80s texture
+  "/images/531f5f2297dd6c08.png", // 2D figure of sci-fi scene
+  "/images/7dc3d3a507b71bf3.png", // Design guides
+  "/images/45d135fab4f5efea.png", // KaiStore partner guide
 ]);
 
 function SingleImage({ src }: { src: string }) {
@@ -328,6 +356,27 @@ function renderPlainNodes(nodes: ContentNode[]): React.ReactNode[] {
   return elements;
 }
 
+// Parses [title, description, title, description, ...] pairs into
+// FeatureGrid items, one per image in order. The description node is
+// read regardless of whether it's typed "heading" or "para" in the
+// source data — some items were scraped with a styled second line
+// that functions as body copy despite the heading type.
+function parseFeatureItems(
+  nodes: ContentNode[],
+  images: string[],
+): FeatureGridItem[] {
+  const items: FeatureGridItem[] = [];
+  for (let i = 0; i < nodes.length; i += 2) {
+    const titleNode = nodes[i];
+    const title = titleNode && titleNode.type !== "list" ? titleNode.text : "";
+    const descNode = nodes[i + 1];
+    const description =
+      descNode && descNode.type !== "list" ? descNode.text : undefined;
+    items.push({ title, description, icon: images[items.length] });
+  }
+  return items;
+}
+
 function RoleTeamDuration({
   role,
   team,
@@ -385,6 +434,40 @@ export function CaseStudySection({ section }: { section: Section }) {
           title={firstNode.text}
           groups={groups}
           images={section.images}
+        />
+      </div>
+    );
+  }
+
+  // EMERGING MARKET USERS BEHAVIOR INSIGHTS: six parallel insights,
+  // each with its own icon — laid out as a 3-column feature grid
+  // instead of a stacked side-by-side narrative.
+  if (
+    firstNode?.type === "heading" &&
+    firstNode.text === "EMERGING MARKET USERS BEHAVIOR INSIGHTS"
+  ) {
+    const items = parseFeatureItems(section.nodes.slice(1), section.images);
+    return (
+      <div className="py-12">
+        <FeatureGrid heading={firstNode.text} items={items} columns={3} />
+      </div>
+    );
+  }
+
+  // DESIGN PRINCIPLE: four parallel principles, each with its own
+  // icon — laid out as a single-row, 4-column feature grid.
+  if (firstNode?.type === "heading" && firstNode.text === "DESIGN PRINCIPLE") {
+    const subheadingNode = section.nodes[1];
+    const subheading =
+      subheadingNode?.type === "heading" ? subheadingNode.text : "";
+    const items = parseFeatureItems(section.nodes.slice(2), section.images);
+    return (
+      <div className="py-12">
+        <FeatureGrid
+          eyebrow={firstNode.text}
+          heading={subheading}
+          items={items}
+          columns={4}
         />
       </div>
     );
