@@ -2,6 +2,7 @@ import type { ContentNode, Section } from "@/data/types";
 import { CarouselSection } from "@/components/CarouselSection";
 import { FeatureGrid, type FeatureGridItem } from "@/components/FeatureGrid";
 import { Reveal } from "@/components/Reveal";
+import { StatGrid, type StatGridItem } from "@/components/StatGrid";
 import { asset } from "@/lib/asset";
 import { CONTAINER } from "@/lib/layout";
 
@@ -394,6 +395,21 @@ function parseFeatureItems(
   return items;
 }
 
+// Parses [number, label, number, label, ...] pairs into StatGrid
+// items — the reverse order of parseFeatureItems, since these were
+// scraped as the number's own paragraph followed by its heading label.
+function parseStatItems(nodes: ContentNode[]): StatGridItem[] {
+  const items: StatGridItem[] = [];
+  for (let i = 0; i < nodes.length; i += 2) {
+    const numberNode = nodes[i];
+    const number = numberNode && numberNode.type !== "list" ? numberNode.text : "";
+    const labelNode = nodes[i + 1];
+    const label = labelNode && labelNode.type !== "list" ? labelNode.text : "";
+    items.push({ number, label });
+  }
+  return items;
+}
+
 function RoleTeamDuration({
   role,
   team,
@@ -486,6 +502,30 @@ export function CaseStudySection({ section }: { section: Section }) {
           items={items}
           columns={4}
         />
+      </div>
+    );
+  }
+
+  // INDIVIDUAL CONTRIBUTIONS TO THIS PROJECT: a quick number/label
+  // summary — laid out as a single row of big-number stats.
+  if (
+    firstNode?.type === "heading" &&
+    firstNode.text === "INDIVIDUAL CONTRIBUTIONS TO THIS PROJECT"
+  ) {
+    const items = parseStatItems(section.nodes.slice(1));
+    return (
+      <div className="py-12">
+        <StatGrid heading={firstNode.text} items={items} />
+      </div>
+    );
+  }
+
+  // MEET OTHER APPS AT A GLANCE: a couple of extra screenshots that
+  // read better as a full-bleed carousel than a small static grid.
+  if (firstNode?.type === "heading" && firstNode.text === "MEET OTHER APPS AT A GLANCE") {
+    return (
+      <div className="py-12">
+        <CarouselSection heading={firstNode.text} images={section.images} />
       </div>
     );
   }

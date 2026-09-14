@@ -394,6 +394,10 @@
       "kind": "content",
       "nodes": [
         {
+          "type": "heading",
+          "text": "INDIVIDUAL CONTRIBUTIONS TO THIS PROJECT"
+        },
+        {
           "type": "para",
           "text": "18"
         },
