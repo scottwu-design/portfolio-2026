@@ -27,6 +27,18 @@ const HERO_IMAGE_OVERRIDES: Record<string, string> = {
   "kaios-st-lock-screen": "/images/f6219556491234a1.png",
 };
 
+// Some projects read better with a descriptive lead sentence as the
+// Hero's headline (with the project name demoted to a small eyebrow
+// label above it) instead of the project title itself. Falls back to
+// the project title/no eyebrow when a slug has no override.
+const HERO_TITLE_OVERRIDES: Record<string, string> = {
+  "kaios-st-lock-screen":
+    "How I led the design sprint to redesign the unlock screen experience on KaiOS SmartTouch phone",
+};
+const HERO_EYEBROW_OVERRIDES: Record<string, string> = {
+  "kaios-st-lock-screen": "CASE STUDY",
+};
+
 export function generateStaticParams() {
   return getAllProjectSlugs().map((slug) => ({ slug }));
 }
@@ -70,7 +82,8 @@ export default async function ProjectPage({
     return (
       <article className="bg-navy text-ink">
         <Hero
-          title={summary.title}
+          eyebrow={HERO_EYEBROW_OVERRIDES[slug]}
+          title={HERO_TITLE_OVERRIDES[slug] ?? summary.title}
           background={{
             type: "image",
             src: asset(HERO_IMAGE_OVERRIDES[slug] ?? summary.thumbnail),

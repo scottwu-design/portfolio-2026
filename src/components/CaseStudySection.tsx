@@ -18,6 +18,9 @@ const WHITE_BG_IMAGES = new Set([
   "/images/b4a66501ddc69673.png", // Swipe up to unlock solution
   "/images/039a16af99efead8.png", // User testing with actual device (solution 2)
   "/images/d60eb46b70e16ff7.png", // What I learned & next steps
+  "/images/c3ec51e29fe8a047.png", // How do our users unlock the device on the lock screen?
+  "/images/c08f1d6f3d6b2b28.png", // What problems did we identify? (KaiOS ST lock screen)
+  "/images/a1b65956640eb7b1.png", // Rewriting problems as outcomes and dot voting
 ]);
 
 function SingleImage({ src }: { src: string }) {
