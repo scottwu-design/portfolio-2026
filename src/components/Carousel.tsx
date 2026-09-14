@@ -1,6 +1,13 @@
 "use client";
 
-import { forwardRef, useEffect, useImperativeHandle, useRef } from "react";
+import {
+  forwardRef,
+  useCallback,
+  useEffect,
+  useImperativeHandle,
+  useLayoutEffect,
+  useRef,
+} from "react";
 import { asset } from "@/lib/asset";
 import { CONTAINER } from "@/lib/layout";
 
@@ -9,21 +16,53 @@ export interface CarouselHandle {
   scrollNext: () => void;
 }
 
+export interface CarouselScrollState {
+  canScrollPrev: boolean;
+  canScrollNext: boolean;
+  /** Whether the track overflows at all, i.e. whether buttons are needed. */
+  canScroll: boolean;
+}
+
 export interface CarouselProps {
   images: string[];
   captions?: string[];
+  onScrollStateChange?: (state: CarouselScrollState) => void;
 }
 
 export const Carousel = forwardRef<CarouselHandle, CarouselProps>(
-  function Carousel({ images, captions }, ref) {
+  function Carousel({ images, captions, onScrollStateChange }, ref) {
     const trackRef = useRef<HTMLDivElement>(null);
+
+    const updateScrollState = useCallback(() => {
+      const track = trackRef.current;
+      if (!track || !onScrollStateChange) return;
+      const { scrollLeft, scrollWidth, clientWidth } = track;
+      const canScroll = scrollWidth > clientWidth + 1;
+      onScrollStateChange({
+        canScroll,
+        canScrollPrev: canScroll && scrollLeft > 1,
+        canScrollNext: canScroll && scrollLeft < scrollWidth - clientWidth - 1,
+      });
+    }, [onScrollStateChange]);
 
     // The track's leading padding (matching CONTAINER) can make some
     // browsers auto-snap-scroll past it on load, canceling out the
     // intended peek of the first card. Force it back to the start.
-    useEffect(() => {
+    useLayoutEffect(() => {
       if (trackRef.current) trackRef.current.scrollLeft = 0;
-    }, []);
+      updateScrollState();
+    }, [updateScrollState]);
+
+    useEffect(() => {
+      const track = trackRef.current;
+      if (!track) return;
+      track.addEventListener("scroll", updateScrollState);
+      window.addEventListener("resize", updateScrollState);
+      return () => {
+        track.removeEventListener("scroll", updateScrollState);
+        window.removeEventListener("resize", updateScrollState);
+      };
+    }, [updateScrollState]);
 
     const scrollByCard = (direction: 1 | -1) => {
       const track = trackRef.current;
@@ -51,6 +90,7 @@ export const Carousel = forwardRef<CarouselHandle, CarouselProps>(
               alt={captions?.[i] ?? ""}
               loading="lazy"
               className="h-[400px] w-auto rounded-sm object-contain"
+              onLoad={updateScrollState}
             />
             {captions?.[i] && (
               <p className="mt-3 text-sm text-ink/60">{captions[i]}</p>

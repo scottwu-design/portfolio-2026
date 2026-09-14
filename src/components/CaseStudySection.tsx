@@ -300,7 +300,7 @@ function RoleTeamDuration({
 export function CaseStudySection({ section }: { section: Section }) {
   if (section.kind === "roleTeamDuration") {
     return (
-      <div className={`${CONTAINER} py-6`}>
+      <div className={`${CONTAINER} py-12`}>
         <RoleTeamDuration
           role={section.role}
           team={section.team}
@@ -316,7 +316,7 @@ export function CaseStudySection({ section }: { section: Section }) {
   if (firstNode?.type === "heading" && firstNode.text === "WIREFRAME") {
     const groups = groupByHeading(section.nodes.slice(1));
     return (
-      <div className={`${CONTAINER} py-6`}>
+      <div className={`${CONTAINER} py-12`}>
         <WireframeSection
           title={firstNode.text}
           groups={groups}
@@ -347,7 +347,7 @@ export function CaseStudySection({ section }: { section: Section }) {
     const groupBodyNodes = group.filter((n) => n !== groupHeadingNode);
 
     return (
-      <div className="py-6">
+      <div className="py-12">
         {before.length > 0 && (
           <div className={CONTAINER}>
             <Reveal>
@@ -393,7 +393,7 @@ export function CaseStudySection({ section }: { section: Section }) {
       const before = section.nodes.slice(0, splitIndex);
       const group = section.nodes.slice(splitIndex);
       return (
-        <div className={`${CONTAINER} py-6`}>
+        <div className={`${CONTAINER} py-12`}>
           {before.length > 0 && <ContentNodes nodes={before} />}
           <Reveal className={before.length > 0 ? "mt-10" : undefined}>
             <div className="grid grid-cols-1 items-center gap-8 sm:grid-cols-2">
@@ -414,7 +414,7 @@ export function CaseStudySection({ section }: { section: Section }) {
     const restNodes = bodyNodes.filter((n) => n !== headingNode);
 
     return (
-      <div className="py-6">
+      <div className="py-12">
         <CarouselSection
           heading={headingText}
           body={
@@ -430,7 +430,7 @@ export function CaseStudySection({ section }: { section: Section }) {
   }
 
   return (
-    <div className="py-6">
+    <div className="py-12">
       <div className={CONTAINER}>
         <ContentNodes nodes={section.nodes} />
       </div>
