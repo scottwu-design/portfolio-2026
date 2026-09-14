@@ -68,11 +68,12 @@
           ]
         },
         {
-          "type": "list",
-          "items": [
-            "WHAT'S OUR PROPOSITION?",
-            "A bridge from feature to smartphone"
-          ]
+          "type": "heading",
+          "text": "WHAT'S OUR PROPOSITION?"
+        },
+        {
+          "type": "para",
+          "text": "A bridge from feature to smartphone"
         },
         {
           "type": "para",
