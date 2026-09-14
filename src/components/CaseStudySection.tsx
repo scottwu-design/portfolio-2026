@@ -492,20 +492,28 @@ export function CaseStudySection({ section }: { section: Section }) {
     );
   }
 
-  // DESIGN PRINCIPLE: four parallel principles, each with its own
-  // icon — laid out as a single-row, 4-column feature grid.
+  // DESIGN PRINCIPLE: a handful of parallel principles, each with its
+  // own icon — laid out as a single-row feature grid. Some pages give
+  // it its own subheading line (2 leading nodes before the items
+  // start), others don't (1 leading node) — infer which from how many
+  // nodes are left over once every image has claimed a title+desc
+  // pair.
   if (firstNode?.type === "heading" && firstNode.text === "DESIGN PRINCIPLE") {
-    const subheadingNode = section.nodes[1];
+    const leadCount = section.nodes.length - 2 * section.images.length;
+    const subheadingNode = leadCount >= 2 ? section.nodes[1] : undefined;
     const subheading =
       subheadingNode?.type === "heading" ? subheadingNode.text : "";
-    const items = parseFeatureItems(section.nodes.slice(2), section.images);
+    const items = parseFeatureItems(
+      section.nodes.slice(Math.max(leadCount, 1)),
+      section.images,
+    );
     return (
       <div className="py-12">
         <FeatureGrid
-          eyebrow={firstNode.text}
-          heading={subheading}
+          eyebrow={subheading ? firstNode.text : undefined}
+          heading={subheading || firstNode.text}
           items={items}
-          columns={4}
+          columns={items.length === 3 ? 3 : 4}
         />
       </div>
     );

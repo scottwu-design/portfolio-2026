@@ -24,7 +24,11 @@ export function StatGrid({
         </h3>
       </Reveal>
 
-      <div className="mt-10 grid grid-cols-1 gap-y-10 sm:grid-cols-3 sm:gap-x-8">
+      <div
+        className={`mt-10 grid grid-cols-1 gap-y-10 sm:gap-x-8 ${
+          items.length === 4 ? "sm:grid-cols-2 lg:grid-cols-4" : "sm:grid-cols-3"
+        }`}
+      >
         {items.map((item, i) => (
           <Reveal key={item.label} delay={i * 100}>
             <p className="font-display text-6xl font-bold sm:text-7xl">
