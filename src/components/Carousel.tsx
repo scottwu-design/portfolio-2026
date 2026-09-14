@@ -30,6 +30,25 @@ export function Carousel({
 
   return (
     <div className="relative">
+      <div className={`mb-4 hidden justify-end gap-3 sm:flex ${CONTAINER}`}>
+        <button
+          type="button"
+          aria-label="Previous"
+          onClick={() => scrollByCard(-1)}
+          className="flex h-10 w-10 items-center justify-center rounded-full border border-white/25 text-ink transition-colors hover:border-accent-light hover:text-accent-light"
+        >
+          ←
+        </button>
+        <button
+          type="button"
+          aria-label="Next"
+          onClick={() => scrollByCard(1)}
+          className="flex h-10 w-10 items-center justify-center rounded-full border border-white/25 text-ink transition-colors hover:border-accent-light hover:text-accent-light"
+        >
+          →
+        </button>
+      </div>
+
       <div
         ref={trackRef}
         className={`flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden [scroll-padding-inline:1.5rem] sm:[scroll-padding-inline:2rem] lg:[scroll-padding-inline:3.5rem] ${CONTAINER}`}
@@ -52,25 +71,6 @@ export function Carousel({
             )}
           </div>
         ))}
-      </div>
-
-      <div className={`mt-4 hidden justify-end gap-3 sm:flex ${CONTAINER}`}>
-        <button
-          type="button"
-          aria-label="Previous"
-          onClick={() => scrollByCard(-1)}
-          className="flex h-10 w-10 items-center justify-center rounded-full border border-white/25 text-ink transition-colors hover:border-accent-light hover:text-accent-light"
-        >
-          ←
-        </button>
-        <button
-          type="button"
-          aria-label="Next"
-          onClick={() => scrollByCard(1)}
-          className="flex h-10 w-10 items-center justify-center rounded-full border border-white/25 text-ink transition-colors hover:border-accent-light hover:text-accent-light"
-        >
-          →
-        </button>
       </div>
     </div>
   );
