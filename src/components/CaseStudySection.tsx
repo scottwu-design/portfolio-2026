@@ -200,6 +200,60 @@ function findLastGroupStart(nodes: ContentNode[]): number | null {
   return lastStart;
 }
 
+// Splits nodes into one group per heading (each heading's eyebrow
+// partner, if any, stays in the same group), preserving any
+// leading content in the first group. Used for long case-study
+// sections that step through a series of heading + image beats.
+function splitIntoGroups(nodes: ContentNode[]): ContentNode[][] {
+  const groups: ContentNode[][] = [];
+  let i = 0;
+
+  let lead: ContentNode[] = [];
+  if (nodes[0]?.type !== "heading") {
+    while (i < nodes.length && nodes[i].type !== "heading") i += 1;
+    lead = nodes.slice(0, i);
+  }
+
+  while (i < nodes.length) {
+    const start = i;
+    i += nodes[i + 1]?.type === "heading" ? 2 : 1;
+    while (i < nodes.length && nodes[i].type !== "heading") i += 1;
+    groups.push(nodes.slice(start, i));
+  }
+
+  if (lead.length > 0) {
+    if (groups.length > 0) groups[0] = [...lead, ...groups[0]];
+    else groups.push(lead);
+  }
+
+  return groups;
+}
+
+// Pairs each heading group with its own image, side by side, stacked
+// down the page — for sections that step through a beat-by-beat
+// narrative with one screenshot per beat.
+function GroupedGallery({
+  groups,
+  images,
+}: {
+  groups: ContentNode[][];
+  images: string[];
+}) {
+  return (
+    <div className="space-y-16">
+      {groups.map((group, i) => (
+        <Reveal
+          key={i}
+          className="grid grid-cols-1 items-center gap-8 sm:grid-cols-2"
+        >
+          <div>{renderPlainNodes(group)}</div>
+          {images[i] && <SingleImage src={images[i]} />}
+        </Reveal>
+      ))}
+    </div>
+  );
+}
+
 // Renders heading/para/list nodes as plain elements (no individual
 // Reveal wrapping) for use inside a single surrounding Reveal, e.g. a
 // side-by-side text+image pair.
@@ -427,6 +481,21 @@ export function CaseStudySection({ section }: { section: Section }) {
         />
       </div>
     );
+  }
+
+  // A long section that steps through several heading groups with one
+  // image per beat (e.g. a design-sprint narrative) pairs each group
+  // with its corresponding image in sequence, instead of dumping every
+  // image into one grid at the bottom.
+  if (!captions && section.images.length > 1) {
+    const groups = splitIntoGroups(section.nodes);
+    if (groups.length === section.images.length && groups.length > 1) {
+      return (
+        <div className={`${CONTAINER} py-12`}>
+          <GroupedGallery groups={groups} images={section.images} />
+        </div>
+      );
+    }
   }
 
   return (

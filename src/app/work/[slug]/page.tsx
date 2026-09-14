@@ -16,7 +16,7 @@ import {
 // Staged rollout of the Option D redesign for case study pages: trying
 // it out on Hoy TV App first before applying it to every project.
 // Remove this once every slug has moved over to CaseStudySection.
-const OPTION_D_SLUGS = new Set(["hoy-tv-app"]);
+const OPTION_D_SLUGS = new Set(["hoy-tv-app", "kaios-st-lock-screen"]);
 
 // Some projects have a dedicated banner image (usually the first
 // section's sole image in the original content) that reads better as
