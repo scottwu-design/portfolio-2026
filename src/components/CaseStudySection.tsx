@@ -354,7 +354,13 @@ function GroupedGallery({
     <div className="space-y-16">
       {groups.map((group, i) => {
         const image = images[i];
-        const headingNode = group.find((n) => n.type === "heading");
+        // When a group starts with an eyebrow+heading pair (two
+        // headings back to back), the second one is the actual
+        // visible title — that's what VIDEO_OVERRIDES is keyed by.
+        const headingNode =
+          group[0]?.type === "heading" && group[1]?.type === "heading"
+            ? group[1]
+            : group.find((n) => n.type === "heading");
         const heading = headingNode?.type === "heading" ? headingNode.text : undefined;
         const hasVideo = Boolean(heading && VIDEO_OVERRIDES[slug]?.[heading]);
         const showMedia = Boolean(image) || hasVideo;
@@ -685,7 +691,10 @@ export function CaseStudySection({
     if (splitIndex !== null) {
       const before = section.nodes.slice(0, splitIndex);
       const group = section.nodes.slice(splitIndex);
-      const groupHeadingNode = group.find((n) => n.type === "heading");
+      const groupHeadingNode =
+        group[0]?.type === "heading" && group[1]?.type === "heading"
+          ? group[1]
+          : group.find((n) => n.type === "heading");
       const groupHeading =
         groupHeadingNode?.type === "heading" ? groupHeadingNode.text : undefined;
       return (
