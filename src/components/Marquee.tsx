@@ -29,7 +29,7 @@ export function Marquee({
           {track.map((src, i) => (
             <div
               key={i}
-              className="flex h-28 w-44 flex-shrink-0 items-center justify-center rounded-sm bg-white p-4"
+              className="flex h-28 w-44 flex-shrink-0 items-center justify-center"
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
