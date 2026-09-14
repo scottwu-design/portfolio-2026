@@ -95,7 +95,7 @@ const VIDEO_OVERRIDES: Record<string, Record<string, string>> = {
   },
   "kaios-smart-feature-phone": {
     "THE INTERNET ENABLER":
-      `https://player.vimeo.com/video/711522349?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479&${VIDEO_PLAYER_PARAMS}`,
+      "https://player.vimeo.com/video/711522349?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&muted=1&loop=1",
     CARDS: `https://player.vimeo.com/video/824962055?h=f584ea1789&${VIDEO_PLAYER_PARAMS}`,
   },
 };
