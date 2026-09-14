@@ -1,6 +1,7 @@
 import type { ContentNode, Section } from "@/data/types";
 import { CarouselSection } from "@/components/CarouselSection";
 import { FeatureGrid, type FeatureGridItem } from "@/components/FeatureGrid";
+import { Marquee } from "@/components/Marquee";
 import { Reveal } from "@/components/Reveal";
 import { StatGrid, type StatGridItem } from "@/components/StatGrid";
 import { asset } from "@/lib/asset";
@@ -65,6 +66,11 @@ const CAROUSEL_HEADINGS = new Set([
   "MEET OTHER APPS AT A GLANCE",
   "VISUAL REFRESH",
 ]);
+
+// Headings whose section is a row of logos/badges (awards, press,
+// clients) — rendered as a continuously auto-scrolling marquee
+// instead of a static grid or a manually-controlled carousel.
+const MARQUEE_HEADINGS = new Set(["AWARDS"]);
 
 // Sections whose static screenshot/gif reads much better as the
 // actual motion/prototype recording — keyed by slug then by the
@@ -621,6 +627,21 @@ export function CaseStudySection({
     return (
       <div className="py-12">
         <CarouselSection heading={firstNode.text} images={section.images} />
+      </div>
+    );
+  }
+
+  // AWARDS-style sections: a row of logos/badges that scrolls
+  // continuously instead of sitting in a static grid.
+  if (
+    firstNode?.type === "heading" &&
+    MARQUEE_HEADINGS.has(firstNode.text) &&
+    section.nodes.length === 1 &&
+    section.images.length > 1
+  ) {
+    return (
+      <div className="py-12">
+        <Marquee heading={firstNode.text} images={section.images} />
       </div>
     );
   }
