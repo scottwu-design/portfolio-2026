@@ -100,7 +100,7 @@ export default async function ProjectPage({
 
         <div className="py-12">
           {content.sections.map((section, idx) => (
-            <CaseStudySection key={idx} section={section} />
+            <CaseStudySection key={idx} section={section} slug={slug} />
           ))}
         </div>
 

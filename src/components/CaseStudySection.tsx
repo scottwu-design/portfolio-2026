@@ -8,58 +8,82 @@ import { CONTAINER } from "@/lib/layout";
 
 // Diagrams/screenshots that ship as transparent PNGs and need a white
 // card behind them instead of blending into the navy page background.
-const WHITE_BG_IMAGES = new Set([
-  "/images/2e9404c58c6bcc87.png", // What problems did we identify?
-  "/images/434e1eacbaf01c09.png", // Ideations
-  "/images/1a0ac749f2d28cf3.png", // User flow
-  "/images/90684e0ec494fe81.png", // Award-winning
-  "/images/a7b3d716305b7402.png", // Crazy 8s
-  "/images/b38b02ba567701be.png", // Narrowing down to the best solutions
-  "/images/2ff6223656850ef3.png", // One tap to unlock solution
-  "/images/0e3021817d93b234.png", // User testing with actual device (solution 1)
-  "/images/b4a66501ddc69673.png", // Swipe up to unlock solution
-  "/images/039a16af99efead8.png", // User testing with actual device (solution 2)
-  "/images/d60eb46b70e16ff7.png", // What I learned & next steps
-  "/images/c3ec51e29fe8a047.png", // How do our users unlock the device on the lock screen?
-  "/images/c08f1d6f3d6b2b28.png", // What problems did we identify? (KaiOS ST lock screen)
-  "/images/a1b65956640eb7b1.png", // Rewriting problems as outcomes and dot voting
-  // kaios-smart-touch: every side-by-side paired image on the page
-  "/images/ec5c19ba272b1f0f.png", // What's Smart Touch?
-  "/images/5331824ccb9a645a.png", // Product positioning map
-  "/images/5ecc02c0a560dc4a.png", // FOB pricing
-  "/images/e040f63eb9474442.png", // What's the product proposition?
-  "/images/24cb665b1d7b3c79.png", // Who are the target users?
-  "/images/fae0f72a4dd7cc45.png", // UX design
-  "/images/b9880f9eaae81372.png", // Infogation bar
-  "/images/baaecf9a66d5d2a7.png", // Cards
-  "/images/2eca6dea05b3de7b.png", // The navigation of screens flow
-  "/images/8caaeaa0436f3354.png", // Visual characteristics
-  "/images/a1eea2f6221b8ef9.gif", // Meet KaiOS apps
-  "/images/64ab51ce03c440d6.png", // KaiStore
-  "/images/c5fdadf33da3c8b4.png", // Internet browser
-  "/images/9535f899e933d964.png", // First time use
-  "/images/3f59a41d0b08fa3e.png", // Wallpaper design
+// Keyed by slug first: the same uploaded asset (content hash) can be
+// reused across different projects for unrelated images, so a plain
+// image-path lookup risks applying the wrong page's treatment to a
+// coincidentally-shared file.
+const WHITE_BG_IMAGES: Record<string, Set<string>> = {
+  "hoy-tv-app": new Set([
+    "/images/2e9404c58c6bcc87.png", // What problems did we identify?
+    "/images/434e1eacbaf01c09.png", // Ideations
+    "/images/1a0ac749f2d28cf3.png", // User flow
+    "/images/90684e0ec494fe81.png", // Award-winning
+  ]),
+  "kaios-st-lock-screen": new Set([
+    "/images/a7b3d716305b7402.png", // Crazy 8s
+    "/images/b38b02ba567701be.png", // Narrowing down to the best solutions
+    "/images/2ff6223656850ef3.png", // One tap to unlock solution
+    "/images/0e3021817d93b234.png", // User testing with actual device (solution 1)
+    "/images/b4a66501ddc69673.png", // Swipe up to unlock solution
+    "/images/039a16af99efead8.png", // User testing with actual device (solution 2)
+    "/images/d60eb46b70e16ff7.png", // What I learned & next steps
+    "/images/c3ec51e29fe8a047.png", // How do our users unlock the device on the lock screen?
+    "/images/c08f1d6f3d6b2b28.png", // What problems did we identify?
+    "/images/a1b65956640eb7b1.png", // Rewriting problems as outcomes and dot voting
+  ]),
+  "kaios-smart-touch": new Set([
+    "/images/ec5c19ba272b1f0f.png", // What's Smart Touch?
+    "/images/5331824ccb9a645a.png", // Product positioning map
+    "/images/5ecc02c0a560dc4a.png", // FOB pricing
+    "/images/e040f63eb9474442.png", // What's the product proposition?
+    "/images/24cb665b1d7b3c79.png", // Who are the target users?
+    "/images/fae0f72a4dd7cc45.png", // UX design
+    "/images/b9880f9eaae81372.png", // Infogation bar
+    "/images/baaecf9a66d5d2a7.png", // Cards
+    "/images/2eca6dea05b3de7b.png", // The navigation of screens flow
+    "/images/8caaeaa0436f3354.png", // Visual characteristics
+    "/images/a1eea2f6221b8ef9.gif", // Meet KaiOS apps
+    "/images/64ab51ce03c440d6.png", // KaiStore
+    "/images/c5fdadf33da3c8b4.png", // Internet browser
+    "/images/9535f899e933d964.png", // First time use
+    "/images/3f59a41d0b08fa3e.png", // Wallpaper design
+  ]),
+  "kaios-smart-feature-phone": new Set([
+    "/images/968861c0acda55d0.png", // What's our proposition?
+    "/images/e139aad8cbd4058c.png", // Type
+    "/images/1030d8b23fa8be78.png", // Iconography
+  ]),
+};
+
+// Headings whose section is just a title plus a handful of extra
+// screenshots with no per-image text — rendered as a full-bleed
+// carousel instead of a small static grid.
+const CAROUSEL_HEADINGS = new Set([
+  "MEET OTHER APPS AT A GLANCE",
+  "VISUAL REFRESH",
 ]);
 
 // Sections whose static screenshot/gif reads much better as the
-// actual motion/prototype recording — keyed by the image path they
-// replace so SingleImage can swap in the embed at the same spot.
+// actual motion/prototype recording — keyed by slug then the image
+// path they replace (same collision risk as WHITE_BG_IMAGES above).
 // autoplay requires muted in every browser, and loop repeats playback
 // continuously — matching the looping gif/screen-recording feel these
 // videos replaced.
 const VIDEO_PLAYER_PARAMS = "autoplay=1&loop=1&muted=1";
 
-const VIDEO_OVERRIDES: Record<string, string> = {
-  "/images/b6162b8bc7134402.png": // The advantage of Infogation Bar
-    `https://player.vimeo.com/video/718534971?h=d1ca59d48b&${VIDEO_PLAYER_PARAMS}`,
-  "/images/683e8dcebb55b78d.gif": // Animation of launcher navigation
-    `https://player.vimeo.com/video/715438836?h=0328e68ef8&${VIDEO_PLAYER_PARAMS}`,
-  "/images/ab4d0ddd60a6a836.png": // Onboarding tutorial
-    `https://player.vimeo.com/video/718986407?h=3fc668e351&${VIDEO_PLAYER_PARAMS}`,
+const VIDEO_OVERRIDES: Record<string, Record<string, string>> = {
+  "kaios-smart-touch": {
+    "/images/b6162b8bc7134402.png": // The advantage of Infogation Bar
+      `https://player.vimeo.com/video/718534971?h=d1ca59d48b&${VIDEO_PLAYER_PARAMS}`,
+    "/images/683e8dcebb55b78d.gif": // Animation of launcher navigation
+      `https://player.vimeo.com/video/715438836?h=0328e68ef8&${VIDEO_PLAYER_PARAMS}`,
+    "/images/ab4d0ddd60a6a836.png": // Onboarding tutorial
+      `https://player.vimeo.com/video/718986407?h=3fc668e351&${VIDEO_PLAYER_PARAMS}`,
+  },
 };
 
-function SingleImage({ src }: { src: string }) {
-  const videoSrc = VIDEO_OVERRIDES[src];
+function SingleImage({ src, slug }: { src: string; slug: string }) {
+  const videoSrc = VIDEO_OVERRIDES[slug]?.[src];
   if (videoSrc) {
     return (
       <div className="aspect-video w-full overflow-hidden rounded-sm">
@@ -75,7 +99,7 @@ function SingleImage({ src }: { src: string }) {
     );
   }
 
-  if (WHITE_BG_IMAGES.has(src)) {
+  if (WHITE_BG_IMAGES[slug]?.has(src)) {
     return (
       <div className="rounded-sm bg-white p-3 sm:p-5">
         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -95,13 +119,13 @@ function SingleImage({ src }: { src: string }) {
   );
 }
 
-function ImageGallery({ images }: { images: string[] }) {
+function ImageGallery({ images, slug }: { images: string[]; slug: string }) {
   if (images.length === 0) return null;
 
   if (images.length === 1) {
     return (
       <Reveal>
-        <SingleImage src={images[0]} />
+        <SingleImage src={images[0]} slug={slug} />
       </Reveal>
     );
   }
@@ -110,7 +134,7 @@ function ImageGallery({ images }: { images: string[] }) {
     <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 sm:gap-8">
       {images.map((src, i) => (
         <Reveal key={src} delay={(i % 3) * 100}>
-          <SingleImage src={src} />
+          <SingleImage src={src} slug={slug} />
         </Reveal>
       ))}
     </div>
@@ -205,10 +229,12 @@ function WireframeSection({
   title,
   groups,
   images,
+  slug,
 }: {
   title: string;
   groups: HeadingGroup[];
   images: string[];
+  slug: string;
 }) {
   return (
     <>
@@ -235,7 +261,7 @@ function WireframeSection({
                 </p>
               ))}
             </div>
-            {images[i] && <SingleImage src={images[i]} />}
+            {images[i] && <SingleImage src={images[i]} slug={slug} />}
           </Reveal>
         ))}
       </div>
@@ -296,21 +322,30 @@ function splitIntoGroups(nodes: ContentNode[]): ContentNode[][] {
 function GroupedGallery({
   groups,
   images,
+  slug,
 }: {
   groups: ContentNode[][];
   images: string[];
+  slug: string;
 }) {
   return (
     <div className="space-y-16">
-      {groups.map((group, i) => (
-        <Reveal
-          key={i}
-          className="grid grid-cols-1 items-center gap-8 sm:grid-cols-2"
-        >
-          <div>{renderPlainNodes(group)}</div>
-          {images[i] && <SingleImage src={images[i]} />}
-        </Reveal>
-      ))}
+      {groups.map((group, i) => {
+        const image = images[i];
+        return (
+          <Reveal
+            key={i}
+            className={
+              image
+                ? "grid grid-cols-1 items-center gap-8 sm:grid-cols-2"
+                : "max-w-2xl"
+            }
+          >
+            <div>{renderPlainNodes(group)}</div>
+            {image && <SingleImage src={image} slug={slug} />}
+          </Reveal>
+        );
+      })}
     </div>
   );
 }
@@ -448,7 +483,13 @@ function RoleTeamDuration({
   );
 }
 
-export function CaseStudySection({ section }: { section: Section }) {
+export function CaseStudySection({
+  section,
+  slug,
+}: {
+  section: Section;
+  slug: string;
+}) {
   if (section.kind === "roleTeamDuration") {
     return (
       <div className={`${CONTAINER} py-12`}>
@@ -472,6 +513,7 @@ export function CaseStudySection({ section }: { section: Section }) {
           title={firstNode.text}
           groups={groups}
           images={section.images}
+          slug={slug}
         />
       </div>
     );
@@ -533,9 +575,15 @@ export function CaseStudySection({ section }: { section: Section }) {
     );
   }
 
-  // MEET OTHER APPS AT A GLANCE: a couple of extra screenshots that
-  // read better as a full-bleed carousel than a small static grid.
-  if (firstNode?.type === "heading" && firstNode.text === "MEET OTHER APPS AT A GLANCE") {
+  // A handful of sections are just a heading plus a handful of extra
+  // screenshots with no per-image text — those read better as a
+  // full-bleed carousel than a small static grid.
+  if (
+    firstNode?.type === "heading" &&
+    CAROUSEL_HEADINGS.has(firstNode.text) &&
+    section.nodes.length === 1 &&
+    section.images.length > 1
+  ) {
     return (
       <div className="py-12">
         <CarouselSection heading={firstNode.text} images={section.images} />
@@ -570,7 +618,7 @@ export function CaseStudySection({ section }: { section: Section }) {
             <Reveal>
               <div className="grid grid-cols-1 items-center gap-8 sm:grid-cols-2">
                 <div>{renderPlainNodes(before)}</div>
-                {firstImage && <SingleImage src={firstImage} />}
+                {firstImage && <SingleImage src={firstImage} slug={slug} />}
               </div>
             </Reveal>
           </div>
@@ -615,7 +663,7 @@ export function CaseStudySection({ section }: { section: Section }) {
           <Reveal className={before.length > 0 ? "mt-10" : undefined}>
             <div className="grid grid-cols-1 items-center gap-8 sm:grid-cols-2">
               <div>{renderPlainNodes(group)}</div>
-              <SingleImage src={section.images[0]} />
+              <SingleImage src={section.images[0]} slug={slug} />
             </div>
           </Reveal>
         </div>
@@ -649,13 +697,20 @@ export function CaseStudySection({ section }: { section: Section }) {
   // A long section that steps through several heading groups with one
   // image per beat (e.g. a design-sprint narrative) pairs each group
   // with its corresponding image in sequence, instead of dumping every
-  // image into one grid at the bottom.
+  // image into one grid at the bottom. A single trailing group with no
+  // image of its own (e.g. a closing personal-contribution note) is
+  // still allowed — it just renders full-width with no paired image.
   if (!captions && section.images.length > 1) {
     const groups = splitIntoGroups(section.nodes);
-    if (groups.length === section.images.length && groups.length > 1) {
+    const extraTrailingGroups = groups.length - section.images.length;
+    if (
+      groups.length > 1 &&
+      extraTrailingGroups >= 0 &&
+      extraTrailingGroups <= 1
+    ) {
       return (
         <div className={`${CONTAINER} py-12`}>
-          <GroupedGallery groups={groups} images={section.images} />
+          <GroupedGallery groups={groups} images={section.images} slug={slug} />
         </div>
       );
     }
@@ -668,7 +723,7 @@ export function CaseStudySection({ section }: { section: Section }) {
       </div>
       {section.images.length > 0 && (
         <div className={`mt-6 ${CONTAINER}`}>
-          <ImageGallery images={section.images} />
+          <ImageGallery images={section.images} slug={slug} />
         </div>
       )}
     </div>
