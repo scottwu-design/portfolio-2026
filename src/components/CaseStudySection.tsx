@@ -44,13 +44,18 @@ const WHITE_BG_IMAGES = new Set([
 // Sections whose static screenshot/gif reads much better as the
 // actual motion/prototype recording — keyed by the image path they
 // replace so SingleImage can swap in the embed at the same spot.
+// autoplay requires muted in every browser, and loop repeats playback
+// continuously — matching the looping gif/screen-recording feel these
+// videos replaced.
+const VIDEO_PLAYER_PARAMS = "autoplay=1&loop=1&muted=1";
+
 const VIDEO_OVERRIDES: Record<string, string> = {
   "/images/b6162b8bc7134402.png": // The advantage of Infogation Bar
-    "https://player.vimeo.com/video/718534971?h=d1ca59d48b",
+    `https://player.vimeo.com/video/718534971?h=d1ca59d48b&${VIDEO_PLAYER_PARAMS}`,
   "/images/683e8dcebb55b78d.gif": // Animation of launcher navigation
-    "https://player.vimeo.com/video/715438836?h=0328e68ef8",
+    `https://player.vimeo.com/video/715438836?h=0328e68ef8&${VIDEO_PLAYER_PARAMS}`,
   "/images/ab4d0ddd60a6a836.png": // Onboarding tutorial
-    "https://player.vimeo.com/video/718986407?h=3fc668e351",
+    `https://player.vimeo.com/video/718986407?h=3fc668e351&${VIDEO_PLAYER_PARAMS}`,
 };
 
 function SingleImage({ src }: { src: string }) {
