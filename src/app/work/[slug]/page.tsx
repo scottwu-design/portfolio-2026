@@ -16,7 +16,11 @@ import {
 // Staged rollout of the Option D redesign for case study pages: trying
 // it out on Hoy TV App first before applying it to every project.
 // Remove this once every slug has moved over to CaseStudySection.
-const OPTION_D_SLUGS = new Set(["hoy-tv-app", "kaios-st-lock-screen"]);
+const OPTION_D_SLUGS = new Set([
+  "hoy-tv-app",
+  "kaios-st-lock-screen",
+  "kaios-smart-touch",
+]);
 
 // Some projects have a dedicated banner image (usually the first
 // section's sole image in the original content) that reads better as
@@ -25,6 +29,7 @@ const OPTION_D_SLUGS = new Set(["hoy-tv-app", "kaios-st-lock-screen"]);
 const HERO_IMAGE_OVERRIDES: Record<string, string> = {
   "hoy-tv-app": "/images/1bd16d78eac35a36.png",
   "kaios-st-lock-screen": "/images/f6219556491234a1.png",
+  "kaios-smart-touch": "/images/d56c2cb34a04914c.png",
 };
 
 // Some projects read better with a descriptive lead sentence as the
