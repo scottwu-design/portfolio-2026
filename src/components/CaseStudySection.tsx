@@ -38,6 +38,7 @@ const WHITE_BG_IMAGES = new Set([
   "/images/8caaeaa0436f3354.png", // Visual characteristics
   "/images/f6f9b7b62fa01ec0.gif", // Color
   "/images/26e31207f76c4230.gif", // UI component
+  "/images/a1eea2f6221b8ef9.gif", // Meet KaiOS apps
   "/images/ab4d0ddd60a6a836.png", // App designs
   "/images/64ab51ce03c440d6.png", // KaiStore
   "/images/c5fdadf33da3c8b4.png", // Internet browser
@@ -50,27 +51,10 @@ const WHITE_BG_IMAGES = new Set([
   "/images/45d135fab4f5efea.png", // KaiStore partner guide
 ]);
 
-// Same white-card treatment, but flush (no inner padding) — for
-// images (like a dense grid of app-screen mockups) that already carry
-// their own whitespace framing and look better filling the card edge
-// to edge.
-const WHITE_BG_FLUSH_IMAGES = new Set([
-  "/images/a1eea2f6221b8ef9.gif", // Meet KaiOS apps
-]);
-
 function SingleImage({ src }: { src: string }) {
-  if (WHITE_BG_FLUSH_IMAGES.has(src)) {
-    return (
-      <div className="rounded-sm bg-white">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={asset(src)} alt="" loading="lazy" className="w-full" />
-      </div>
-    );
-  }
-
   if (WHITE_BG_IMAGES.has(src)) {
     return (
-      <div className="rounded-sm bg-white p-6 sm:p-10">
+      <div className="rounded-sm bg-white p-3 sm:p-5">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={asset(src)} alt="" loading="lazy" className="w-full" />
       </div>
