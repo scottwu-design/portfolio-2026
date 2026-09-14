@@ -46,7 +46,7 @@ export function FeatureGrid({
               src={asset(item.icon)}
               alt=""
               loading="lazy"
-              className="h-14 w-14 object-contain"
+              className="h-[42px] w-[42px] object-contain"
             />
             <h4 className="mt-4 font-display text-lg font-bold">{item.title}</h4>
             {item.description && (
