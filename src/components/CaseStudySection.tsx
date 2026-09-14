@@ -1,5 +1,5 @@
 import type { ContentNode, Section } from "@/data/types";
-import { Carousel } from "@/components/Carousel";
+import { CarouselSection } from "@/components/CarouselSection";
 import { Reveal } from "@/components/Reveal";
 import { asset } from "@/lib/asset";
 import { CONTAINER } from "@/lib/layout";
@@ -341,26 +341,34 @@ export function CaseStudySection({ section }: { section: Section }) {
       splitIndex !== null ? section.nodes.slice(splitIndex) : section.nodes;
     const [firstImage, ...restImages] = section.images;
 
+    const groupHeadingNode = group.find((n) => n.type === "heading");
+    const groupHeadingText =
+      groupHeadingNode?.type === "heading" ? groupHeadingNode.text : "";
+    const groupBodyNodes = group.filter((n) => n !== groupHeadingNode);
+
     return (
       <div className="py-6">
-        <div className={CONTAINER}>
-          {before.length > 0 && (
+        {before.length > 0 && (
+          <div className={CONTAINER}>
             <Reveal>
               <div className="grid grid-cols-1 items-center gap-8 sm:grid-cols-2">
                 <div>{renderPlainNodes(before)}</div>
                 {firstImage && <SingleImage src={firstImage} />}
               </div>
             </Reveal>
-          )}
-          <div className={before.length > 0 ? "mt-10" : undefined}>
-            <ContentNodes nodes={group} />
           </div>
-        </div>
-        {restImages.length > 0 && (
-          <Reveal className="mt-6">
-            <Carousel images={restImages} />
-          </Reveal>
         )}
+        <div className={before.length > 0 ? "mt-10" : undefined}>
+          <CarouselSection
+            heading={groupHeadingText}
+            body={
+              groupBodyNodes.length > 0 ? (
+                <>{renderPlainNodes(groupBodyNodes)}</>
+              ) : undefined
+            }
+            images={restImages}
+          />
+        </div>
       </div>
     );
   }
@@ -398,24 +406,37 @@ export function CaseStudySection({ section }: { section: Section }) {
     }
   }
 
+  if (captions && section.images.length > 0) {
+    const bodyNodes = section.nodes.slice(0, -1);
+    const headingNode = bodyNodes.find((n) => n.type === "heading");
+    const headingText =
+      headingNode?.type === "heading" ? headingNode.text : "";
+    const restNodes = bodyNodes.filter((n) => n !== headingNode);
+
+    return (
+      <div className="py-6">
+        <CarouselSection
+          heading={headingText}
+          body={
+            restNodes.length > 0 ? (
+              <>{renderPlainNodes(restNodes)}</>
+            ) : undefined
+          }
+          images={section.images}
+          captions={captions}
+        />
+      </div>
+    );
+  }
+
   return (
     <div className="py-6">
       <div className={CONTAINER}>
-        <ContentNodes
-          nodes={captions ? section.nodes.slice(0, -1) : section.nodes}
-        />
+        <ContentNodes nodes={section.nodes} />
       </div>
       {section.images.length > 0 && (
-        <div className="mt-6">
-          {captions ? (
-            <Reveal>
-              <Carousel images={section.images} captions={captions} />
-            </Reveal>
-          ) : (
-            <div className={CONTAINER}>
-              <ImageGallery images={section.images} />
-            </div>
-          )}
+        <div className={`mt-6 ${CONTAINER}`}>
+          <ImageGallery images={section.images} />
         </div>
       )}
     </div>
