@@ -712,8 +712,16 @@ export function CaseStudySection({
   // node) — infer which from how many nodes are left over once every
   // image has claimed a title+desc pair. Sections with no images at
   // all (no icons to assign) have no such anchor, so just skip the
-  // section's own heading.
-  if (firstNode?.type === "heading" && FEATURE_GRID_HEADINGS.has(firstNode.text)) {
+  // section's own heading. A section with a "list" node never matches
+  // this repeated-title+desc shape (e.g. an intro paragraph followed
+  // by a bulleted list under the same heading text on a different
+  // page) — fall through to the default rendering instead.
+  const hasListNode = section.nodes.some((n) => n.type === "list");
+  if (
+    firstNode?.type === "heading" &&
+    FEATURE_GRID_HEADINGS.has(firstNode.text) &&
+    !hasListNode
+  ) {
     const leadCount =
       section.images.length > 0
         ? section.nodes.length - 2 * section.images.length
