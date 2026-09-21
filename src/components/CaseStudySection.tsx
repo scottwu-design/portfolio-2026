@@ -99,6 +99,12 @@ const VIDEO_OVERRIDES: Record<string, Record<string, string>> = {
       "https://player.vimeo.com/video/711522349?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&muted=1&loop=1",
     CARDS: `https://player.vimeo.com/video/824962055?h=f584ea1789&${VIDEO_PLAYER_PARAMS}`,
   },
+  "kaios-smart-tv-launcher": {
+    // This section has no heading to key by (just a lone caption), so
+    // the image path itself is the key here.
+    "/images/c3b7c493750fdf31.png":
+      `https://player.vimeo.com/video/713591199?h=f9ce1fabef&${VIDEO_PLAYER_PARAMS}`,
+  },
 };
 
 function SingleImage({
@@ -573,6 +579,30 @@ export function CaseStudySection({
           team={section.team}
           duration={section.duration}
         />
+      </div>
+    );
+  }
+
+  // A lone caption + single image with no heading (e.g. "Animation of
+  // the spatial navigation model...") — when that image has a video
+  // override, swap in the video and move the caption below it instead
+  // of above.
+  if (
+    section.nodes.length === 1 &&
+    section.nodes[0].type === "para" &&
+    section.images.length === 1 &&
+    VIDEO_OVERRIDES[slug]?.[section.images[0]]
+  ) {
+    const captionNode = section.nodes[0];
+    const image = section.images[0];
+    return (
+      <div className={`${CONTAINER} py-12`}>
+        <Reveal>
+          <SingleImage src={image} slug={slug} videoKey={image} />
+          <p className="mt-4 leading-relaxed text-ink/70">
+            {renderTextWithLinks(captionNode.text)}
+          </p>
+        </Reveal>
       </div>
     );
   }
