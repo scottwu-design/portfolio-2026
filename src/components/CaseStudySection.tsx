@@ -79,6 +79,11 @@ const CAROUSEL_HEADINGS = new Set([
 // instead of a static grid or a manually-controlled carousel.
 const MARQUEE_HEADINGS = new Set(["AWARDS"]);
 
+// Headings whose section is a short text-only list — laid out as
+// side-by-side numbered columns instead of a plain stacked bullet
+// list.
+const NUMBERED_GRID_HEADINGS = new Set(["CHALLENGES", "GOAL"]);
+
 // Sections whose static screenshot/gif reads much better as the
 // actual motion/prototype recording — keyed by slug then by the
 // group's HEADING text (not the image path): the same uploaded asset
@@ -613,10 +618,8 @@ export function CaseStudySection({
     );
   }
 
-  // CHALLENGES: a short text-only list — laid out as side-by-side
-  // numbered columns instead of a plain stacked bullet list.
   const firstNode = section.nodes[0];
-  if (firstNode?.type === "heading" && firstNode.text === "CHALLENGES") {
+  if (firstNode?.type === "heading" && NUMBERED_GRID_HEADINGS.has(firstNode.text)) {
     const listNode = section.nodes.find((n) => n.type === "list");
     if (listNode?.type === "list") {
       return (
