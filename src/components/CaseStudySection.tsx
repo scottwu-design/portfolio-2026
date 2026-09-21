@@ -89,6 +89,7 @@ const WHITE_BG_IMAGES: Record<string, Set<string>> = {
   ]),
   "yadea-e-scooter": new Set([
     "/images/d90625018742be03.png", // App audit
+    "/images/fa9f81641bb610bf.png", // Typography and colors
   ]),
 };
 
