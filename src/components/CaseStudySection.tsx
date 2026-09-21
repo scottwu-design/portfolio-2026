@@ -133,6 +133,15 @@ const WIREFRAME_HEADINGS = new Set([
   "Animation of home in pin an channel/app to home",
 ]);
 
+// Like WIREFRAME_HEADINGS, but the first heading is itself one of the
+// flat items (not a standalone section title) — e.g. a page with no
+// umbrella heading at all, just a bare list of named screens. Every
+// node, including the first, becomes its own group instead of the
+// first being consumed as the section's title.
+const WIREFRAME_HEADINGS_NO_TITLE = new Set([
+  "Timeline view in Day, Month, and Year",
+]);
+
 // Sections whose static screenshot/gif reads much better as the
 // actual motion/prototype recording — keyed by slug then by the
 // group's HEADING text (not the image path): the same uploaded asset
@@ -382,23 +391,25 @@ function WireframeSection({
   images,
   slug,
 }: {
-  title: string;
+  title?: string;
   groups: HeadingGroup[];
   images: string[];
   slug: string;
 }) {
   return (
     <>
-      <Reveal className="max-w-2xl first:mt-0">
-        <h3 className="font-display text-xl font-bold sm:text-2xl">
-          {title}
-        </h3>
-      </Reveal>
+      {title && (
+        <Reveal className="max-w-2xl first:mt-0">
+          <h3 className="font-display text-xl font-bold sm:text-2xl">
+            {title}
+          </h3>
+        </Reveal>
+      )}
 
       <div className="mt-6 space-y-12">
         {groups.map((group, i) => (
           <Reveal
-            key={group.heading}
+            key={i}
             delay={i * 100}
             className="grid grid-cols-1 items-center gap-8 sm:grid-cols-2"
           >
@@ -719,6 +730,18 @@ export function CaseStudySection({
           images={section.images}
           slug={slug}
         />
+      </div>
+    );
+  }
+
+  if (
+    firstNode?.type === "heading" &&
+    WIREFRAME_HEADINGS_NO_TITLE.has(firstNode.text)
+  ) {
+    const groups = groupByHeading(section.nodes);
+    return (
+      <div className={`${CONTAINER} py-12`}>
+        <WireframeSection groups={groups} images={section.images} slug={slug} />
       </div>
     );
   }
