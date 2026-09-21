@@ -3,13 +3,6 @@
   "sections": [
     {
       "kind": "content",
-      "nodes": [],
-      "images": [
-        "/images/571b4e279eaa573d.jpg"
-      ]
-    },
-    {
-      "kind": "content",
       "nodes": [
         {
           "type": "heading",
@@ -43,7 +36,7 @@
       "nodes": [
         {
           "type": "heading",
-          "text": "Essential Phone Project"
+          "text": "Essential Phone Project — Launch & Close"
         },
         {
           "type": "para",
@@ -51,7 +44,7 @@
         },
         {
           "type": "heading",
-          "text": "Essential Phone Project"
+          "text": "Essential Phone Project — Pin & Unpin"
         },
         {
           "type": "para",
@@ -59,7 +52,7 @@
         },
         {
           "type": "heading",
-          "text": "Ripple Project"
+          "text": "Ripple Project — Download"
         },
         {
           "type": "para",
@@ -67,7 +60,7 @@
         },
         {
           "type": "heading",
-          "text": "Ripple Project"
+          "text": "Ripple Project — Share"
         },
         {
           "type": "para",
@@ -76,7 +69,9 @@
       ],
       "images": [
         "/images/25ec829c86ec4ccf.jpg",
-        "/images/859ef545a19837d0.png"
+        "/images/859ef545a19837d0.png",
+        "/images/25ec829c86ec4ccf.jpg",
+        "/images/25ec829c86ec4ccf.jpg"
       ]
     }
   ]

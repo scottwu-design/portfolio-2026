@@ -179,6 +179,16 @@ const VIDEO_OVERRIDES: Record<string, Record<string, string>> = {
     "Animation of Popup UI components":
       `https://player.vimeo.com/video/165105506?${VIDEO_PLAYER_PARAMS}`,
   },
+  "fxos-smartphone": {
+    "Essential Phone Project — Launch & Close":
+      `https://player.vimeo.com/video/164666255?${VIDEO_PLAYER_PARAMS}`,
+    "Essential Phone Project — Pin & Unpin":
+      `https://player.vimeo.com/video/164664548?${VIDEO_PLAYER_PARAMS}`,
+    "Ripple Project — Download":
+      `https://player.vimeo.com/video/164890932?${VIDEO_PLAYER_PARAMS}`,
+    "Ripple Project — Share":
+      `https://player.vimeo.com/video/164890852?${VIDEO_PLAYER_PARAMS}`,
+  },
 };
 
 function SingleImage({

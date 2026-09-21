@@ -28,6 +28,7 @@ const OPTION_D_SLUGS = new Set([
   "home-automation",
   "h5os-smart-feature-phone",
   "fxos-smart-tv",
+  "fxos-smartphone",
 ]);
 
 // Some projects have a dedicated banner image (usually the first
@@ -46,6 +47,7 @@ const HERO_IMAGE_OVERRIDES: Record<string, string> = {
   "home-automation": "/images/ac84798518a9207f.png",
   "h5os-smart-feature-phone": "/images/ffcecba0151e433f.png",
   "fxos-smart-tv": "/images/e406c6cfb100ac2c.jpg",
+  "fxos-smartphone": "/images/571b4e279eaa573d.jpg",
 };
 
 // Some projects read better with a descriptive lead sentence as the
