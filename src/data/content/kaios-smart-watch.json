@@ -457,6 +457,24 @@
         "/images/dc7e6fd4275e9fcd.png",
         "/images/b646337ce25f6cf2.png"
       ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "TAKEAWAY"
+        },
+        {
+          "type": "para",
+          "text": "Designing a concept for a smart watch from the ground up, spanning both touch and non-touch hardware, was one of the most exploratory projects I've worked on. From studying Wear OS and Apple WatchOS to defining a single-layer navigation model that works across square and circular displays, the process pushed me to think beyond the mobile-first patterns I was used to and design for a much smaller, glanceable screen."
+        },
+        {
+          "type": "para",
+          "text": "In the end, AT&T decided not to move forward with the product due to their own business priorities, and the project was shelved before development began. While it was disappointing not to see it come to life, I'm proud of the concept work my team and I produced, and the wearable UX principles I learned continue to inform how I approach designing for constrained screens today."
+        }
+      ],
+      "images": []
     }
   ]
 }
