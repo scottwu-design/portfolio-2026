@@ -81,6 +81,11 @@ const WHITE_BG_IMAGES: Record<string, Set<string>> = {
     "/images/56fc7900f4303718.png", // Voice assistant
     "/images/89ec143bfe201f31.png", // Color
     "/images/e04766405eeff218.gif", // (last UI component image)
+    "/images/9b5f48c04ca785c1.png", // Screen shapes
+    "/images/001819f222b17f98.png", // Hardware compatibility
+    "/images/cbeb4662a37099a1.png", // Watch faces
+    "/images/dc7e6fd4275e9fcd.png", // Kids / Sports
+    "/images/b646337ce25f6cf2.png", // Unisex
   ]),
 };
 
