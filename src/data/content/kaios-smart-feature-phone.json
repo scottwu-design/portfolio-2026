@@ -61,9 +61,12 @@
           "text": "Because they are non-touch devices with little memory, smart feature phones cost less to produce than smartphones. Not having large touchscreens makes them more durable and resistant to impact, which means they last longer than smartphones."
         },
         {
+          "type": "para",
+          "text": "Smart Feature Phones can be divided into four types:"
+        },
+        {
           "type": "list",
           "items": [
-            "Smart Feature Phones can be divided into four types:",
             "Candy bar phones, Flip phones, Rugged phones, Keyboard phones"
           ]
         },
