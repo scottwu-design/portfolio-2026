@@ -3,13 +3,6 @@
   "sections": [
     {
       "kind": "content",
-      "nodes": [],
-      "images": [
-        "/images/4716d504dd48b52f.png"
-      ]
-    },
-    {
-      "kind": "content",
       "nodes": [
         {
           "type": "heading",
@@ -52,11 +45,8 @@
           "text": "DESIGN THINKING"
         },
         {
-          "type": "list",
-          "items": [
-            "A Simple, Essential",
-            "Yet Efficient Smart Watch Design"
-          ]
+          "type": "heading",
+          "text": "A Simple, Essential, Yet Efficient Smart Watch Design"
         }
       ],
       "images": []
@@ -132,7 +122,7 @@
           "text": "Voice Assistant"
         },
         {
-          "type": "heading",
+          "type": "para",
           "text": "Use voice commands and voice typing"
         },
         {
@@ -140,7 +130,7 @@
           "text": "Communication"
         },
         {
-          "type": "heading",
+          "type": "para",
           "text": "Make and receive phone calls"
         },
         {
@@ -148,7 +138,7 @@
           "text": "Training"
         },
         {
-          "type": "heading",
+          "type": "para",
           "text": "Track workouts and activities"
         },
         {
@@ -156,7 +146,7 @@
           "text": "Health"
         },
         {
-          "type": "heading",
+          "type": "para",
           "text": "Monitor heart rate and gather fitness data"
         },
         {
@@ -164,7 +154,7 @@
           "text": "Location Monitor"
         },
         {
-          "type": "heading",
+          "type": "para",
           "text": "Track child's location for safety"
         },
         {

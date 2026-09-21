@@ -84,6 +84,22 @@ const MARQUEE_HEADINGS = new Set(["AWARDS"]);
 // list.
 const NUMBERED_GRID_HEADINGS = new Set(["CHALLENGES", "GOAL"]);
 
+// Headings whose section steps through several parallel points, each
+// with its own icon — rendered as a FeatureGrid instead of a stacked
+// side-by-side narrative.
+const FEATURE_GRID_HEADINGS = new Set([
+  "EMERGING MARKET USERS BEHAVIOR INSIGHTS",
+  "DESIGN PRINCIPLE",
+  "DESIGN OBJECTIVE",
+  "FEATURES",
+]);
+
+// Headings whose section is a flat list of independent named items
+// (not all of which have a body paragraph) — each one pairs with its
+// own image regardless, so every heading starts a new group rather
+// than being folded into an eyebrow+title pair with its neighbor.
+const WIREFRAME_HEADINGS = new Set(["WIREFRAME", "UI COMPONENTS"]);
+
 // Sections whose static screenshot/gif reads much better as the
 // actual motion/prototype recording — keyed by slug then by the
 // group's HEADING text (not the image path): the same uploaded asset
@@ -630,9 +646,13 @@ export function CaseStudySection({
     }
   }
 
-  // The WIREFRAME section pairs "Mobile App" / "Website" with their own
-  // screenshot, side by side, instead of the default layout.
-  if (firstNode?.type === "heading" && firstNode.text === "WIREFRAME") {
+  // WIREFRAME-style sections pair each sub-heading (e.g. "Mobile App",
+  // "Website", or a flat list of UI component names) with its own
+  // screenshot, side by side, instead of the default layout. Every
+  // heading starts its own group here — unlike the eyebrow+title
+  // pairing used elsewhere — since these are independent items that
+  // just don't all have a body paragraph.
+  if (firstNode?.type === "heading" && WIREFRAME_HEADINGS.has(firstNode.text)) {
     const groups = groupByHeading(section.nodes.slice(1));
     return (
       <div className={`${CONTAINER} py-12`}>
@@ -646,28 +666,14 @@ export function CaseStudySection({
     );
   }
 
-  // EMERGING MARKET USERS BEHAVIOR INSIGHTS: six parallel insights,
-  // each with its own icon — laid out as a 3-column feature grid
-  // instead of a stacked side-by-side narrative.
-  if (
-    firstNode?.type === "heading" &&
-    firstNode.text === "EMERGING MARKET USERS BEHAVIOR INSIGHTS"
-  ) {
-    const items = parseFeatureItems(section.nodes.slice(1), section.images);
-    return (
-      <div className="py-12">
-        <FeatureGrid heading={firstNode.text} items={items} columns={3} />
-      </div>
-    );
-  }
-
-  // DESIGN PRINCIPLE: a handful of parallel principles, each with its
-  // own icon — laid out as a single-row feature grid. Some pages give
-  // it its own subheading line (2 leading nodes before the items
-  // start), others don't (1 leading node) — infer which from how many
-  // nodes are left over once every image has claimed a title+desc
-  // pair.
-  if (firstNode?.type === "heading" && firstNode.text === "DESIGN PRINCIPLE") {
+  // A handful of parallel points, each with its own icon — laid out as
+  // a feature grid (3 columns for 6 items, 4 for a single row of 4,
+  // otherwise 3) instead of a stacked side-by-side narrative. Some
+  // pages give the section its own subheading line (2 leading nodes
+  // before the items start), others don't (1 leading node) — infer
+  // which from how many nodes are left over once every image has
+  // claimed a title+desc pair.
+  if (firstNode?.type === "heading" && FEATURE_GRID_HEADINGS.has(firstNode.text)) {
     const leadCount = section.nodes.length - 2 * section.images.length;
     const subheadingNode = leadCount >= 2 ? section.nodes[1] : undefined;
     const subheading =
@@ -682,7 +688,7 @@ export function CaseStudySection({
           eyebrow={subheading ? firstNode.text : undefined}
           heading={subheading || firstNode.text}
           items={items}
-          columns={items.length === 3 ? 3 : 4}
+          columns={items.length === 4 ? 4 : 3}
         />
       </div>
     );
@@ -782,10 +788,15 @@ export function CaseStudySection({
 
   // When a section's trailing list has exactly one item per image (e.g.
   // a screen-by-screen breakdown like "Home / Live TV / Details..."),
-  // treat each item as that image's caption instead of a separate list.
+  // treat each item as that image's caption instead of a separate
+  // list. Require it to be the section's only list, so a section with
+  // several genuine bullet lists (where the last one just happens to
+  // match the image count) doesn't get misread as captions.
   const lastNode = section.nodes[section.nodes.length - 1];
+  const listNodeCount = section.nodes.filter((n) => n.type === "list").length;
   const captions =
     lastNode?.type === "list" &&
+    listNodeCount === 1 &&
     section.images.length > 0 &&
     lastNode.items.length === section.images.length
       ? lastNode.items
