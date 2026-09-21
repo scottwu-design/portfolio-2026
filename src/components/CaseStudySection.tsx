@@ -64,6 +64,24 @@ const WHITE_BG_IMAGES: Record<string, Set<string>> = {
     "/images/73fcfea03dec8faf.gif", // Simulator
     "/images/0d38cf916fffe6fe.gif", // Board
   ]),
+  "kaios-smart-watch": new Set([
+    "/images/04f770ca55bc6c0b.png", // Who are the users?
+    // UI Components (every image in the section)
+    "/images/774eaed10b2b3241.png", // List
+    "/images/119f5bb3605a2555.png", // Header button
+    "/images/1c233b17f948873a.png", // Button
+    "/images/46a1ba46c81541cd.png", // Input / Option menu
+    "/images/b3a05fab27de82e7.png", // Number keypad
+    "/images/85740b4714d66729.png", // Magnifying effect on number keypad
+    "/images/aae2c921917c56eb.png", // Slider
+    "/images/a800fafc3df8e055.png", // Date picker
+    "/images/0b67c600447fb40d.png", // Dialog
+    "/images/230e425843188685.png", // Progress bar
+    "/images/bc428a6a37b4702a.png", // Notifications
+    "/images/56fc7900f4303718.png", // Voice assistant
+    "/images/89ec143bfe201f31.png", // Color
+    "/images/e04766405eeff218.gif", // (last UI component image)
+  ]),
 };
 
 // Headings whose section is just a title plus a handful of extra
@@ -92,6 +110,7 @@ const FEATURE_GRID_HEADINGS = new Set([
   "DESIGN PRINCIPLE",
   "DESIGN OBJECTIVE",
   "FEATURES",
+  "VISUAL DIRECTION",
 ]);
 
 // Headings whose section is a flat list of independent named items
@@ -666,15 +685,20 @@ export function CaseStudySection({
     );
   }
 
-  // A handful of parallel points, each with its own icon — laid out as
-  // a feature grid (3 columns for 6 items, 4 for a single row of 4,
-  // otherwise 3) instead of a stacked side-by-side narrative. Some
-  // pages give the section its own subheading line (2 leading nodes
-  // before the items start), others don't (1 leading node) — infer
-  // which from how many nodes are left over once every image has
-  // claimed a title+desc pair.
+  // A handful of parallel points, each optionally with its own icon —
+  // laid out as a feature grid (3 columns for 6 items, 4 for a single
+  // row of 4, otherwise 3) instead of a stacked side-by-side
+  // narrative. Some pages give the section its own subheading line (2
+  // leading nodes before the items start), others don't (1 leading
+  // node) — infer which from how many nodes are left over once every
+  // image has claimed a title+desc pair. Sections with no images at
+  // all (no icons to assign) have no such anchor, so just skip the
+  // section's own heading.
   if (firstNode?.type === "heading" && FEATURE_GRID_HEADINGS.has(firstNode.text)) {
-    const leadCount = section.nodes.length - 2 * section.images.length;
+    const leadCount =
+      section.images.length > 0
+        ? section.nodes.length - 2 * section.images.length
+        : 1;
     const subheadingNode = leadCount >= 2 ? section.nodes[1] : undefined;
     const subheading =
       subheadingNode?.type === "heading" ? subheadingNode.text : "";
