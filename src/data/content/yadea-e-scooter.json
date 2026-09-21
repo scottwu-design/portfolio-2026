@@ -139,7 +139,24 @@
     },
     {
       "kind": "content",
-      "nodes": [],
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "Typography and Colors"
+        },
+        {
+          "type": "para",
+          "text": "I paired Rubik for bold, expressive headlines with PingFang for legible body copy across both English and Chinese. The palette blends vibrant orange-to-teal gradients with a neutral grayscale, giving the interface an energetic yet approachable feel that reflects Yadea's brand."
+        },
+        {
+          "type": "heading",
+          "text": "Iconography"
+        },
+        {
+          "type": "para",
+          "text": "A custom icon set, built around simple and consistent shapes, covers everything from scooter-specific actions to everyday utility functions, keeping the interface easy to scan at a glance."
+        }
+      ],
       "images": [
         "/images/fa9f81641bb610bf.png",
         "/images/2e22094234e4fa2e.png"

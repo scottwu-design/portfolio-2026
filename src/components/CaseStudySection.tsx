@@ -127,16 +127,6 @@ const FEATURE_GRID_HEADINGS = new Set([
 // than being folded into an eyebrow+title pair with its neighbor.
 const WIREFRAME_HEADINGS = new Set(["WIREFRAME", "UI COMPONENTS"]);
 
-// Headless (no heading) multi-image sections that should stack as a
-// single column instead of the default multi-column grid — keyed by
-// slug then the section's first image path, since there's no heading
-// to key by.
-const SINGLE_COLUMN_IMAGE_SECTIONS: Record<string, Set<string>> = {
-  "yadea-e-scooter": new Set([
-    "/images/fa9f81641bb610bf.png", // Typography/color + icon set section
-  ]),
-};
-
 // Sections whose static screenshot/gif reads much better as the
 // actual motion/prototype recording — keyed by slug then by the
 // group's HEADING text (not the image path): the same uploaded asset
@@ -919,28 +909,6 @@ export function CaseStudySection({
         </div>
       );
     }
-  }
-
-  // A headless multi-image section explicitly marked to stack as a
-  // single column instead of the default multi-column grid.
-  if (
-    section.images.length > 0 &&
-    SINGLE_COLUMN_IMAGE_SECTIONS[slug]?.has(section.images[0])
-  ) {
-    return (
-      <div className="py-12">
-        <div className={CONTAINER}>
-          <ContentNodes nodes={section.nodes} />
-        </div>
-        <div className={`mt-6 space-y-6 ${CONTAINER}`}>
-          {section.images.map((src, i) => (
-            <Reveal key={src} delay={i * 100}>
-              <SingleImage src={src} slug={slug} />
-            </Reveal>
-          ))}
-        </div>
-      </div>
-    );
   }
 
   return (
