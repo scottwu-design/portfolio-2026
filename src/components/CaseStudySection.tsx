@@ -2,6 +2,7 @@ import type { ContentNode, Section } from "@/data/types";
 import { CarouselSection } from "@/components/CarouselSection";
 import { FeatureGrid, type FeatureGridItem } from "@/components/FeatureGrid";
 import { Marquee } from "@/components/Marquee";
+import { NumberedGrid } from "@/components/NumberedGrid";
 import { Reveal } from "@/components/Reveal";
 import { StatGrid, type StatGridItem } from "@/components/StatGrid";
 import { asset } from "@/lib/asset";
@@ -576,9 +577,22 @@ export function CaseStudySection({
     );
   }
 
+  // CHALLENGES: a short text-only list — laid out as side-by-side
+  // numbered columns instead of a plain stacked bullet list.
+  const firstNode = section.nodes[0];
+  if (firstNode?.type === "heading" && firstNode.text === "CHALLENGES") {
+    const listNode = section.nodes.find((n) => n.type === "list");
+    if (listNode?.type === "list") {
+      return (
+        <div className="py-12">
+          <NumberedGrid heading={firstNode.text} items={listNode.items} />
+        </div>
+      );
+    }
+  }
+
   // The WIREFRAME section pairs "Mobile App" / "Website" with their own
   // screenshot, side by side, instead of the default layout.
-  const firstNode = section.nodes[0];
   if (firstNode?.type === "heading" && firstNode.text === "WIREFRAME") {
     const groups = groupByHeading(section.nodes.slice(1));
     return (
