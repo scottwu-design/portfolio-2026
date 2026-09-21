@@ -3,13 +3,6 @@
   "sections": [
     {
       "kind": "content",
-      "nodes": [],
-      "images": [
-        "/images/eda98159cee8d7e6.jpg"
-      ]
-    },
-    {
-      "kind": "content",
       "nodes": [
         {
           "type": "heading",
@@ -34,7 +27,7 @@
           "text": "My contributions to this project were visual design, interaction design, and front-end development."
         },
         {
-          "type": "para",
+          "type": "heading",
           "text": "MTV - Get Yourself Tested Campaign | April 2009"
         },
         {
