@@ -126,7 +126,11 @@ const FEATURE_GRID_HEADINGS = new Set([
 // (not all of which have a body paragraph) — each one pairs with its
 // own image regardless, so every heading starts a new group rather
 // than being folded into an eyebrow+title pair with its neighbor.
-const WIREFRAME_HEADINGS = new Set(["WIREFRAME", "UI COMPONENTS"]);
+const WIREFRAME_HEADINGS = new Set([
+  "WIREFRAME",
+  "UI COMPONENTS",
+  "Animation of home automation from greeting screen to home screen",
+]);
 
 // Sections whose static screenshot/gif reads much better as the
 // actual motion/prototype recording — keyed by slug then by the

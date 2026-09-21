@@ -3,13 +3,6 @@
   "sections": [
     {
       "kind": "content",
-      "nodes": [],
-      "images": [
-        "/images/ac84798518a9207f.png"
-      ]
-    },
-    {
-      "kind": "content",
       "nodes": [
         {
           "type": "heading",
@@ -47,7 +40,7 @@
       "kind": "content",
       "nodes": [
         {
-          "type": "para",
+          "type": "heading",
           "text": "Animation of home automation from greeting screen to home screen"
         },
         {
