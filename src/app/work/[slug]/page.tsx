@@ -24,6 +24,7 @@ const OPTION_D_SLUGS = new Set([
   "kaios-smart-tv-launcher",
   "kaios-smart-watch",
   "yadea-e-scooter",
+  "htc-sense-ui",
 ]);
 
 // Some projects have a dedicated banner image (usually the first
@@ -38,6 +39,7 @@ const HERO_IMAGE_OVERRIDES: Record<string, string> = {
   "kaios-smart-tv-launcher": "/images/6372d8349d326737.png",
   "kaios-smart-watch": "/images/4716d504dd48b52f.png",
   "yadea-e-scooter": "/images/f3cc4e2f6f56eddc.png",
+  "htc-sense-ui": "/images/0f15d4f34e573773.jpg",
 };
 
 // Some projects read better with a descriptive lead sentence as the

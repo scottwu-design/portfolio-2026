@@ -160,6 +160,12 @@ const VIDEO_OVERRIDES: Record<string, Record<string, string>> = {
     "/images/c3b7c493750fdf31.png":
       `https://player.vimeo.com/video/713591199?h=f9ce1fabef&${VIDEO_PLAYER_PARAMS}`,
   },
+  "htc-sense-ui": {
+    "HTC Weather Clock":
+      `https://player.vimeo.com/video/164675945?${VIDEO_PLAYER_PARAMS}`,
+    "Panorama mode":
+      `https://player.vimeo.com/video/164675986?${VIDEO_PLAYER_PARAMS}`,
+  },
 };
 
 function SingleImage({
