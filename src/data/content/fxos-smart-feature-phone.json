@@ -3,13 +3,6 @@
   "sections": [
     {
       "kind": "content",
-      "nodes": [],
-      "images": [
-        "/images/9b01b4d1d7f8aa64.jpg"
-      ]
-    },
-    {
-      "kind": "content",
       "nodes": [
         {
           "type": "heading",

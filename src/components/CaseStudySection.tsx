@@ -242,7 +242,7 @@ function ImageGallery({ images, slug }: { images: string[]; slug: string }) {
   if (images.length === 1) {
     return (
       <Reveal>
-        <SingleImage src={images[0]} slug={slug} />
+        <SingleImage src={images[0]} slug={slug} videoKey={images[0]} />
       </Reveal>
     );
   }
@@ -251,7 +251,7 @@ function ImageGallery({ images, slug }: { images: string[]; slug: string }) {
     <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 sm:gap-8">
       {images.map((src, i) => (
         <Reveal key={src} delay={(i % 3) * 100}>
-          <SingleImage src={src} slug={slug} />
+          <SingleImage src={src} slug={slug} videoKey={src} />
         </Reveal>
       ))}
     </div>
