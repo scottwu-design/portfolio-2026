@@ -31,6 +31,7 @@ const OPTION_D_SLUGS = new Set([
   "fxos-smartphone",
   "fxos-smart-feature-phone",
   "htc-lifeme",
+  "htc-multi-windows",
 ]);
 
 // Some projects have a dedicated banner image (usually the first
@@ -52,6 +53,7 @@ const HERO_IMAGE_OVERRIDES: Record<string, string> = {
   "fxos-smartphone": "/images/571b4e279eaa573d.jpg",
   "fxos-smart-feature-phone": "/images/9b01b4d1d7f8aa64.jpg",
   "htc-lifeme": "/images/59d78f217fdd7ad4.jpg",
+  "htc-multi-windows": "/images/24337a2e5c0ae1c4.jpg",
 };
 
 // Some projects read better with a descriptive lead sentence as the
