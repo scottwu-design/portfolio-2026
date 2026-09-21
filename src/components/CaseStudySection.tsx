@@ -130,6 +130,7 @@ const WIREFRAME_HEADINGS = new Set([
   "WIREFRAME",
   "UI COMPONENTS",
   "Animation of home automation from greeting screen to home screen",
+  "Animation of home in pin an channel/app to home",
 ]);
 
 // Sections whose static screenshot/gif reads much better as the
@@ -169,6 +170,14 @@ const VIDEO_OVERRIDES: Record<string, Record<string, string>> = {
       `https://player.vimeo.com/video/164675945?${VIDEO_PLAYER_PARAMS}`,
     "Panorama mode":
       `https://player.vimeo.com/video/164675986?${VIDEO_PLAYER_PARAMS}`,
+  },
+  "fxos-smart-tv": {
+    "Animation of Dashboard in entering floating mode and transition of widget panels":
+      `https://player.vimeo.com/video/165097433?${VIDEO_PLAYER_PARAMS}`,
+    "Animation of UI components":
+      `https://player.vimeo.com/video/165105448?${VIDEO_PLAYER_PARAMS}`,
+    "Animation of Popup UI components":
+      `https://player.vimeo.com/video/165105506?${VIDEO_PLAYER_PARAMS}`,
   },
 };
 

@@ -3,13 +3,6 @@
   "sections": [
     {
       "kind": "content",
-      "nodes": [],
-      "images": [
-        "/images/e406c6cfb100ac2c.jpg"
-      ]
-    },
-    {
-      "kind": "content",
       "nodes": [
         {
           "type": "heading",
@@ -25,7 +18,7 @@
         },
         {
           "type": "para",
-          "text": "Click here for an article written by me on how we designed Firefox OS TV."
+          "text": "[Click here for an article written by me on how we designed Firefox OS TV.](https://blog.mozilla.org/ux/2015/04/firefox-os-tv-user-interface-animation-design/)"
         }
       ],
       "images": []
@@ -52,7 +45,7 @@
       "kind": "content",
       "nodes": [
         {
-          "type": "para",
+          "type": "heading",
           "text": "Animation of home in pin an channel/app to home"
         },
         {
@@ -68,7 +61,7 @@
           "text": "Dashboard"
         },
         {
-          "type": "para",
+          "type": "heading",
           "text": "Animation of Dashboard in entering floating mode and transition of widget panels"
         },
         {
@@ -96,9 +89,11 @@
         "/images/d0a7942b5138ece0.png",
         "/images/5be2668b56647255.jpg",
         "/images/f49ad02989096bd8.jpg",
+        "/images/d0a7942b5138ece0.png",
         "/images/c88b0e2cf1a63921.png",
         "/images/e476b84f3bdb52a3.png",
         "/images/e7efb4aa82f578c4.jpg",
+        "/images/d0a7942b5138ece0.png",
         "/images/3f9014533302b08d.jpg"
       ]
     }
