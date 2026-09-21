@@ -58,6 +58,12 @@ const WHITE_BG_IMAGES: Record<string, Set<string>> = {
     "/images/90d3347148fc3f3e.png", // Typing Guide
     "/images/0f8b28316d83b5e8.gif", // Make In-App Payment
   ]),
+  "kaios-smart-tv-launcher": new Set([
+    "/images/cbfd6032a2633305.png", // Launcher architecture
+    "/images/0c6eff90b5bbde1e.gif", // Visual design direction
+    "/images/73fcfea03dec8faf.gif", // Simulator
+    "/images/0d38cf916fffe6fe.gif", // Board
+  ]),
 };
 
 // Headings whose section is just a title plus a handful of extra
