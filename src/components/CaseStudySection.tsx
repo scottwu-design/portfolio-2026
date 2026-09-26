@@ -225,6 +225,12 @@ const VIDEO_OVERRIDES: Record<string, Record<string, string>> = {
     // this one isn't domain-restricted.
     Greeting: `https://player.vimeo.com/video/436842485?h=36dfa586c1&${VIDEO_PLAYER_PARAMS}`,
   },
+  "fxos-smart-feature-phone": {
+    // No heading exists for this section, so the image path is the
+    // key here (see the SingleImage videoKey convention below).
+    "/images/7d8b9067d2ed1854.jpg":
+      `https://player.vimeo.com/video/164571808?h=9665280cc0&${VIDEO_PLAYER_PARAMS}`,
+  },
   "h5os-smart-feature-phone": {
     // This embed-code query format (app_id=58479, matching Vimeo's own
     // share dialog) isn't domain-restricted, unlike the plain player
@@ -762,6 +768,49 @@ export function CaseStudySection({
     return (
       <div className="py-12">
         <CarouselSection images={section.images} whiteBg />
+      </div>
+    );
+  }
+
+  // FxOS Smart Feature Phone's concept video: title + description
+  // (contained), then the video full-bleed — instead of the default
+  // small side-by-side image grid.
+  if (
+    slug === "fxos-smart-feature-phone" &&
+    firstNode?.type === "heading" &&
+    firstNode.text === "Concept Video"
+  ) {
+    const videoSrc = VIDEO_OVERRIDES[slug]?.[section.images[0]];
+    const descNode = section.nodes[1];
+    const description = descNode?.type === "para" ? descNode.text : undefined;
+    return (
+      <div className="py-12">
+        <div className={CONTAINER}>
+          <Reveal className="max-w-2xl">
+            <h3 className="font-display text-xl font-bold sm:text-2xl">
+              {firstNode.text}
+            </h3>
+            {description && (
+              <p className="mt-4 leading-relaxed text-ink/70">
+                {renderTextWithLinks(description)}
+              </p>
+            )}
+          </Reveal>
+        </div>
+        {videoSrc && (
+          <Reveal className="mt-6">
+            <div className="aspect-video w-full overflow-hidden">
+              <iframe
+                src={videoSrc}
+                title="Vimeo video"
+                className="h-full w-full border-0"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
+            </div>
+          </Reveal>
+        )}
       </div>
     );
   }

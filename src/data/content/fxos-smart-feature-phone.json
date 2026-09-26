@@ -39,10 +39,18 @@
     },
     {
       "kind": "content",
-      "nodes": [],
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "Concept Video"
+        },
+        {
+          "type": "para",
+          "text": "I created this concept video to help convey our interaction and design ideas clearly to vendors and stakeholders, showing how the smart feature phone experience comes together across devices."
+        }
+      ],
       "images": [
-        "/images/7d8b9067d2ed1854.jpg",
-        "/images/600034ca51fb3feb.jpg"
+        "/images/7d8b9067d2ed1854.jpg"
       ]
     }
   ]
