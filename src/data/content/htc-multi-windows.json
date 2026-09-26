@@ -40,7 +40,32 @@
     },
     {
       "kind": "content",
-      "nodes": [],
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "Key Screens"
+        },
+        {
+          "type": "para",
+          "text": "A quick look at the core screens for multi-window mode — browsing camera shots, switching between favorite music, and picking an app to launch in a new window."
+        },
+        {
+          "type": "heading",
+          "text": "Wireframe"
+        },
+        {
+          "type": "para",
+          "text": "Wireframes detailing how users add a second app window and customize or refresh the active layout."
+        },
+        {
+          "type": "heading",
+          "text": "Wireframe"
+        },
+        {
+          "type": "para",
+          "text": "Wireframes defining the two-window and three-window layout options and how each multi-window configuration is structured."
+        }
+      ],
       "images": [
         "/images/8cbe231f7f9edf13.jpg",
         "/images/e9f7b400e76a2789.jpg",
