@@ -107,6 +107,11 @@ const WHITE_BG_IMAGES: Record<string, Set<string>> = {
     "/images/5670b3b55ecf4bd3.jpg", // Timeline view in Day, Month, and Year
     "/images/38ff16cb0722c9ec.jpg", // A look back video themes
   ]),
+  "htc-multi-windows": new Set([
+    "/images/8cbe231f7f9edf13.jpg", // Key Screens
+    "/images/e9f7b400e76a2789.jpg", // Wireframe (add a second window)
+    "/images/3ff13123f28d699b.jpg", // Wireframe (layout definitions)
+  ]),
 };
 
 // FeatureGrid sections whose icon art is dark and needs a white
