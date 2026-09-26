@@ -45,6 +45,10 @@
       "nodes": [
         {
           "type": "heading",
+          "text": "Patent number: US 20140210812 A1"
+        },
+        {
+          "type": "heading",
           "text": "HTC Music Channel"
         },
         {
@@ -53,7 +57,7 @@
         },
         {
           "type": "heading",
-          "text": "Patent number: US 20140210812 A1"
+          "text": "Patent number: US D711921 S1"
         },
         {
           "type": "heading",
@@ -65,7 +69,7 @@
         },
         {
           "type": "heading",
-          "text": "Patent number: US D711921 S1"
+          "text": "Patent number: US D689874 S1"
         },
         {
           "type": "heading",
@@ -74,10 +78,6 @@
         {
           "type": "para",
           "text": "The Panorama mode designed for HTC Windows Phone project(Titan). It stitches three images together into a single image with remarkable precision and speed. Helpful guides are imposed on the screen to show users where to rotate to."
-        },
-        {
-          "type": "heading",
-          "text": "Patent number: US D689874 S1"
         }
       ],
       "images": [
