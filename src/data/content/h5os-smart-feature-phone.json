@@ -42,11 +42,11 @@
       "kind": "content",
       "nodes": [
         {
-          "type": "para",
-          "text": "\u2014 Design Philosophy \u2014"
+          "type": "heading",
+          "text": "Design Philosophy"
         },
         {
-          "type": "para",
+          "type": "heading",
           "text": "Design is the best medium to flow technologies into our lives."
         },
         {

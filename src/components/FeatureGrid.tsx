@@ -6,6 +6,9 @@ export interface FeatureGridItem {
   icon?: string;
   title: string;
   description?: string;
+  // A white circle behind the icon, for dark icon art that would
+  // otherwise blend into the navy page background.
+  iconWhiteBg?: boolean;
 }
 
 // A grid of icon + title + description cards — used for sections that
@@ -42,13 +45,25 @@ export function FeatureGrid({
         {items.map((item, i) => (
           <Reveal key={item.title} delay={(i % columns) * 100}>
             {item.icon && (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
-                src={asset(item.icon)}
-                alt=""
-                loading="lazy"
-                className="h-[42px] w-[42px] object-contain"
-              />
+              item.iconWhiteBg ? (
+                <div className="flex h-[42px] w-[42px] items-center justify-center rounded-full bg-white">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={asset(item.icon)}
+                    alt=""
+                    loading="lazy"
+                    className="h-[26px] w-[26px] object-contain"
+                  />
+                </div>
+              ) : (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={asset(item.icon)}
+                  alt=""
+                  loading="lazy"
+                  className="h-[42px] w-[42px] object-contain"
+                />
+              )
             )}
             <h4
               className={`font-display text-lg font-bold ${item.icon ? "mt-4" : ""}`}

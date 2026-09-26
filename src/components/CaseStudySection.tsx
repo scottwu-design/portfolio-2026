@@ -91,6 +91,20 @@ const WHITE_BG_IMAGES: Record<string, Set<string>> = {
     "/images/d90625018742be03.png", // App audit
     "/images/fa9f81641bb610bf.png", // Typography and colors
   ]),
+  "h5os-smart-feature-phone": new Set([
+    "/images/ebea979a7a09668f.png", // Visual direction
+    "/images/d9d1bb3e867dafc7.png", // Theme
+    "/images/b189eacbf7122eca.png", // Action icon
+    "/images/8fefd546ac3f7418.png", // Badge icon
+    "/images/5b62d7b6a342aac4.png", // Typeface
+    "/images/d52ef7105548049a.png", // Invisible boundary
+  ]),
+};
+
+// FeatureGrid sections whose icon art is dark and needs a white
+// circle behind it to stay visible on the navy page background.
+const ICON_WHITE_BG_HEADINGS: Record<string, Set<string>> = {
+  "h5os-smart-feature-phone": new Set(["DESIGN PRINCIPLE"]),
 };
 
 // Headings whose section is just a title plus a handful of extra
@@ -825,10 +839,11 @@ export function CaseStudySection({
     const subheadingNode = leadCount >= 2 ? section.nodes[1] : undefined;
     const subheading =
       subheadingNode?.type === "heading" ? subheadingNode.text : "";
+    const iconWhiteBg = ICON_WHITE_BG_HEADINGS[slug]?.has(firstNode.text);
     const items = parseFeatureItems(
       section.nodes.slice(Math.max(leadCount, 1)),
       section.images,
-    );
+    ).map((item) => (iconWhiteBg ? { ...item, iconWhiteBg: true } : item));
     return (
       <div className="py-12">
         <FeatureGrid
