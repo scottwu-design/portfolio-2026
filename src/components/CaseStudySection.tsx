@@ -719,11 +719,10 @@ export function CaseStudySection({
       "Animation of home automation from greeting screen to home screen"
   ) {
     const videoSrc = VIDEO_OVERRIDES[slug]?.["Greeting"];
-    const restCaptions = section.nodes
-      .slice(2)
+    const screenCaptions = section.nodes
+      .slice(1)
       .filter((n): n is Extract<ContentNode, { type: "heading" }> => n.type === "heading")
       .map((n) => n.text);
-    const restImages = section.images.slice(1);
     return (
       <div className="py-12">
         <div className={CONTAINER}>
@@ -732,23 +731,27 @@ export function CaseStudySection({
               {firstNode.text}
             </h3>
           </Reveal>
-          {videoSrc && (
-            <Reveal className="mt-6">
-              <div className="aspect-video w-full overflow-hidden rounded-sm">
-                <iframe
-                  src={videoSrc}
-                  title="Vimeo video"
-                  className="h-full w-full border-0"
-                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-                  referrerPolicy="strict-origin-when-cross-origin"
-                  allowFullScreen
-                />
-              </div>
-            </Reveal>
-          )}
         </div>
+        {videoSrc && (
+          <Reveal className="mt-6">
+            <div className="aspect-video w-full overflow-hidden">
+              <iframe
+                src={videoSrc}
+                title="Vimeo video"
+                className="h-full w-full border-0"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
+            </div>
+          </Reveal>
+        )}
         <div className="mt-10">
-          <CarouselSection images={restImages} captions={restCaptions} />
+          <CarouselSection
+            heading="KEY SCREENS"
+            images={section.images}
+            captions={screenCaptions}
+          />
         </div>
       </div>
     );
