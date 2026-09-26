@@ -324,18 +324,36 @@
           "text": "Overview of H5OS apps in motion"
         },
         {
-          "type": "list",
-          "items": [
-            "Launcher navigation in motion",
-            "Add a contact to Pinboard in motion",
-            "Play FM radio and add a favorite station in motion",
-            "Play songs via Music app in motion",
-            "Incoming call in motion",
-            "A parallax header of Message app in motion"
-          ]
+          "type": "heading",
+          "text": "Launcher navigation in motion"
+        },
+        {
+          "type": "heading",
+          "text": "Add a contact to Pinboard in motion"
+        },
+        {
+          "type": "heading",
+          "text": "Play FM radio and add a favorite station in motion"
+        },
+        {
+          "type": "heading",
+          "text": "Play songs via Music app in motion"
+        },
+        {
+          "type": "heading",
+          "text": "Incoming call in motion"
+        },
+        {
+          "type": "heading",
+          "text": "A parallax header of Message app in motion"
         }
       ],
       "images": [
+        "/images/71e95373de39d076.png",
+        "/images/71e95373de39d076.png",
+        "/images/71e95373de39d076.png",
+        "/images/71e95373de39d076.png",
+        "/images/71e95373de39d076.png",
         "/images/71e95373de39d076.png"
       ]
     }

@@ -17,11 +17,13 @@ export function CarouselSection({
   body,
   images,
   captions,
+  whiteBg,
 }: {
   heading?: string;
   body?: ReactNode;
   images: string[];
   captions?: string[];
+  whiteBg?: boolean;
 }) {
   const carouselRef = useRef<CarouselHandle>(null);
   // null until the carousel reports its first measurement, so the
@@ -70,6 +72,7 @@ export function CarouselSection({
           ref={carouselRef}
           images={images}
           captions={captions}
+          whiteBg={whiteBg}
           onScrollStateChange={setScrollState}
         />
       </Reveal>

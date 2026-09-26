@@ -144,6 +144,7 @@ const WIREFRAME_HEADINGS = new Set([
   "WIREFRAME",
   "UI COMPONENTS",
   "Animation of home in pin an channel/app to home",
+  "Overview of H5OS apps in motion",
 ]);
 
 // Like WIREFRAME_HEADINGS, but the first heading is itself one of the
@@ -215,6 +216,25 @@ const VIDEO_OVERRIDES: Record<string, Record<string, string>> = {
     // A private-link hash, unlike the plain video id tried earlier —
     // this one isn't domain-restricted.
     Greeting: `https://player.vimeo.com/video/436842485?h=36dfa586c1&${VIDEO_PLAYER_PARAMS}`,
+  },
+  "h5os-smart-feature-phone": {
+    // This embed-code query format (app_id=58479, matching Vimeo's own
+    // share dialog) isn't domain-restricted, unlike the plain player
+    // URLs tried earlier for this same set of videos.
+    "UI Components in motion":
+      "https://player.vimeo.com/video/719829869?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&muted=1&loop=1",
+    "Launcher navigation in motion":
+      "https://player.vimeo.com/video/720245506?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&muted=1&loop=1",
+    "Add a contact to Pinboard in motion":
+      "https://player.vimeo.com/video/720245616?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&muted=1&loop=1",
+    "Play FM radio and add a favorite station in motion":
+      "https://player.vimeo.com/video/720245274?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&muted=1&loop=1",
+    "Play songs via Music app in motion":
+      "https://player.vimeo.com/video/720245915?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&muted=1&loop=1",
+    "Incoming call in motion":
+      "https://player.vimeo.com/video/720245155?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&muted=1&loop=1",
+    "A parallax header of Message app in motion":
+      "https://player.vimeo.com/video/720245746?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&muted=1&loop=1",
   },
 };
 
@@ -721,6 +741,22 @@ export function CaseStudySection({
   }
 
   const firstNode = section.nodes[0];
+
+  // h5OS Smart Feature Phone's trailing screenshot grid has no
+  // heading to key by — a full-bleed carousel with white cards reads
+  // much better than the default static grid for a run of app
+  // screenshots.
+  if (
+    slug === "h5os-smart-feature-phone" &&
+    section.nodes.length === 0 &&
+    section.images.length > 1
+  ) {
+    return (
+      <div className="py-12">
+        <CarouselSection images={section.images} whiteBg />
+      </div>
+    );
+  }
 
   // Home Automation's animated walkthrough: the title, then the
   // "Greeting" video on its own, then the remaining named screens as

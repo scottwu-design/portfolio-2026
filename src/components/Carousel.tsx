@@ -26,11 +26,12 @@ export interface CarouselScrollState {
 export interface CarouselProps {
   images: string[];
   captions?: string[];
+  whiteBg?: boolean;
   onScrollStateChange?: (state: CarouselScrollState) => void;
 }
 
 export const Carousel = forwardRef<CarouselHandle, CarouselProps>(
-  function Carousel({ images, captions, onScrollStateChange }, ref) {
+  function Carousel({ images, captions, whiteBg, onScrollStateChange }, ref) {
     const trackRef = useRef<HTMLDivElement>(null);
 
     const updateScrollState = useCallback(() => {
@@ -84,14 +85,27 @@ export const Carousel = forwardRef<CarouselHandle, CarouselProps>(
       >
         {images.map((src, i) => (
           <div key={src} data-carousel-card className="flex-shrink-0 snap-start">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={asset(src)}
-              alt={captions?.[i] ?? ""}
-              loading="lazy"
-              className="h-[400px] w-auto rounded-sm object-contain"
-              onLoad={updateScrollState}
-            />
+            {whiteBg ? (
+              <div className="h-[400px] rounded-sm bg-white p-4">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={asset(src)}
+                  alt={captions?.[i] ?? ""}
+                  loading="lazy"
+                  className="h-full w-auto object-contain"
+                  onLoad={updateScrollState}
+                />
+              </div>
+            ) : (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={asset(src)}
+                alt={captions?.[i] ?? ""}
+                loading="lazy"
+                className="h-[400px] w-auto rounded-sm object-contain"
+                onLoad={updateScrollState}
+              />
+            )}
             {captions?.[i] && (
               <p className="mt-3 text-sm text-ink/60">{captions[i]}</p>
             )}
