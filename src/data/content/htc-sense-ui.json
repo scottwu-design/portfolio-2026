@@ -132,15 +132,24 @@
           "text": "I created a promotional video for HTC Sense 4.0 to showcase its key features and user experience enhancements to our partners. Through engaging visuals and dynamic motion graphics, it effectively highlighted HTC's design and innovation."
         },
         {
-          "type": "para",
-          "text": "HTC Sense 4.0 - Home screen Music, FM Radio, and Calendar widget designs"
+          "type": "heading",
+          "text": "HTC Sense 4.0"
         },
         {
           "type": "para",
-          "text": "HTC Sense 3.0 - Home screen Gallery, Email, and Message widget designs"
+          "text": "Home screen Music, FM Radio, and Calendar widget designs"
+        },
+        {
+          "type": "heading",
+          "text": "HTC Sense 3.0"
+        },
+        {
+          "type": "para",
+          "text": "Home screen Gallery, Email, and Message widget designs"
         }
       ],
       "images": [
+        "/images/9c5728c5886f58b0.jpg",
         "/images/c83fa97b19edb121.jpg",
         "/images/41dff92ecda34f8f.jpg"
       ]

@@ -213,6 +213,8 @@ const VIDEO_OVERRIDES: Record<string, Record<string, string | string[]>> = {
       "https://player.vimeo.com/video/164694515?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&muted=1&loop=1",
       "https://player.vimeo.com/video/164813825?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&muted=1&loop=1",
     ],
+    "HTC Sense 4.0 - Parter showcase promotional video":
+      "https://player.vimeo.com/video/164801057?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&muted=1&loop=1",
   },
   "fxos-smart-tv": {
     "Animation of home in pin an channel/app to home":
