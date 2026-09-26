@@ -205,10 +205,12 @@ const VIDEO_OVERRIDES: Record<string, Record<string, string>> = {
     "Animation of UI components":
       `https://player.vimeo.com/video/165105448?${VIDEO_PLAYER_PARAMS}`,
     // "Animation of Popup UI components" (video 165105506) has no
-    // working override — confirmed blocked directly on Vimeo's side
-    // (not just domain-restricted) under both the plain player URL
-    // and the embed-code query format, unlike its siblings above. It
-    // falls back to its own static screenshot instead.
+    // working override. Confirmed blocked directly on Vimeo's own
+    // player page (outside our site entirely) under all three URL
+    // forms tried: the plain player URL, the embed-code query format,
+    // and a private-link hash. Its sibling videos load fine the same
+    // way, so this is specific to this one video on Vimeo's side, not
+    // fixable from our end. Falls back to its static screenshot.
   },
   "fxos-smartphone": {
     "Essential Phone Project — Launch & Close":

@@ -104,6 +104,10 @@
         {
           "type": "heading",
           "text": "Firefox OS TV UI Components Overview"
+        },
+        {
+          "type": "para",
+          "text": "A consolidated reference sheet of the design system built for Firefox OS TV: color palette, typography, buttons, list items, form controls, and other common components used consistently across the interface."
         }
       ],
       "images": [
