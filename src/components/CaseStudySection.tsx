@@ -129,7 +129,6 @@ const FEATURE_GRID_HEADINGS = new Set([
 const WIREFRAME_HEADINGS = new Set([
   "WIREFRAME",
   "UI COMPONENTS",
-  "Animation of home automation from greeting screen to home screen",
   "Animation of home in pin an channel/app to home",
 ]);
 
@@ -197,6 +196,11 @@ const VIDEO_OVERRIDES: Record<string, Record<string, string>> = {
       `https://player.vimeo.com/video/164890932?${VIDEO_PLAYER_PARAMS}`,
     "Ripple Project — Share":
       `https://player.vimeo.com/video/164890852?${VIDEO_PLAYER_PARAMS}`,
+  },
+  "home-automation": {
+    // A private-link hash, unlike the plain video id tried earlier —
+    // this one isn't domain-restricted.
+    Greeting: `https://player.vimeo.com/video/436842485?h=36dfa586c1&${VIDEO_PLAYER_PARAMS}`,
   },
 };
 
@@ -703,6 +707,53 @@ export function CaseStudySection({
   }
 
   const firstNode = section.nodes[0];
+
+  // Home Automation's animated walkthrough: the title, then the
+  // "Greeting" video on its own, then the remaining named screens as
+  // a full-bleed carousel instead of the default paired-with-image
+  // layout.
+  if (
+    slug === "home-automation" &&
+    firstNode?.type === "heading" &&
+    firstNode.text ===
+      "Animation of home automation from greeting screen to home screen"
+  ) {
+    const videoSrc = VIDEO_OVERRIDES[slug]?.["Greeting"];
+    const restCaptions = section.nodes
+      .slice(2)
+      .filter((n): n is Extract<ContentNode, { type: "heading" }> => n.type === "heading")
+      .map((n) => n.text);
+    const restImages = section.images.slice(1);
+    return (
+      <div className="py-12">
+        <div className={CONTAINER}>
+          <Reveal className="max-w-2xl">
+            <h3 className="font-display text-xl font-bold sm:text-2xl">
+              {firstNode.text}
+            </h3>
+          </Reveal>
+          {videoSrc && (
+            <Reveal className="mt-6">
+              <div className="aspect-video w-full overflow-hidden rounded-sm">
+                <iframe
+                  src={videoSrc}
+                  title="Vimeo video"
+                  className="h-full w-full border-0"
+                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                />
+              </div>
+            </Reveal>
+          )}
+        </div>
+        <div className="mt-10">
+          <CarouselSection images={restImages} captions={restCaptions} />
+        </div>
+      </div>
+    );
+  }
+
   if (firstNode?.type === "heading" && NUMBERED_GRID_HEADINGS.has(firstNode.text)) {
     const listNode = section.nodes.find((n) => n.type === "list");
     if (listNode?.type === "list") {

@@ -18,7 +18,7 @@ export function CarouselSection({
   images,
   captions,
 }: {
-  heading: string;
+  heading?: string;
   body?: ReactNode;
   images: string[];
   captions?: string[];
@@ -34,9 +34,11 @@ export function CarouselSection({
     <>
       <Reveal className={CONTAINER}>
         <div className="flex flex-wrap items-center justify-between gap-4">
-          <h3 className="font-display text-xl font-bold sm:text-2xl">
-            {heading}
-          </h3>
+          {heading && (
+            <h3 className="font-display text-xl font-bold sm:text-2xl">
+              {heading}
+            </h3>
+          )}
           {scrollState?.canScroll && (
             <div className="hidden gap-3 sm:flex">
               <button
