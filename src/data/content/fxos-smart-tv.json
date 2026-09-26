@@ -97,6 +97,18 @@
         "/images/d0a7942b5138ece0.png",
         "/images/3f9014533302b08d.jpg"
       ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "Firefox OS TV UI Components Overview"
+        }
+      ],
+      "images": [
+        "/images/3f9014533302b08d.jpg"
+      ]
     }
   ]
 }
