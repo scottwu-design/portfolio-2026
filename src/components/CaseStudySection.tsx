@@ -102,6 +102,11 @@ const WHITE_BG_IMAGES: Record<string, Set<string>> = {
   "fxos-smart-tv": new Set([
     "/images/e7efb4aa82f578c4.jpg", // UX Wireframe
   ]),
+  "htc-lifeme": new Set([
+    "/images/33a268fc4d62e12d.jpg", // UX Wireframe
+    "/images/5670b3b55ecf4bd3.jpg", // Timeline view in Day, Month, and Year
+    "/images/38ff16cb0722c9ec.jpg", // A look back video themes
+  ]),
 };
 
 // FeatureGrid sections whose icon art is dark and needs a white

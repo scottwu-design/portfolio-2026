@@ -46,16 +46,28 @@
           "text": "Timeline view in Day, Month, and Year"
         },
         {
+          "type": "para",
+          "text": "The timeline view spans Day, Month, and Year, surfacing diary-like moments so users can quickly look back on their day."
+        },
+        {
           "type": "heading",
           "text": "Summary view"
         },
         {
-          "type": "heading",
-          "text": "A look back video themes"
+          "type": "para",
+          "text": "Tapping in reveals a summary of activity recorded by month or by year."
         },
         {
           "type": "heading",
           "text": "A look back video themes"
+        },
+        {
+          "type": "para",
+          "text": "Beyond the data and records, Life.me can automatically pick a video theme and generate a look-back video for users to share on social media."
+        },
+        {
+          "type": "heading",
+          "text": "UX Wireframe"
         }
       ],
       "images": [
