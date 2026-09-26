@@ -176,7 +176,12 @@ const WIREFRAME_HEADINGS_NO_TITLE = new Set([
 // videos replaced.
 const VIDEO_PLAYER_PARAMS = "autoplay=1&loop=1&muted=1";
 
-const VIDEO_OVERRIDES: Record<string, Record<string, string>> = {
+// A heading key's value is normally a single video URL. When the same
+// heading text legitimately repeats for two different items (e.g. two
+// "HTC Sense 5.0" motion clips shown with identical visible titles),
+// it can be an array instead — consumed in document order, one entry
+// per occurrence, via GroupedGallery's per-heading occurrence count.
+const VIDEO_OVERRIDES: Record<string, Record<string, string | string[]>> = {
   "kaios-smart-touch": {
     "THE ADVANTAGE OF INFOGATION BAR":
       `https://player.vimeo.com/video/718534971?h=d1ca59d48b&${VIDEO_PLAYER_PARAMS}`,
@@ -201,6 +206,13 @@ const VIDEO_OVERRIDES: Record<string, Record<string, string>> = {
       `https://player.vimeo.com/video/164675945?${VIDEO_PLAYER_PARAMS}`,
     "Panorama mode":
       `https://player.vimeo.com/video/164675986?${VIDEO_PLAYER_PARAMS}`,
+    // Two distinct motion clips share the identical visible title
+    // "HTC Sense 5.0" — resolved in document order (first occurrence
+    // gets the first entry, second occurrence the second).
+    "HTC Sense 5.0": [
+      "https://player.vimeo.com/video/164694515?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&muted=1&loop=1",
+      "https://player.vimeo.com/video/164813825?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&muted=1&loop=1",
+    ],
   },
   "fxos-smart-tv": {
     "Animation of home in pin an channel/app to home":
@@ -257,16 +269,28 @@ const VIDEO_OVERRIDES: Record<string, Record<string, string>> = {
   },
 };
 
+// Resolves a single video URL for call sites that always expect one
+// override per key (as opposed to GroupedGallery's per-occurrence
+// array lookup) — picks the first entry if the value is an array.
+function resolveVideoSrc(
+  value: string | string[] | undefined,
+): string | undefined {
+  return Array.isArray(value) ? value[0] : value;
+}
+
 function SingleImage({
   src,
   slug,
   videoKey,
+  occurrence = 0,
 }: {
   src: string;
   slug: string;
   videoKey?: string;
+  occurrence?: number;
 }) {
-  const videoSrc = VIDEO_OVERRIDES[slug]?.[videoKey ?? ""];
+  const rawVideo = VIDEO_OVERRIDES[slug]?.[videoKey ?? ""];
+  const videoSrc = Array.isArray(rawVideo) ? rawVideo[occurrence] : rawVideo;
   if (videoSrc) {
     return (
       <div className="aspect-video w-full overflow-hidden rounded-sm">
@@ -549,6 +573,11 @@ function GroupedGallery({
   images: string[];
   slug: string;
 }) {
+  // Tracks how many times each heading text has been seen so far, so
+  // two groups that legitimately share the same visible title (e.g.
+  // two identically-titled motion clips) can each resolve their own
+  // entry from that heading's video array in document order.
+  const occurrenceCounts: Record<string, number> = {};
   return (
     <div className="space-y-16">
       {groups.map((group, i) => {
@@ -561,6 +590,8 @@ function GroupedGallery({
             ? group[1]
             : group.find((n) => n.type === "heading");
         const heading = headingNode?.type === "heading" ? headingNode.text : undefined;
+        const occurrence = heading ? (occurrenceCounts[heading] ?? 0) : 0;
+        if (heading) occurrenceCounts[heading] = occurrence + 1;
         const hasVideo = Boolean(heading && VIDEO_OVERRIDES[slug]?.[heading]);
         const showMedia = Boolean(image) || hasVideo;
         return (
@@ -574,7 +605,12 @@ function GroupedGallery({
           >
             <div>{renderPlainNodes(group)}</div>
             {showMedia && (
-              <SingleImage src={image ?? ""} slug={slug} videoKey={heading} />
+              <SingleImage
+                src={image ?? ""}
+                slug={slug}
+                videoKey={heading}
+                occurrence={occurrence}
+              />
             )}
           </Reveal>
         );
@@ -785,7 +821,7 @@ export function CaseStudySection({
     firstNode?.type === "heading" &&
     firstNode.text === "Concept Video"
   ) {
-    const videoSrc = VIDEO_OVERRIDES[slug]?.[section.images[0]];
+    const videoSrc = resolveVideoSrc(VIDEO_OVERRIDES[slug]?.[section.images[0]]);
     const descNode = section.nodes[1];
     const description = descNode?.type === "para" ? descNode.text : undefined;
     return (
@@ -828,7 +864,7 @@ export function CaseStudySection({
     firstNode.text ===
       "Animation of home automation from greeting screen to home screen"
   ) {
-    const videoSrc = VIDEO_OVERRIDES[slug]?.["Greeting"];
+    const videoSrc = resolveVideoSrc(VIDEO_OVERRIDES[slug]?.["Greeting"]);
     const screenCaptions = section.nodes
       .slice(1)
       .filter((n): n is Extract<ContentNode, { type: "heading" }> => n.type === "heading")

@@ -90,17 +90,39 @@
       "kind": "content",
       "nodes": [
         {
-          "type": "para",
-          "text": "HTC Sense 6.0 - Easy Mode is designed specifically for senior users or those who prefer a simplified smartphone experience. It features a clean, easy-to-read interface with larger icons, bold text, and an intuitive layout, ensuring effortless navigation."
+          "type": "heading",
+          "text": "HTC Sense 6.0"
         },
         {
           "type": "para",
-          "text": "HTC Sense 5.0 - fluid UI component motions, smooth tab page transition, and intuitive call motion designs"
+          "text": "Easy Mode is designed specifically for senior users or those who prefer a simplified smartphone experience. It features a clean, easy-to-read interface with larger icons, bold text, and an intuitive layout, ensuring effortless navigation."
+        },
+        {
+          "type": "heading",
+          "text": "HTC Sense 5.0"
         },
         {
           "type": "para",
-          "text": "HTC Sense 6.0 - Seamless in-app transition and dynamic window activity motion designs"
+          "text": "fluid UI component motions, smooth tab page transition, and intuitive call motion designs"
         },
+        {
+          "type": "heading",
+          "text": "HTC Sense 5.0"
+        },
+        {
+          "type": "para",
+          "text": "Seamless in-app transition and dynamic window activity motion designs"
+        }
+      ],
+      "images": [
+        "/images/9c5728c5886f58b0.jpg",
+        "/images/9c5728c5886f58b0.jpg",
+        "/images/9c5728c5886f58b0.jpg"
+      ]
+    },
+    {
+      "kind": "content",
+      "nodes": [
         {
           "type": "heading",
           "text": "HTC Sense 4.0 - Parter showcase promotional video"
@@ -119,7 +141,6 @@
         }
       ],
       "images": [
-        "/images/9c5728c5886f58b0.jpg",
         "/images/c83fa97b19edb121.jpg",
         "/images/41dff92ecda34f8f.jpg"
       ]
