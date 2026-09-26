@@ -772,9 +772,9 @@ export function CaseStudySection({
     );
   }
 
-  // FxOS Smart Feature Phone's concept video: title + description
-  // (contained), then the video full-bleed — instead of the default
-  // small side-by-side image grid.
+  // FxOS Smart Feature Phone's concept video: title + description,
+  // then the video below — both contained (matching CONTAINER's side
+  // padding) instead of the default small side-by-side image grid.
   if (
     slug === "fxos-smart-feature-phone" &&
     firstNode?.type === "heading" &&
@@ -784,22 +784,20 @@ export function CaseStudySection({
     const descNode = section.nodes[1];
     const description = descNode?.type === "para" ? descNode.text : undefined;
     return (
-      <div className="py-12">
-        <div className={CONTAINER}>
-          <Reveal className="max-w-2xl">
-            <h3 className="font-display text-xl font-bold sm:text-2xl">
-              {firstNode.text}
-            </h3>
-            {description && (
-              <p className="mt-4 leading-relaxed text-ink/70">
-                {renderTextWithLinks(description)}
-              </p>
-            )}
-          </Reveal>
-        </div>
+      <div className={`${CONTAINER} py-12`}>
+        <Reveal className="max-w-2xl">
+          <h3 className="font-display text-xl font-bold sm:text-2xl">
+            {firstNode.text}
+          </h3>
+          {description && (
+            <p className="mt-4 leading-relaxed text-ink/70">
+              {renderTextWithLinks(description)}
+            </p>
+          )}
+        </Reveal>
         {videoSrc && (
           <Reveal className="mt-6">
-            <div className="aspect-video w-full overflow-hidden">
+            <div className="aspect-video w-full overflow-hidden rounded-sm">
               <iframe
                 src={videoSrc}
                 title="Vimeo video"
