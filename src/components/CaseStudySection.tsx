@@ -99,6 +99,9 @@ const WHITE_BG_IMAGES: Record<string, Set<string>> = {
     "/images/5b62d7b6a342aac4.png", // Typeface
     "/images/d52ef7105548049a.png", // Invisible boundary
   ]),
+  "fxos-smart-tv": new Set([
+    "/images/e7efb4aa82f578c4.jpg", // UX Wireframe
+  ]),
 };
 
 // FeatureGrid sections whose icon art is dark and needs a white
@@ -143,7 +146,6 @@ const FEATURE_GRID_HEADINGS = new Set([
 const WIREFRAME_HEADINGS = new Set([
   "WIREFRAME",
   "UI COMPONENTS",
-  "Animation of home in pin an channel/app to home",
   "Overview of H5OS apps in motion",
 ]);
 
@@ -154,6 +156,7 @@ const WIREFRAME_HEADINGS = new Set([
 // first being consumed as the section's title.
 const WIREFRAME_HEADINGS_NO_TITLE = new Set([
   "Timeline view in Day, Month, and Year",
+  "Animation of home in pin an channel/app to home",
 ]);
 
 // Sections whose static screenshot/gif reads much better as the
@@ -195,12 +198,17 @@ const VIDEO_OVERRIDES: Record<string, Record<string, string>> = {
       `https://player.vimeo.com/video/164675986?${VIDEO_PLAYER_PARAMS}`,
   },
   "fxos-smart-tv": {
+    "Animation of home in pin an channel/app to home":
+      "https://player.vimeo.com/video/165096295?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&muted=1&loop=1",
     "Animation of Dashboard in entering floating mode and transition of widget panels":
       `https://player.vimeo.com/video/165097433?${VIDEO_PLAYER_PARAMS}`,
     "Animation of UI components":
       `https://player.vimeo.com/video/165105448?${VIDEO_PLAYER_PARAMS}`,
-    "Animation of Popup UI components":
-      `https://player.vimeo.com/video/165105506?${VIDEO_PLAYER_PARAMS}`,
+    // "Animation of Popup UI components" (video 165105506) has no
+    // working override — confirmed blocked directly on Vimeo's side
+    // (not just domain-restricted) under both the plain player URL
+    // and the embed-code query format, unlike its siblings above. It
+    // falls back to its own static screenshot instead.
   },
   "fxos-smartphone": {
     "Essential Phone Project — Launch & Close":
