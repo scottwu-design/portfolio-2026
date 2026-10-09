@@ -23,6 +23,7 @@ export default function Home() {
           src: asset("/images/Website_banner_03.png"),
         }}
         overlayOpacity={0.9}
+        grayscale
         primaryAction={{ label: "View My Work", href: "/#selected-works" }}
         secondaryAction={{ label: "Get in Touch", href: "/#contact" }}
       />

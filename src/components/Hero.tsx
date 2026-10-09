@@ -35,6 +35,8 @@ export interface HeroProps {
    * image/video — higher fades the image further for easier text
    * reading. Defaults to 0.7. */
   overlayOpacity?: number;
+  /** Renders the background image/video in black and white. */
+  grayscale?: boolean;
 }
 
 export function Hero({
@@ -49,6 +51,7 @@ export function Hero({
   children,
   size = "default",
   overlayOpacity = 0.7,
+  grayscale = false,
 }: HeroProps) {
   return (
     <section
@@ -61,7 +64,9 @@ export function Hero({
         <img
           src={background.src}
           alt={background.alt ?? ""}
-          className="absolute inset-0 h-full w-full object-cover"
+          className={`absolute inset-0 h-full w-full object-cover ${
+            grayscale ? "grayscale" : ""
+          }`}
         />
       )}
       {background?.type === "video" && (
@@ -72,7 +77,9 @@ export function Hero({
           muted
           loop
           playsInline
-          className="absolute inset-0 h-full w-full object-cover"
+          className={`absolute inset-0 h-full w-full object-cover ${
+            grayscale ? "grayscale" : ""
+          }`}
         />
       )}
       {background && (
