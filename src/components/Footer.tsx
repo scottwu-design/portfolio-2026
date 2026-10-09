@@ -22,16 +22,6 @@ export function Footer() {
           className="mt-14 grid grid-cols-1 gap-12 sm:grid-cols-3"
         >
           <div>
-            <p className="text-sm text-white/80">Want to work together?</p>
-            <a
-              href="mailto:shin71630@gmail.com"
-              className="mt-4 inline-block rounded-full bg-white px-7 py-3 text-sm font-semibold text-accent transition-transform hover:-translate-y-0.5"
-            >
-              Write Me an Email
-            </a>
-          </div>
-
-          <div>
             <p className="text-sm text-white/80">+886 911 621113</p>
             <p className="mt-1 text-sm text-white/80">shin71630@gmail.com</p>
             <p className="mt-1 text-sm text-white/80">Taipei City, Taiwan</p>
@@ -51,6 +41,16 @@ export function Footer() {
                 {s.label}
               </a>
             ))}
+          </div>
+
+          <div>
+            <p className="text-sm text-white/80">Want to work together?</p>
+            <a
+              href="mailto:shin71630@gmail.com"
+              className="mt-4 inline-block rounded-full bg-white px-7 py-3 text-sm font-semibold text-accent transition-transform hover:-translate-y-0.5"
+            >
+              Write Me an Email
+            </a>
           </div>
         </Reveal>
 
