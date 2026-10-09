@@ -43,7 +43,7 @@ export function Footer() {
             ))}
           </div>
 
-          <div>
+          <div className="order-first sm:order-none">
             <p className="text-sm text-white/80">Want to work together?</p>
             <a
               href="mailto:shin71630@gmail.com"
