@@ -1,6 +1,7 @@
 import { Hero } from "@/components/Hero";
 import { Services } from "@/components/Services";
 import { Projects } from "@/components/Projects";
+import { asset } from "@/lib/asset";
 import { projects } from "@/lib/content";
 
 export default function Home() {
@@ -17,6 +18,10 @@ export default function Home() {
             </span>
           </>
         }
+        background={{
+          type: "image",
+          src: asset("/images/Website_banner_03.png"),
+        }}
         primaryAction={{ label: "View My Work", href: "/#selected-works" }}
         secondaryAction={{ label: "Get in Touch", href: "/#contact" }}
       />
