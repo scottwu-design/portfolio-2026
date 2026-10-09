@@ -31,6 +31,10 @@ export interface HeroProps {
   /** "tall" adds extra vertical padding on large screens, for a more
    * dramatic full-bleed banner. Defaults to the standard height. */
   size?: "default" | "tall";
+  /** Strength (0–1) of the navy overlay on top of the background
+   * image/video — higher fades the image further for easier text
+   * reading. Defaults to 0.7. */
+  overlayOpacity?: number;
 }
 
 export function Hero({
@@ -44,6 +48,7 @@ export function Hero({
   media,
   children,
   size = "default",
+  overlayOpacity = 0.7,
 }: HeroProps) {
   return (
     <section
@@ -70,7 +75,12 @@ export function Hero({
           className="absolute inset-0 h-full w-full object-cover"
         />
       )}
-      {background && <div className="absolute inset-0 bg-navy/70" />}
+      {background && (
+        <div
+          className="absolute inset-0 bg-navy"
+          style={{ opacity: overlayOpacity }}
+        />
+      )}
 
       <div className={`relative ${CONTAINER}`}>
         {backLink && (
