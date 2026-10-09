@@ -125,7 +125,7 @@ export function Hero({
             {secondaryAction && (
               <Link
                 href={secondaryAction.href}
-                className="rounded-full border border-white/25 bg-white/5 px-8 py-3 text-sm font-semibold text-ink backdrop-blur-md transition-colors hover:border-accent-light"
+                className="rounded-full border border-white/25 px-8 py-3 text-sm font-semibold text-ink transition-colors hover:border-accent-light"
               >
                 {secondaryAction.label}
               </Link>
